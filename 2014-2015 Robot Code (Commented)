@@ -385,3 +385,6 @@ private:
 };
 
 START_ROBOT_CLASS(FYRERobot);
+
+$ cat .gitattributes
+*.rb linguist-language=Java
