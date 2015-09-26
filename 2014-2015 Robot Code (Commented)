@@ -1,7 +1,11 @@
+/*--------FYRE 5480 2014-2015 Incendia Code--------*/
+
+//Includes libraries with various functions, constants, variables, etc. that we use in the program
 #include "WPILib.h"
 #include "string"
 #include <cmath>
 #include <iostream>
+
 
 class FYRERobot: public IterativeRobot
 {
