@@ -19,6 +19,7 @@ class FYRERobot: public IterativeRobot
 	DigitalInput *autoSwitch;
 	Compressor *compressorA;
 	DigitalInput *compressorSwitch;
+	
 
 	//Declares variables changed by code, not robot; Doesn't assign variables
 	float rightXboxY;
@@ -36,6 +37,9 @@ class FYRERobot: public IterativeRobot
 	bool XboxB;
 	bool XboxStart;
 	float newLiftEncoder;
+	bool XboxSelect;
+	int printing;
+	bool selectPressed;
 
 //Contains functions for declaring robot parts
 public:
@@ -76,7 +80,7 @@ private:
 		CameraServer::GetInstance()->StartAutomaticCapture("cam0");
 		//Livewindow again (update)
 		lw = LiveWindow::GetInstance();
-		//Starts Compressor; ASK MATT
+		//Starts Compressor: First function clears faults which stop compressor from running, second starts it, third gives us control rather than Control Module (necessary due to broken Control Module)
 		compressorA -> ClearAllPCMStickyFaults();
 		compressorA -> Start();
 		compressorA -> SetClosedLoopControl(false);
@@ -87,13 +91,14 @@ private:
 		//Reset Lift Encoder and time counter
 		m_liftEncoder->Reset();
 		counter = 0;
-
+		std::cout << "Autonomous Initialized" << std::endl;
 		AutonomousBin();
 
 	}
 	// function for auto-bin
 	void AutonomousBin()
 	{
+		std::cout << "Autonomous Begin" << std::endl;
 		while(m_liftEncoder->Get()<1000){
 			//Solenoid is flipped; Forward = Reverse, <1 = >1
 			m_solenoid -> Set(m_solenoid-> kForward);
@@ -102,7 +107,7 @@ private:
 			std::cout << m_liftEncoder->Get() << std::endl;
 
 		}
-		
+		std::cout << "Bin Lifted" << std::endl;
 		// Stops and locks lift
 		m_robotLift -> Set(0);
 		m_solenoid -> Set(m_solenoid-> kReverse);
@@ -118,16 +123,17 @@ private:
 			m_robotDrive -> Drive(-.5,0);
 			counter++;
 		}
+		std::cout << "In Auto Zone" << std::endl;
 			//Stops robot, resets time counter
 			m_robotDrive -> Drive(0,0);
 			counter = 0;
-
+		std::cout << "Dropping Bin" << std::endl;
 		//Lowering Lift
 		while(m_liftEncoder -> Get()> 100){
 			m_solenoid -> Set(m_solenoid-> kForward);
 			m_robotLift -> Set(.5);
 		}
-
+		std::cout << "Bin Dropped" << std::endl;
 		//Stop and lock lift
 		m_robotLift -> Set(0);
 		m_solenoid -> Set(m_solenoid -> kReverse);
@@ -137,10 +143,11 @@ private:
 			m_robotDrive -> Drive(.5,0);
 			counter++;
 		}
+		std::cout << "Backed Off" << std::endl;
 		m_robotDrive -> Drive(0,0);
 	}
 
-	//This is literally dumb; ASK MATT
+	//Periodic Function for Autonomous: Runs continuously in autonomous
 	void AutonomousPeriodic()
 	{
 		
@@ -155,10 +162,11 @@ private:
 		solenoidValue = false;
 		level = 0;
 		newLiftEncoder = 0;
+		printing = 0;
 
 	}
 
-	//Iterative function for teleop; runs over and over and over and over and over and over and over and over and over and over and over and you really think I'm going to do this forever? You're wrong. It's only 12:33:30:19. I have better things to do tonight.
+	//Iterative function for teleop; runs over and over and over and over and over and over and over and over and over and over and over and you really think I'm going to do this forever? You're wrong. It's only 12:33:30:19. I have better things to do tonight. ASK CONNOR
 	void TeleopPeriodic()
 	{
 
@@ -168,20 +176,22 @@ private:
 		leftBumper = m_liftStick -> GetRawButton(5);
 		XboxA = m_liftStick -> GetRawButton(1);
 		XboxB = m_liftStick -> GetRawButton(2);
+		XboxSelect = m_liftStick -> GetRawButton(7);
 		XboxStart = m_liftStick -> GetRawButton(8);
 		
-		//Compressor switch broken; ASK MATT
+		//Pnematics Control Module Broken: Tells us manually what value of compressor switch is
 		compressorSwitch -> Get();
 
 		setDriveTrain();
 
 		//If button A pressed
 		if(XboxA == true){
-			
+			//Print to show button is pressed
+			std::cout << "Xbox Button A has been Pressed" << std::endl;
 			//levels of locking bars for lifting mechanism
 			if(level < 3){
 
-				//lifting mech. at bottom; TODOOOOOOOOO
+				//lifting mech. at bottom
 				if (level == 0){
 					newLiftEncoder = m_liftEncoder->Get() + 300;
 					m_solenoid -> Set(m_solenoid-> kForward);
@@ -206,8 +216,8 @@ private:
 					}
 				}
 
-				level = level + 1;
-				m_solenoid -> Set(m_solenoid-> kReverse);
+			level = level + 1;
+			m_solenoid -> Set(m_solenoid-> kReverse);
 			}
 
 
@@ -215,6 +225,7 @@ private:
 		}
 		// Same as A, but down.
 		else if(XboxB == true){
+			std::cout << "Xbox Button B has been Pressed" << std::endl;
 			if(level > 0){
 				m_robotDrive -> Drive(0,0);
 				newLiftEncoder = m_liftEncoder -> Get() + 100;
@@ -236,8 +247,8 @@ private:
 					updatePnuematics();
 
 				}
-               level = level - 1;
-               m_solenoid -> Set(m_solenoid-> kReverse);
+        		level = level - 1;
+        		m_solenoid -> Set(m_solenoid-> kReverse);
 			}
 
 		}
@@ -256,12 +267,34 @@ private:
 
 		}
 		updatePnuematics();
+		if(printing == 0){
+			std::cout << m_liftEncoder->Get() << ": encoder (Press SELECT to Change Modes)" << std::endl;
+		}
+		else if(printing == 1){
+			std::cout << driveStickX -> Get() << ": Drive Stick X (Press SELECT to Change Modes)" << std::endl;
+		}
+		else if(printing == 2){
+			std::cout << driveStickY -> Get() << ": Drive Stick Y (Press SELECT to Change Modes)" << std::endl;	
+		}
+		else{
+			printing = 0
+		}
 		
-		//Bug Testing; ASK MATT
-		std::cout << m_liftEncoder->Get() << ": encoder" << std::endl;
-		std::cout << compressorSwitch -> Get() << ": switch" << std::endl;
+		if(XboxSelect == true){
+			if(selectPressed == 0){
+				printing += 1;
+				selectPressed = 1;
+			}
+		}
+		else{
+			selectPressed = 0;
+		}
+		
+	
+		
+		
 	}
-	//Function... you can read; Compressor Switch still broken... surprise.
+	//Function to Update Pnuematics (Normally done by PCM [Pnuematics Control Module] but ours broke so this was to work around that)
 	void updatePnuematics()
 	{
 		if (compressorSwitch -> Get() == false){
@@ -272,7 +305,7 @@ private:
 		}
 	}
 
-	//function to update drive train controls (The stick of Jobs*)
+	//Function to update Joystick which controlled the wheels of the robot
 	void setDriveTrain()
 	{
 		driveStickX = (m_driveStick->GetX())*-1;
@@ -283,12 +316,12 @@ private:
 		m_robotDrive->ArcadeDrive(driveStickY, driveStickX);
 
 	}
-	//Run to see live window that is actually dead. RIP
+	//Meant to run the live window, but ours doesn't work
 	void TestPeriodic()
 	{
 		lw->Run();
 	}
 };
-//*Joys
 
+//Runs Code Above
 START_ROBOT_CLASS(FYRERobot);
