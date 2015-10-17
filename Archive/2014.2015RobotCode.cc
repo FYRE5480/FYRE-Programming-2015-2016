@@ -47,7 +47,7 @@ public:
 	FYRERobot(void)
 	{
 
-		// Create a RobotDrive object using PWMS 0 & 1
+		// Create a RobotDrive object using PWMs 0 & 1
 		m_robotDrive = new RobotDrive(0, 1);
 		// Define joystick being used at USB port #0 on the Drivers Station
 		m_driveStick = new Joystick(0);
@@ -88,63 +88,13 @@ private:
 	//Function for autonomous portion
 	void AutonomousInit()
 	{
-		//Reset Lift Encoder and time counter
-		m_liftEncoder->Reset();
 		counter = 0;
-		std::cout << "Autonomous Initialized" << std::endl;
-		AutonomousBin();
-
-	}
-	// function for auto-bin
-	void AutonomousBin()
-	{
-		std::cout << "Autonomous Begin" << std::endl;
-		while(m_liftEncoder->Get()<1000){
-			//Solenoid is flipped; Forward = Reverse, <1 = >1
-			m_solenoid -> Set(m_solenoid-> kForward);
-			m_robotLift -> Set(-.5);
-			//Displays lift encoder for debugging purposes
-			std::cout << m_liftEncoder->Get() << std::endl;
-
-		}
-		std::cout << "Bin Lifted" << std::endl;
-		// Stops and locks lift
-		m_robotLift -> Set(0);
-		m_solenoid -> Set(m_solenoid-> kReverse);
-
-		toCenterOfAutoZoneTime();
-
-	}
-
-	//function for auto-zone move
-	 void toCenterOfAutoZoneTime(){
-	 	//time counter
-		while(counter < 5250){
-			m_robotDrive -> Drive(-.5,0);
+		while(counter<777){
+			m_RobotDrive->Drive(-0.2, 0);
 			counter++;
 		}
-		std::cout << "In Auto Zone" << std::endl;
-			//Stops robot, resets time counter
-			m_robotDrive -> Drive(0,0);
-			counter = 0;
-		std::cout << "Dropping Bin" << std::endl;
-		//Lowering Lift
-		while(m_liftEncoder -> Get()> 100){
-			m_solenoid -> Set(m_solenoid-> kForward);
-			m_robotLift -> Set(.5);
-		}
-		std::cout << "Bin Dropped" << std::endl;
-		//Stop and lock lift
-		m_robotLift -> Set(0);
-		m_solenoid -> Set(m_solenoid -> kReverse);
 		
-		//Drive backwards
-		while(counter < 800){
-			m_robotDrive -> Drive(.5,0);
-			counter++;
-		}
-		std::cout << "Backed Off" << std::endl;
-		m_robotDrive -> Drive(0,0);
+		m_RobotDrive->Drive(0, 0);	
 	}
 
 	//Periodic Function for Autonomous: Runs continuously in autonomous
