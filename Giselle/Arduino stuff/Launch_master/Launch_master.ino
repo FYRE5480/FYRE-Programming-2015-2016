@@ -19,7 +19,7 @@ void setup() {
 
 void loop() {
   Serial.println("Really in loop");
-  Wire.requestFrom(8, 1);    // request 8 bytes from slave device #8
+  Wire.requestFrom(8, 1);    // request 1 bytes from slave device #8
 
 //  while (Wire.available()) { // slave may send less than requested
 //    char c = Wire.read(); // receive a byte as character
