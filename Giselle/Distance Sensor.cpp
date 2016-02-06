@@ -3,11 +3,13 @@
 //#define I2C_SLAVE_ADR 0x53 // ADXL345 I2C device address
 #define I2C_SLAVE_ADR 168 // from this thread: http://www.chiefdelphi.com/forums/showthread.php?t=132572
 						  // We think this is the address of the Roborio.
-#define DEVICE   0x53 // ADXL345 I2C device address Theoretically 
-#define ADXL_REG 0x32 // first axis-acceleration-data register on the ADXL345
-#define TO_READ     6 // num of bytes we are going to read each time (two bytes for each axis)
+//#define DEVICE   0x53 // ADXL345 I2C device address
+//#define DEVICE 8 // for Arduino??? Maybe???
+//#define ADXL_REG 0x32 // first axis-acceleration-data register on the ADXL345
+#define ADXL_REG 8 // I am trying a thing.
+#define TO_READ     8 // num of bytes we are going to read each time (two bytes for each axis)
 #define I2C_CHANNEL 2 // The I2C bus on the upper left-hand side is bus 2
-#define ADXL_CONFIG_PORT 0x2D // the configuration port of the ADXL345
+//#define ADXL_CONFIG_PORT 0x2D // the configuration port of the ADXL345
 typedef unsigned char byte;
 
 class Robot: public IterativeRobot
@@ -136,11 +138,12 @@ private:
 		Load();
 		HighGoal();
 		LowGoal();
+		ReadDistance(); //KUFGHLIAEFWJK;M;AEWLKMOMAEW;LKMAEW;LKMC;LKM
 	}
 
 	void ReadDistance() { // THIS IS MY FUNCTIONA;FLKDMS;LKM F;DLKMF;LAKDSM;FLKMAD;SLMF;oifkmlads;flkadsg;lkafdsm;km
 		byte buff[TO_READ];
-		i2cChannel2->Read(ADXL_REG, TO_READ, buff);
+//		i2cChannel2->Read(ADXL_REG, TO_READ, buff);
 		SmartDashboard::PutNumber("i2c is", i2cChannel2->Read(ADXL_REG, TO_READ, buff));
 
 	}
