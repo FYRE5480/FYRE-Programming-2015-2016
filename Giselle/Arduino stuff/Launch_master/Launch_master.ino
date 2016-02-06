@@ -18,7 +18,7 @@ void setup() {
 }
 
 void loop() {
-  Serial.println("In loop");
+  Serial.println("Really in loop");
   Wire.requestFrom(8, 1);    // request 8 bytes from slave device #8
 
 //  while (Wire.available()) { // slave may send less than requested
@@ -26,9 +26,10 @@ void loop() {
 //    Serial.print(c);         // print the character
 //  }
   while(Wire.available()) {
-    int n = Wire.read();
+    long n = Wire.read();
     Serial.print(n);
   }
+//  Serial.print(Wire.read());
 
   delay(500);
 }
