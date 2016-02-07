@@ -26,7 +26,7 @@ void loop() {
 //    Serial.print(c);         // print the character
 //  }
   while(Wire.available()) {
-    long n = Wire.read();
+    int n = Wire.read();
     Serial.print(n);
   }
 //  Serial.print(Wire.read());
