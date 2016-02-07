@@ -12,7 +12,6 @@
 
 #include <Wire.h>
 
-int num = 0;
 int val;
 #define echoPin 7 // Echo Pin
 #define trigPin 8 // Trigger Pin
@@ -23,9 +22,7 @@ int minimumRange = 0; // Minimum range needed
 long duration, distance; // Duration used to calculate distance
   
 void setup() {
-  Serial.begin(9600);
-  Serial.println("Mega has started program");
-  
+  Serial.begin(9600);  
   Wire.begin(8);                // join i2c bus with address #8
   Wire.onRequest(requestEvent); // register event
 
@@ -52,18 +49,14 @@ void loop() {
   distance = duration/58.2;
   
   if (distance >= maximumRange || distance <= minimumRange){
-  /* Send a negative number to computer and Turn LED ON 
-  to indicate "out of range" */
+  /* Send a negative number to computer to indicate "out of range" */
   Serial.println("-1");
-  val = -1;
-//  digitalWrite(LEDPin, HIGH); 
+    val = -1;
   }
   else {
-  /* Send the distance to the computer using Serial protocol, and
-  turn LED OFF to indicate successful reading. */
+  /* Send the distance to the computer using Serial protocol to indicate successful reading. */
   Serial.println(distance);
-  val = distance;
-//  digitalWrite(LEDPin, LOW); 
+    val = distance;
   }
   
   //Delay 50ms before next reading.
@@ -74,10 +67,7 @@ void loop() {
 // this function is registered as an event, see setup()
 void requestEvent() {
   Serial.println("I am writing");
-  Serial.print(num + ": ");
   Serial.println(val);
-//  Wire.write("I am sending ");
   Wire.write(val); // respond with message of 8 bytes
   // as expected by master
-  num++;
 }
