@@ -1,0 +1,3 @@
+Previously: Mega (slave) and Launchpad (master, stand-in for Rio) will transmit proper distance number across I2C. (Except for -1, which puts across 255, which is weird because I changed literally nothing since it was sending across -1. And then I ran it again and it was properly -1. Who knows.) Put the Rio in the loop and it's not actually working yet. 
+
+16.02.10: I do actually have the proper port number in the current Rio code. (See? Wired correctly.) Figured out that the Rio isn't sending to the Mega (slave) the proper message to make the Mega send back the distance. To fix this . . . make the Rio write random stuff to the Mega and make the Mega send back on receiving literally anything? 
