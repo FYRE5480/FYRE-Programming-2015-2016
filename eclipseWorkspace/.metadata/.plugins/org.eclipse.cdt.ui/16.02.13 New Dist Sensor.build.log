@@ -1,10 +1,1 @@
-14:21:34 **** Rebuild of configuration Debug for project 16.02.13 New Dist Sensor ****
-Info: Internal Builder is used for build
-arm-frc-linux-gnueabi-g++ -std=c++1y "-IC:\\Users\\FYRE5480/wpilib/cpp/current/include" "-IC:\\Users\\FYRE5480\\Desktop\\FYRE-Programming-2015-2016\\eclipseWorkspace\\16.02.13 New Dist Sensor\\src" -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Robot.o" "..\\src\\Robot.cpp" 
-..\src\Robot.cpp: In member function 'void Robot::ReadDistance()':
-..\src\Robot.cpp:36:2: error: expected ';' before '}' token
-  }
-  ^
-
-14:21:41 Build Finished (took 7s.504ms)
-
+Info: Nothing to build for 16.02.13 New Dist Sensor

@@ -28,11 +28,12 @@ private:
 
 	void TeleopPeriodic()
 	{
-		ReadDistance();
+//		ReadDistance();
+		SmartDashboard::GetNumber("the distance from the distance sensor is", distanceSensor->GetAverageValue());
 	}
 
 	void ReadDistance() {
-		SmartDashboard::GetNumber("distance",distanceSensor->GetValue())
+		SmartDashboard::GetNumber("the distance from the distance sensor is", distanceSensor->GetValue());
 	}
 
 	void TestPeriodic()
