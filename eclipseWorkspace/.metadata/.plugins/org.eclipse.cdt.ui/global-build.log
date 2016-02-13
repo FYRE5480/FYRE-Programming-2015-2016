@@ -1,495 +1,54 @@
-21:59:19 **** Rebuild of configuration Debug for project 16.02.10 Distance Sensor Tester Code ****
-Info: Internal Builder is used for build
-arm-frc-linux-gnueabi-g++ -std=c++1y "-IC:\\Users\\gsera/wpilib/cpp/current/include" "-IC:\\Users\\gsera\\Desktop\\FYRE-Programming-2015-2016\\New folder\\16.02.10 Distance Sensor Tester Code\\src" -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Robot.o" "..\\src\\Robot.cpp" 
-arm-frc-linux-gnueabi-g++ "-LC:\\Users\\gsera/wpilib/cpp/current/lib" -Wl,-rpath,/opt/GenICam_v2_3/bin/Linux_armv7-a,-rpath,/usr/local/frc/rpath-lib -o FRCUserProgram "src\\Robot.o" -lwpi 
-22:00:27 **** Rebuild of configuration Debug for project 16.02.10 Distance Sensor Tester Code ****
-Info: Internal Builder is used for build
-arm-frc-linux-gnueabi-g++ -std=c++1y "-IC:\\Users\\gsera/wpilib/cpp/current/include" "-IC:\\Users\\gsera\\Desktop\\FYRE-Programming-2015-2016\\New folder\\16.02.10 Distance Sensor Tester Code\\src" -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Robot.o" "..\\src\\Robot.cpp" 
-..\src\Robot.cpp: In member function 'void Robot::ReadDistance()':
-..\src\Robot.cpp:154:8: warning: unused variable 'buff' [-Wunused-variable]
-   byte buff[TO_READ];
-        ^
-arm-frc-linux-gnueabi-g++ "-LC:\\Users\\gsera/wpilib/cpp/current/lib" -Wl,-rpath,/opt/GenICam_v2_3/bin/Linux_armv7-a,-rpath,/usr/local/frc/rpath-lib -o FRCUserProgram "src\\Robot.o" -lwpi 
-18:35:35 **** Incremental Build of configuration Debug for project 16.02.10 Distance Sensor Tester Code ****
-Info: Internal Builder is used for build
-arm-frc-linux-gnueabi-g++ -std=c++1y "-IC:\\Users\\gsera/wpilib/cpp/current/include" "-IC:\\Users\\gsera\\Desktop\\FYRE-Programming-2015-2016\\eclipseWorkspace\\16.02.10 Distance Sensor Tester Code\\src" -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Robot.o" "..\\src\\Robot.cpp" 
-..\src\Robot.cpp: In member function 'void Robot::ReadDistance()':
-..\src\Robot.cpp:154:8: warning: unused variable 'buff' [-Wunused-variable]
-   byte buff[TO_READ];
-        ^
-arm-frc-linux-gnueabi-g++ "-LC:\\Users\\gsera/wpilib/cpp/current/lib" -Wl,-rpath,/opt/GenICam_v2_3/bin/Linux_armv7-a,-rpath,/usr/local/frc/rpath-lib -o FRCUserProgram "src\\Robot.o" -lwpi 
-19:00:44 **** Incremental Build of configuration Debug for project 16.02.10 Distance Sensor Tester Code ****
-Info: Internal Builder is used for build
-arm-frc-linux-gnueabi-g++ -std=c++1y "-IC:\\Users\\FYRE5480/wpilib/cpp/current/include" "-IC:\\Users\\FYRE5480\\Desktop\\FYRE-Programming-2015-2016\\eclipseWorkspace\\16.02.10 Distance Sensor Tester Code\\src" -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Robot.o" "..\\src\\Robot.cpp" 
-..\src\Robot.cpp: In member function 'void Robot::ReadDistance()':
-..\src\Robot.cpp:154:8: warning: unused variable 'buff' [-Wunused-variable]
-   byte buff[TO_READ];
-        ^
-arm-frc-linux-gnueabi-g++ "-LC:\\Users\\FYRE5480/wpilib/cpp/current/lib" -Wl,-rpath,/opt/GenICam_v2_3/bin/Linux_armv7-a,-rpath,/usr/local/frc/rpath-lib -o FRCUserProgram "src\\Robot.o" -lwpi 
-Info: Nothing to build for 16.02.10 Distance Sensor Tester Code
-19:01:48 **** Incremental Build of configuration Debug for project 16.02.10 Distance Sensor Tester Code ****
-Info: Internal Builder is used for build
-arm-frc-linux-gnueabi-g++ -std=c++1y "-IC:\\Users\\FYRE5480/wpilib/cpp/current/include" "-IC:\\Users\\FYRE5480\\Desktop\\FYRE-Programming-2015-2016\\eclipseWorkspace\\16.02.10 Distance Sensor Tester Code\\src" -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Robot.o" "..\\src\\Robot.cpp" 
-..\src\Robot.cpp: In member function 'void Robot::ReadDistance()':
-..\src\Robot.cpp:162:47: error: no matching function for call to 'I2C::ReadOnly(int, int, uint8_t*&)'
-   i2cChannel2->ReadOnly(ADXL_REG, 1, holderPtr);
-                                               ^
-..\src\Robot.cpp:162:47: note: candidate is:
-In file included from C:\Users\FYRE5480/wpilib/cpp/current/include/ADXL345_I2C.h:11:0,
-                 from C:\Users\FYRE5480/wpilib/cpp/current/include/WPILib.h:15,
-                 from ..\src\Robot.cpp:1:
-C:\Users\FYRE5480/wpilib/cpp/current/include/I2C.h:35:8: note: bool I2C::ReadOnly(uint8_t, uint8_t*)
-   bool ReadOnly(uint8_t count, uint8_t *buffer);
-        ^
-C:\Users\FYRE5480/wpilib/cpp/current/include/I2C.h:35:8: note:   candidate expects 2 arguments, 3 provided
-..\src\Robot.cpp:154:8: warning: unused variable 'buff' [-Wunused-variable]
-   byte buff[TO_READ];
-        ^
-19:01:54 **** Incremental Build of configuration Debug for project 16.02.10 Distance Sensor Tester Code ****
-Info: Internal Builder is used for build
-arm-frc-linux-gnueabi-g++ -std=c++1y "-IC:\\Users\\FYRE5480/wpilib/cpp/current/include" "-IC:\\Users\\FYRE5480\\Desktop\\FYRE-Programming-2015-2016\\eclipseWorkspace\\16.02.10 Distance Sensor Tester Code\\src" -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Robot.o" "..\\src\\Robot.cpp" 
-..\src\Robot.cpp: In member function 'void Robot::ReadDistance()':
-..\src\Robot.cpp:162:47: error: no matching function for call to 'I2C::ReadOnly(int, int, uint8_t*&)'
-   i2cChannel2->ReadOnly(ADXL_REG, 1, holderPtr);
-                                               ^
-..\src\Robot.cpp:162:47: note: candidate is:
-In file included from C:\Users\FYRE5480/wpilib/cpp/current/include/ADXL345_I2C.h:11:0,
-                 from C:\Users\FYRE5480/wpilib/cpp/current/include/WPILib.h:15,
-                 from ..\src\Robot.cpp:1:
-C:\Users\FYRE5480/wpilib/cpp/current/include/I2C.h:35:8: note: bool I2C::ReadOnly(uint8_t, uint8_t*)
-   bool ReadOnly(uint8_t count, uint8_t *buffer);
-        ^
-C:\Users\FYRE5480/wpilib/cpp/current/include/I2C.h:35:8: note:   candidate expects 2 arguments, 3 provided
-..\src\Robot.cpp:154:8: warning: unused variable 'buff' [-Wunused-variable]
-   byte buff[TO_READ];
-        ^
-19:02:01 **** Incremental Build of configuration Debug for project 16.02.10 Distance Sensor Tester Code ****
-Info: Internal Builder is used for build
-arm-frc-linux-gnueabi-g++ -std=c++1y "-IC:\\Users\\FYRE5480/wpilib/cpp/current/include" "-IC:\\Users\\FYRE5480\\Desktop\\FYRE-Programming-2015-2016\\eclipseWorkspace\\16.02.10 Distance Sensor Tester Code\\src" -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Robot.o" "..\\src\\Robot.cpp" 
-..\src\Robot.cpp: In member function 'void Robot::ReadDistance()':
-..\src\Robot.cpp:162:47: error: no matching function for call to 'I2C::ReadOnly(int, int, uint8_t*&)'
-   i2cChannel2->ReadOnly(ADXL_REG, 1, holderPtr);
-                                               ^
-..\src\Robot.cpp:162:47: note: candidate is:
-In file included from C:\Users\FYRE5480/wpilib/cpp/current/include/ADXL345_I2C.h:11:0,
-                 from C:\Users\FYRE5480/wpilib/cpp/current/include/WPILib.h:15,
-                 from ..\src\Robot.cpp:1:
-C:\Users\FYRE5480/wpilib/cpp/current/include/I2C.h:35:8: note: bool I2C::ReadOnly(uint8_t, uint8_t*)
-   bool ReadOnly(uint8_t count, uint8_t *buffer);
-        ^
-C:\Users\FYRE5480/wpilib/cpp/current/include/I2C.h:35:8: note:   candidate expects 2 arguments, 3 provided
-..\src\Robot.cpp:154:8: warning: unused variable 'buff' [-Wunused-variable]
-   byte buff[TO_READ];
-        ^
-19:02:58 **** Incremental Build of configuration Debug for project 16.02.10 Distance Sensor Tester Code ****
-Info: Internal Builder is used for build
-arm-frc-linux-gnueabi-g++ -std=c++1y "-IC:\\Users\\FYRE5480/wpilib/cpp/current/include" "-IC:\\Users\\FYRE5480\\Desktop\\FYRE-Programming-2015-2016\\eclipseWorkspace\\16.02.10 Distance Sensor Tester Code\\src" -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Robot.o" "..\\src\\Robot.cpp" 
-..\src\Robot.cpp: In member function 'void Robot::ReadDistance()':
-..\src\Robot.cpp:162:36: error: invalid conversion from 'int' to 'uint8_t* {aka unsigned char*}' [-fpermissive]
-   i2cChannel2->ReadOnly(ADXL_REG, 1);
-                                    ^
-In file included from C:\Users\FYRE5480/wpilib/cpp/current/include/ADXL345_I2C.h:11:0,
-                 from C:\Users\FYRE5480/wpilib/cpp/current/include/WPILib.h:15,
-                 from ..\src\Robot.cpp:1:
-C:\Users\FYRE5480/wpilib/cpp/current/include/I2C.h:35:8: note: initializing argument 2 of 'bool I2C::ReadOnly(uint8_t, uint8_t*)'
-   bool ReadOnly(uint8_t count, uint8_t *buffer);
-        ^
-..\src\Robot.cpp:154:8: warning: unused variable 'buff' [-Wunused-variable]
-   byte buff[TO_READ];
-        ^
-19:03:31 **** Incremental Build of configuration Debug for project 16.02.10 Distance Sensor Tester Code ****
-Info: Internal Builder is used for build
-arm-frc-linux-gnueabi-g++ -std=c++1y "-IC:\\Users\\FYRE5480/wpilib/cpp/current/include" "-IC:\\Users\\FYRE5480\\Desktop\\FYRE-Programming-2015-2016\\eclipseWorkspace\\16.02.10 Distance Sensor Tester Code\\src" -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Robot.o" "..\\src\\Robot.cpp" 
-..\src\Robot.cpp: In member function 'void Robot::ReadDistance()':
-..\src\Robot.cpp:154:8: warning: unused variable 'buff' [-Wunused-variable]
-   byte buff[TO_READ];
-        ^
-arm-frc-linux-gnueabi-g++ "-LC:\\Users\\FYRE5480/wpilib/cpp/current/lib" -Wl,-rpath,/opt/GenICam_v2_3/bin/Linux_armv7-a,-rpath,/usr/local/frc/rpath-lib -o FRCUserProgram "src\\Robot.o" -lwpi 
-Info: Nothing to build for 16.02.10 Distance Sensor Tester Code
-Info: Nothing to build for 16.02.10 Distance Sensor Tester Code
-19:04:38 **** Incremental Build of configuration Debug for project 16.02.10 Distance Sensor Tester Code ****
-Info: Internal Builder is used for build
-arm-frc-linux-gnueabi-g++ -std=c++1y "-IC:\\Users\\FYRE5480/wpilib/cpp/current/include" "-IC:\\Users\\FYRE5480\\Desktop\\FYRE-Programming-2015-2016\\eclipseWorkspace\\16.02.10 Distance Sensor Tester Code\\src" -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Robot.o" "..\\src\\Robot.cpp" 
-..\src\Robot.cpp: In member function 'void Robot::ReadDistance()':
-..\src\Robot.cpp:154:8: warning: unused variable 'buff' [-Wunused-variable]
-   byte buff[TO_READ];
-        ^
-arm-frc-linux-gnueabi-g++ "-LC:\\Users\\FYRE5480/wpilib/cpp/current/lib" -Wl,-rpath,/opt/GenICam_v2_3/bin/Linux_armv7-a,-rpath,/usr/local/frc/rpath-lib -o FRCUserProgram "src\\Robot.o" -lwpi 
-Info: Nothing to build for 16.02.10 Distance Sensor Tester Code
-Info: Nothing to build for 16.02.10 Distance Sensor Tester Code
-19:06:05 **** Incremental Build of configuration Debug for project 16.02.10 Distance Sensor Tester Code ****
-Info: Internal Builder is used for build
-arm-frc-linux-gnueabi-g++ -std=c++1y "-IC:\\Users\\FYRE5480/wpilib/cpp/current/include" "-IC:\\Users\\FYRE5480\\Desktop\\FYRE-Programming-2015-2016\\eclipseWorkspace\\16.02.10 Distance Sensor Tester Code\\src" -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Robot.o" "..\\src\\Robot.cpp" 
-..\src\Robot.cpp: In member function 'void Robot::ReadDistance()':
-..\src\Robot.cpp:154:8: warning: unused variable 'buff' [-Wunused-variable]
-   byte buff[TO_READ];
-        ^
-arm-frc-linux-gnueabi-g++ "-LC:\\Users\\FYRE5480/wpilib/cpp/current/lib" -Wl,-rpath,/opt/GenICam_v2_3/bin/Linux_armv7-a,-rpath,/usr/local/frc/rpath-lib -o FRCUserProgram "src\\Robot.o" -lwpi 
-Info: Nothing to build for 16.02.10 Distance Sensor Tester Code
-Info: Nothing to build for 16.02.10 Distance Sensor Tester Code
-19:07:08 **** Incremental Build of configuration Debug for project 16.02.10 Distance Sensor Tester Code ****
-Info: Internal Builder is used for build
-arm-frc-linux-gnueabi-g++ -std=c++1y "-IC:\\Users\\FYRE5480/wpilib/cpp/current/include" "-IC:\\Users\\FYRE5480\\Desktop\\FYRE-Programming-2015-2016\\eclipseWorkspace\\16.02.10 Distance Sensor Tester Code\\src" -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Robot.o" "..\\src\\Robot.cpp" 
-..\src\Robot.cpp: In member function 'void Robot::ReadDistance()':
-..\src\Robot.cpp:154:8: warning: unused variable 'buff' [-Wunused-variable]
-   byte buff[TO_READ];
-        ^
-arm-frc-linux-gnueabi-g++ "-LC:\\Users\\FYRE5480/wpilib/cpp/current/lib" -Wl,-rpath,/opt/GenICam_v2_3/bin/Linux_armv7-a,-rpath,/usr/local/frc/rpath-lib -o FRCUserProgram "src\\Robot.o" -lwpi 
-Info: Nothing to build for 16.02.10 Distance Sensor Tester Code
-Info: Nothing to build for 16.02.10 Distance Sensor Tester Code
-19:19:21 **** Rebuild of configuration Debug for project 16.02.12 Cleaned And Stuff ****
-Info: Internal Builder is used for build
-arm-frc-linux-gnueabi-g++ -std=c++1y "-IC:\\Users\\FYRE5480/wpilib/cpp/current/include" "-IC:\\Users\\FYRE5480\\Desktop\\FYRE-Programming-2015-2016\\eclipseWorkspace\\16.02.12 Cleaned And Stuff\\src" -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Robot.o" "..\\src\\Robot.cpp" 
-arm-frc-linux-gnueabi-g++ "-LC:\\Users\\FYRE5480/wpilib/cpp/current/lib" -Wl,-rpath,/opt/GenICam_v2_3/bin/Linux_armv7-a,-rpath,/usr/local/frc/rpath-lib -o FRCUserProgram "src\\Robot.o" -lwpi 
-Info: Nothing to build for 16.02.10 Distance Sensor Tester Code
-19:23:21 **** Rebuild of configuration Debug for project 16.02.12 Cleaned And Stuff ****
-Info: Internal Builder is used for build
-arm-frc-linux-gnueabi-g++ -std=c++1y "-IC:\\Users\\FYRE5480/wpilib/cpp/current/include" "-IC:\\Users\\FYRE5480\\Desktop\\FYRE-Programming-2015-2016\\eclipseWorkspace\\16.02.12 Cleaned And Stuff\\src" -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Robot.o" "..\\src\\Robot.cpp" 
-..\src\Robot.cpp: In member function 'void Robot::ReadDistance()':
-..\src\Robot.cpp:48:8: warning: unused variable 'buff' [-Wunused-variable]
-   byte buff[TO_READ];
-        ^
-arm-frc-linux-gnueabi-g++ "-LC:\\Users\\FYRE5480/wpilib/cpp/current/lib" -Wl,-rpath,/opt/GenICam_v2_3/bin/Linux_armv7-a,-rpath,/usr/local/frc/rpath-lib -o FRCUserProgram "src\\Robot.o" -lwpi 
-Info: Nothing to build for 16.02.10 Distance Sensor Tester Code
-19:23:59 **** Incremental Build of configuration Debug for project 16.02.12 Cleaned And Stuff ****
-Info: Internal Builder is used for build
-arm-frc-linux-gnueabi-g++ -std=c++1y "-IC:\\Users\\FYRE5480/wpilib/cpp/current/include" "-IC:\\Users\\FYRE5480\\Desktop\\FYRE-Programming-2015-2016\\eclipseWorkspace\\16.02.12 Cleaned And Stuff\\src" -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Robot.o" "..\\src\\Robot.cpp" 
-arm-frc-linux-gnueabi-g++ "-LC:\\Users\\FYRE5480/wpilib/cpp/current/lib" -Wl,-rpath,/opt/GenICam_v2_3/bin/Linux_armv7-a,-rpath,/usr/local/frc/rpath-lib -o FRCUserProgram "src\\Robot.o" -lwpi 
-Info: Nothing to build for 16.02.10 Distance Sensor Tester Code
-Info: Nothing to build for 16.02.12 Cleaned And Stuff
-Info: Nothing to build for 16.02.12 Cleaned And Stuff
-Info: Nothing to build for 16.02.10 Distance Sensor Tester Code
-Info: Nothing to build for 16.02.12 Cleaned And Stuff
-Info: Nothing to build for 16.02.12 Cleaned And Stuff
-Info: Nothing to build for 16.02.10 Distance Sensor Tester Code
-Info: Nothing to build for 16.02.12 Cleaned And Stuff
-Info: Nothing to build for 16.02.12 Cleaned And Stuff
-Info: Nothing to build for 16.02.10 Distance Sensor Tester Code
-Info: Nothing to build for 16.02.12 Cleaned And Stuff
-19:31:34 **** Incremental Build of configuration Debug for project 16.02.12 Cleaned And Stuff ****
-Info: Internal Builder is used for build
-arm-frc-linux-gnueabi-g++ -std=c++1y "-IC:\\Users\\FYRE5480/wpilib/cpp/current/include" "-IC:\\Users\\FYRE5480\\Desktop\\FYRE-Programming-2015-2016\\eclipseWorkspace\\16.02.12 Cleaned And Stuff\\src" -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Robot.o" "..\\src\\Robot.cpp" 
-arm-frc-linux-gnueabi-g++ "-LC:\\Users\\FYRE5480/wpilib/cpp/current/lib" -Wl,-rpath,/opt/GenICam_v2_3/bin/Linux_armv7-a,-rpath,/usr/local/frc/rpath-lib -o FRCUserProgram "src\\Robot.o" -lwpi 
-Info: Nothing to build for 16.02.10 Distance Sensor Tester Code
-Info: Nothing to build for 16.02.12 Cleaned And Stuff
-Info: Nothing to build for 16.02.12 Cleaned And Stuff
-Info: Nothing to build for 16.02.10 Distance Sensor Tester Code
-Info: Nothing to build for 16.02.12 Cleaned And Stuff
-Info: Nothing to build for 16.02.12 Cleaned And Stuff
-Info: Nothing to build for 16.02.10 Distance Sensor Tester Code
-Info: Nothing to build for 16.02.12 Cleaned And Stuff
-Info: Nothing to build for 16.02.12 Cleaned And Stuff
-Info: Nothing to build for 16.02.10 Distance Sensor Tester Code
-Info: Nothing to build for 16.02.12 Cleaned And Stuff
-Info: Nothing to build for 16.02.12 Cleaned And Stuff
-Info: Nothing to build for 16.02.10 Distance Sensor Tester Code
-Info: Nothing to build for 16.02.12 Cleaned And Stuff
-Info: Nothing to build for 16.02.12 Cleaned And Stuff
-Info: Nothing to build for 16.02.10 Distance Sensor Tester Code
-Info: Nothing to build for 16.02.12 Cleaned And Stuff
-19:52:57 **** Incremental Build of configuration Debug for project 16.02.12 Cleaned And Stuff ****
-Info: Internal Builder is used for build
-arm-frc-linux-gnueabi-g++ -std=c++1y "-IC:\\Users\\FYRE5480/wpilib/cpp/current/include" "-IC:\\Users\\FYRE5480\\Desktop\\FYRE-Programming-2015-2016\\eclipseWorkspace\\16.02.12 Cleaned And Stuff\\src" -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Robot.o" "..\\src\\Robot.cpp" 
-arm-frc-linux-gnueabi-g++ "-LC:\\Users\\FYRE5480/wpilib/cpp/current/lib" -Wl,-rpath,/opt/GenICam_v2_3/bin/Linux_armv7-a,-rpath,/usr/local/frc/rpath-lib -o FRCUserProgram "src\\Robot.o" -lwpi 
-Info: Nothing to build for 16.02.10 Distance Sensor Tester Code
-Info: Nothing to build for 16.02.12 Cleaned And Stuff
-Info: Nothing to build for 16.02.12 Cleaned And Stuff
-Info: Nothing to build for 16.02.10 Distance Sensor Tester Code
-19:54:19 **** Incremental Build of configuration Debug for project 16.02.12 Cleaned And Stuff ****
-Info: Internal Builder is used for build
-arm-frc-linux-gnueabi-g++ -std=c++1y "-IC:\\Users\\FYRE5480/wpilib/cpp/current/include" "-IC:\\Users\\FYRE5480\\Desktop\\FYRE-Programming-2015-2016\\eclipseWorkspace\\16.02.12 Cleaned And Stuff\\src" -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Robot.o" "..\\src\\Robot.cpp" 
-arm-frc-linux-gnueabi-g++ "-LC:\\Users\\FYRE5480/wpilib/cpp/current/lib" -Wl,-rpath,/opt/GenICam_v2_3/bin/Linux_armv7-a,-rpath,/usr/local/frc/rpath-lib -o FRCUserProgram "src\\Robot.o" -lwpi 
-19:59:31 **** Incremental Build of configuration Debug for project 16.02.12 Cleaned And Stuff ****
-Info: Internal Builder is used for build
-arm-frc-linux-gnueabi-g++ -std=c++1y "-IC:\\Users\\FYRE5480/wpilib/cpp/current/include" "-IC:\\Users\\FYRE5480\\Desktop\\FYRE-Programming-2015-2016\\eclipseWorkspace\\16.02.12 Cleaned And Stuff\\src" -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Robot.o" "..\\src\\Robot.cpp" 
-arm-frc-linux-gnueabi-g++ "-LC:\\Users\\FYRE5480/wpilib/cpp/current/lib" -Wl,-rpath,/opt/GenICam_v2_3/bin/Linux_armv7-a,-rpath,/usr/local/frc/rpath-lib -o FRCUserProgram "src\\Robot.o" -lwpi 
-Info: Nothing to build for 16.02.10 Distance Sensor Tester Code
-Info: Nothing to build for 16.02.12 Cleaned And Stuff
-Info: Nothing to build for 16.02.12 Cleaned And Stuff
-Info: Nothing to build for 16.02.10 Distance Sensor Tester Code
-Info: Nothing to build for 16.02.12 Cleaned And Stuff
-20:01:55 **** Incremental Build of configuration Debug for project 16.02.12 Cleaned And Stuff ****
-Info: Internal Builder is used for build
-arm-frc-linux-gnueabi-g++ -std=c++1y "-IC:\\Users\\FYRE5480/wpilib/cpp/current/include" "-IC:\\Users\\FYRE5480\\Desktop\\FYRE-Programming-2015-2016\\eclipseWorkspace\\16.02.12 Cleaned And Stuff\\src" -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Robot.o" "..\\src\\Robot.cpp" 
-arm-frc-linux-gnueabi-g++ "-LC:\\Users\\FYRE5480/wpilib/cpp/current/lib" -Wl,-rpath,/opt/GenICam_v2_3/bin/Linux_armv7-a,-rpath,/usr/local/frc/rpath-lib -o FRCUserProgram "src\\Robot.o" -lwpi 
-Info: Nothing to build for 16.02.10 Distance Sensor Tester Code
-Info: Nothing to build for 16.02.12 Cleaned And Stuff
-20:04:21 **** Rebuild of configuration Debug for project 16.02.12 Please Run ****
-Info: Internal Builder is used for build
-arm-frc-linux-gnueabi-g++ -std=c++1y "-IC:\\Users\\FYRE5480/wpilib/cpp/current/include" "-IC:\\Users\\FYRE5480\\Desktop\\FYRE-Programming-2015-2016\\eclipseWorkspace\\16.02.12 Please Run\\src" -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Robot.o" "..\\src\\Robot.cpp" 
-arm-frc-linux-gnueabi-g++ "-LC:\\Users\\FYRE5480/wpilib/cpp/current/lib" -Wl,-rpath,/opt/GenICam_v2_3/bin/Linux_armv7-a,-rpath,/usr/local/frc/rpath-lib -o FRCUserProgram "src\\Robot.o" -lwpi 
-20:05:14 **** Rebuild of configuration Debug for project 16.02.12 Please Run ****
-Info: Internal Builder is used for build
-arm-frc-linux-gnueabi-g++ -std=c++1y "-IC:\\Users\\FYRE5480/wpilib/cpp/current/include" "-IC:\\Users\\FYRE5480\\Desktop\\FYRE-Programming-2015-2016\\eclipseWorkspace\\16.02.12 Please Run\\src" -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Robot.o" "..\\src\\Robot.cpp" 
-arm-frc-linux-gnueabi-g++ "-LC:\\Users\\FYRE5480/wpilib/cpp/current/lib" -Wl,-rpath,/opt/GenICam_v2_3/bin/Linux_armv7-a,-rpath,/usr/local/frc/rpath-lib -o FRCUserProgram "src\\Robot.o" -lwpi 
-Info: Nothing to build for 16.02.10 Distance Sensor Tester Code
-Info: Nothing to build for 16.02.12 Cleaned And Stuff
-Info: Nothing to build for 16.02.12 Please Run
-20:08:42 **** Incremental Build of configuration Debug for project 16.02.12 Cleaned And Stuff ****
-Info: Internal Builder is used for build
-arm-frc-linux-gnueabi-g++ -std=c++1y "-IC:\\Users\\FYRE5480/wpilib/cpp/current/include" "-IC:\\Users\\FYRE5480\\Desktop\\FYRE-Programming-2015-2016\\eclipseWorkspace\\16.02.12 Cleaned And Stuff\\src" -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Robot.o" "..\\src\\Robot.cpp" 
-arm-frc-linux-gnueabi-g++ "-LC:\\Users\\FYRE5480/wpilib/cpp/current/lib" -Wl,-rpath,/opt/GenICam_v2_3/bin/Linux_armv7-a,-rpath,/usr/local/frc/rpath-lib -o FRCUserProgram "src\\Robot.o" -lwpi 
-Info: Nothing to build for 16.02.10 Distance Sensor Tester Code
-Info: Nothing to build for 16.02.12 Cleaned And Stuff
-Info: Nothing to build for 16.02.12 Please Run
-20:11:10 **** Incremental Build of configuration Debug for project 16.02.12 Cleaned And Stuff ****
-Info: Internal Builder is used for build
-arm-frc-linux-gnueabi-g++ -std=c++1y "-IC:\\Users\\FYRE5480/wpilib/cpp/current/include" "-IC:\\Users\\FYRE5480\\Desktop\\FYRE-Programming-2015-2016\\eclipseWorkspace\\16.02.12 Cleaned And Stuff\\src" -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Robot.o" "..\\src\\Robot.cpp" 
-arm-frc-linux-gnueabi-g++ "-LC:\\Users\\FYRE5480/wpilib/cpp/current/lib" -Wl,-rpath,/opt/GenICam_v2_3/bin/Linux_armv7-a,-rpath,/usr/local/frc/rpath-lib -o FRCUserProgram "src\\Robot.o" -lwpi 
-Info: Nothing to build for 16.02.10 Distance Sensor Tester Code
-Info: Nothing to build for 16.02.12 Cleaned And Stuff
-Info: Nothing to build for 16.02.12 Please Run
-Info: Nothing to build for 16.02.10 Distance Sensor Tester Code
-Info: Nothing to build for 16.02.10 Distance Sensor Tester Code
-Info: Nothing to build for 16.02.12 Cleaned And Stuff
-Info: Nothing to build for 16.02.12 Please Run
-20:15:06 **** Incremental Build of configuration Debug for project 16.02.12 Cleaned And Stuff ****
-Info: Internal Builder is used for build
-arm-frc-linux-gnueabi-g++ -std=c++1y "-IC:\\Users\\FYRE5480/wpilib/cpp/current/include" "-IC:\\Users\\FYRE5480\\Desktop\\FYRE-Programming-2015-2016\\eclipseWorkspace\\16.02.12 Cleaned And Stuff\\src" -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Robot.o" "..\\src\\Robot.cpp" 
-arm-frc-linux-gnueabi-g++ "-LC:\\Users\\FYRE5480/wpilib/cpp/current/lib" -Wl,-rpath,/opt/GenICam_v2_3/bin/Linux_armv7-a,-rpath,/usr/local/frc/rpath-lib -o FRCUserProgram "src\\Robot.o" -lwpi 
-Info: Nothing to build for 16.02.10 Distance Sensor Tester Code
-Info: Nothing to build for 16.02.12 Cleaned And Stuff
-Info: Nothing to build for 16.02.12 Please Run
-10:05:17 **** Rebuild of configuration Debug for project 16.02.13 DIO Testing ****
-Info: Internal Builder is used for build
-arm-frc-linux-gnueabi-g++ -std=c++1y "-IC:\\Users\\gsera/wpilib/cpp/current/include" "-IC:\\Users\\gsera\\Desktop\\FYRE-Programming-2015-2016\\eclipseWorkspace\\16.02.13 DIO Testing\\src" -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Robot.o" "..\\src\\Robot.cpp" 
-arm-frc-linux-gnueabi-g++ "-LC:\\Users\\gsera/wpilib/cpp/current/lib" -Wl,-rpath,/opt/GenICam_v2_3/bin/Linux_armv7-a,-rpath,/usr/local/frc/rpath-lib -o FRCUserProgram "src\\Robot.o" -lwpi 
-10:37:24 **** Incremental Build of configuration Debug for project 16.02.10 Distance Sensor Tester Code ****
-Info: Internal Builder is used for build
-arm-frc-linux-gnueabi-g++ -std=c++1y "-IC:\\Users\\gsera/wpilib/cpp/current/include" "-IC:\\Users\\gsera\\Desktop\\FYRE-Programming-2015-2016\\eclipseWorkspace\\16.02.10 Distance Sensor Tester Code\\src" -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Robot.o" "..\\src\\Robot.cpp" 
-..\src\Robot.cpp: In member function 'void Robot::ReadDistance()':
-..\src\Robot.cpp:154:8: warning: unused variable 'buff' [-Wunused-variable]
-   byte buff[TO_READ];
-        ^
-arm-frc-linux-gnueabi-g++ "-LC:\\Users\\gsera/wpilib/cpp/current/lib" -Wl,-rpath,/opt/GenICam_v2_3/bin/Linux_armv7-a,-rpath,/usr/local/frc/rpath-lib -o FRCUserProgram "src\\Robot.o" -lwpi 
-10:37:27 **** Rebuild of configuration Debug for project 16.02.12 Cleaned And Stuff ****
-Info: Internal Builder is used for build
-arm-frc-linux-gnueabi-g++ -std=c++1y "-IC:\\Users\\gsera/wpilib/cpp/current/include" "-IC:\\Users\\gsera\\Desktop\\FYRE-Programming-2015-2016\\eclipseWorkspace\\16.02.12 Cleaned And Stuff\\src" -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Robot.o" "..\\src\\Robot.cpp" 
-arm-frc-linux-gnueabi-g++ "-LC:\\Users\\gsera/wpilib/cpp/current/lib" -Wl,-rpath,/opt/GenICam_v2_3/bin/Linux_armv7-a,-rpath,/usr/local/frc/rpath-lib -o FRCUserProgram "src\\Robot.o" -lwpi 
-10:37:30 **** Rebuild of configuration Debug for project 16.02.12 Please Run ****
-Info: Internal Builder is used for build
-arm-frc-linux-gnueabi-g++ -std=c++1y "-IC:\\Users\\gsera/wpilib/cpp/current/include" "-IC:\\Users\\gsera\\Desktop\\FYRE-Programming-2015-2016\\eclipseWorkspace\\16.02.12 Please Run\\src" -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Robot.o" "..\\src\\Robot.cpp" 
-arm-frc-linux-gnueabi-g++ "-LC:\\Users\\gsera/wpilib/cpp/current/lib" -Wl,-rpath,/opt/GenICam_v2_3/bin/Linux_armv7-a,-rpath,/usr/local/frc/rpath-lib -o FRCUserProgram "src\\Robot.o" -lwpi 
-10:37:32 **** Rebuild of configuration Debug for project 16.02.13 DIO Testing ****
-Info: Internal Builder is used for build
-arm-frc-linux-gnueabi-g++ -std=c++1y "-IC:\\Users\\gsera/wpilib/cpp/current/include" "-IC:\\Users\\gsera\\Desktop\\FYRE-Programming-2015-2016\\eclipseWorkspace\\16.02.13 DIO Testing\\src" -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Robot.o" "..\\src\\Robot.cpp" 
-..\src\Robot.cpp: In member function 'void Robot::ReadDistance()':
-..\src\Robot.cpp:69:17: error: 'delay' was not declared in this scope
-   delay(0.000002); // 2 microseconds
-                 ^
-..\src\Robot.cpp:81:3: error: 'distance' was not declared in this scope
-   distance = duration/58.2;
-   ^
-..\src\Robot.cpp:81:3: note: suggested alternative:
-In file included from c:\frc\arm-frc-linux-gnueabi\include\c++\4.9.3\bits\stl_algobase.h:66:0,
-                 from c:\frc\arm-frc-linux-gnueabi\include\c++\4.9.3\bits\char_traits.h:39,
-                 from c:\frc\arm-frc-linux-gnueabi\include\c++\4.9.3\ios:40,
-                 from c:\frc\arm-frc-linux-gnueabi\include\c++\4.9.3\ostream:38,
-                 from c:\frc\arm-frc-linux-gnueabi\include\c++\4.9.3\iostream:39,
-                 from C:\Users\gsera/wpilib/cpp/current/include/WPILib.h:13,
-                 from ..\src\Robot.cpp:1:
-c:\frc\arm-frc-linux-gnueabi\include\c++\4.9.3\bits\stl_iterator_base_funcs.h:114:5: note:   'std::distance'
-     distance(_InputIterator __first, _InputIterator __last)
-     ^
-..\src\Robot.cpp:81:14: error: 'duration' was not declared in this scope
-   distance = duration/58.2;
-              ^
-..\src\Robot.cpp:81:14: note: suggested alternative:
-In file included from c:\frc\arm-frc-linux-gnueabi\include\c++\4.9.3\mutex:39:0,
-                 from C:\Users\gsera/wpilib/cpp/current/include/HAL/cpp/priority_mutex.h:11,
-                 from C:\Users\gsera/wpilib/cpp/current/include/ErrorBase.h:13,
-                 from C:\Users\gsera/wpilib/cpp/current/include/SensorBase.h:10,
-                 from C:\Users\gsera/wpilib/cpp/current/include/I2C.h:10,
-                 from C:\Users\gsera/wpilib/cpp/current/include/ADXL345_I2C.h:11,
-                 from C:\Users\gsera/wpilib/cpp/current/include/WPILib.h:15,
-                 from ..\src\Robot.cpp:1:
-c:\frc\arm-frc-linux-gnueabi\include\c++\4.9.3\chrono:64:14: note:   'std::chrono::duration'
-       struct duration;
-              ^
-..\src\Robot.cpp:83:19: error: 'maximumRange' was not declared in this scope
-   if (distance >= maximumRange || distance <= minimumRange){
-                   ^
-..\src\Robot.cpp:83:47: error: 'minimumRange' was not declared in this scope
-   if (distance >= maximumRange || distance <= minimumRange){
-                                               ^
-..\src\Robot.cpp:85:3: error: 'Serial' was not declared in this scope
-   Serial.println("-1");
-   ^
-..\src\Robot.cpp:86:3: error: 'val' was not declared in this scope
-   val = -1;
-   ^
-..\src\Robot.cpp:90:3: error: 'Serial' was not declared in this scope
-   Serial.println(distance);
-   ^
-..\src\Robot.cpp:91:3: error: 'val' was not declared in this scope
-   val = distance;
-   ^
-Info: Nothing to build for 16.02.10 Distance Sensor Tester Code
-Info: Nothing to build for 16.02.12 Cleaned And Stuff
-Info: Nothing to build for 16.02.12 Please Run
-10:55:15 **** Incremental Build of configuration Debug for project 16.02.13 DIO Testing ****
-Info: Internal Builder is used for build
-arm-frc-linux-gnueabi-g++ -std=c++1y "-IC:\\Users\\gsera/wpilib/cpp/current/include" "-IC:\\Users\\gsera\\Desktop\\FYRE-Programming-2015-2016\\eclipseWorkspace\\16.02.13 DIO Testing\\src" -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Robot.o" "..\\src\\Robot.cpp" 
-..\src\Robot.cpp: In member function 'void Robot::ReadDistance()':
-..\src\Robot.cpp:76:19: error: request for member 'HasPeriodPassed' in '((Robot*)this)->Robot::distTimer', which is of pointer type 'Timer*' (maybe you meant to use '->' ?)
-   while(distTimer.HasPeriodPassed(0.000002) == 0) {
-                   ^
-..\src\Robot.cpp:84:19: error: request for member 'HasPeriodPassed' in '((Robot*)this)->Robot::distTimer', which is of pointer type 'Timer*' (maybe you meant to use '->' ?)
-   while(distTimer.HasPeriodPassed(0.000010) == 0) {
-                   ^
-..\src\Robot.cpp:93:42: error: request for member 'HasPeriodPassed' in '((Robot*)this)->Robot::distTimer', which is of pointer type 'Timer*' (maybe you meant to use '->' ?)
-   while(echoPin->Get() == 0 && distTimer.HasPeriodPassed(0.5) == 1) {
-                                          ^
-Info: Nothing to build for 16.02.10 Distance Sensor Tester Code
-Info: Nothing to build for 16.02.12 Cleaned And Stuff
-Info: Nothing to build for 16.02.12 Please Run
-10:55:40 **** Incremental Build of configuration Debug for project 16.02.13 DIO Testing ****
-Info: Internal Builder is used for build
-arm-frc-linux-gnueabi-g++ -std=c++1y "-IC:\\Users\\gsera/wpilib/cpp/current/include" "-IC:\\Users\\gsera\\Desktop\\FYRE-Programming-2015-2016\\eclipseWorkspace\\16.02.13 DIO Testing\\src" -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Robot.o" "..\\src\\Robot.cpp" 
-..\src\Robot.cpp: In member function 'void Robot::ReadDistance()':
-..\src\Robot.cpp:76:19: error: request for member 'HasPeriodPassed' in '((Robot*)this)->Robot::distTimer', which is of pointer type 'Timer*' (maybe you meant to use '->' ?)
-   while(distTimer.HasPeriodPassed(0.000002) == 0) {
-                   ^
-..\src\Robot.cpp:84:19: error: request for member 'HasPeriodPassed' in '((Robot*)this)->Robot::distTimer', which is of pointer type 'Timer*' (maybe you meant to use '->' ?)
-   while(distTimer.HasPeriodPassed(0.000010) == 0) {
-                   ^
-11:01:06 **** Rebuild of configuration Debug for project 16.02.10 Distance Sensor Tester Code ****
-Info: Internal Builder is used for build
-arm-frc-linux-gnueabi-g++ -std=c++1y "-IC:\\Users\\FYRE5480/wpilib/cpp/current/include" "-IC:\\Users\\FYRE5480\\Desktop\\FYRE-Programming-2015-2016\\eclipseWorkspace\\16.02.10 Distance Sensor Tester Code\\src" -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Robot.o" "..\\src\\Robot.cpp" 
-..\src\Robot.cpp: In member function 'void Robot::ReadDistance()':
-..\src\Robot.cpp:154:8: warning: unused variable 'buff' [-Wunused-variable]
-   byte buff[TO_READ];
-        ^
-arm-frc-linux-gnueabi-g++ "-LC:\\Users\\FYRE5480/wpilib/cpp/current/lib" -Wl,-rpath,/opt/GenICam_v2_3/bin/Linux_armv7-a,-rpath,/usr/local/frc/rpath-lib -o FRCUserProgram "src\\Robot.o" -lwpi 
-11:01:22 **** Rebuild of configuration Debug for project 16.02.12 Cleaned And Stuff ****
-Info: Internal Builder is used for build
-arm-frc-linux-gnueabi-g++ -std=c++1y "-IC:\\Users\\FYRE5480/wpilib/cpp/current/include" "-IC:\\Users\\FYRE5480\\Desktop\\FYRE-Programming-2015-2016\\eclipseWorkspace\\16.02.12 Cleaned And Stuff\\src" -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Robot.o" "..\\src\\Robot.cpp" 
-arm-frc-linux-gnueabi-g++ "-LC:\\Users\\FYRE5480/wpilib/cpp/current/lib" -Wl,-rpath,/opt/GenICam_v2_3/bin/Linux_armv7-a,-rpath,/usr/local/frc/rpath-lib -o FRCUserProgram "src\\Robot.o" -lwpi 
-11:01:35 **** Rebuild of configuration Debug for project 16.02.12 Please Run ****
-Info: Internal Builder is used for build
-arm-frc-linux-gnueabi-g++ -std=c++1y "-IC:\\Users\\FYRE5480/wpilib/cpp/current/include" "-IC:\\Users\\FYRE5480\\Desktop\\FYRE-Programming-2015-2016\\eclipseWorkspace\\16.02.12 Please Run\\src" -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Robot.o" "..\\src\\Robot.cpp" 
-arm-frc-linux-gnueabi-g++ "-LC:\\Users\\FYRE5480/wpilib/cpp/current/lib" -Wl,-rpath,/opt/GenICam_v2_3/bin/Linux_armv7-a,-rpath,/usr/local/frc/rpath-lib -o FRCUserProgram "src\\Robot.o" -lwpi 
-11:01:47 **** Rebuild of configuration Debug for project 16.02.13 DIO Testing ****
-Info: Internal Builder is used for build
-arm-frc-linux-gnueabi-g++ -std=c++1y "-IC:\\Users\\FYRE5480/wpilib/cpp/current/include" "-IC:\\Users\\FYRE5480\\Desktop\\FYRE-Programming-2015-2016\\eclipseWorkspace\\16.02.13 DIO Testing\\src" -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Robot.o" "..\\src\\Robot.cpp" 
-..\src\Robot.cpp: In member function 'void Robot::ReadDistance()':
-..\src\Robot.cpp:76:19: error: request for member 'HasPeriodPassed' in '((Robot*)this)->Robot::distTimer', which is of pointer type 'Timer*' (maybe you meant to use '->' ?)
-   while(distTimer.HasPeriodPassed(0.000002) == 0) {
-                   ^
-..\src\Robot.cpp:84:19: error: request for member 'HasPeriodPassed' in '((Robot*)this)->Robot::distTimer', which is of pointer type 'Timer*' (maybe you meant to use '->' ?)
-   while(distTimer.HasPeriodPassed(0.000010) == 0) {
-                   ^
-Info: Nothing to build for 16.02.10 Distance Sensor Tester Code
-Info: Nothing to build for 16.02.12 Cleaned And Stuff
-Info: Nothing to build for 16.02.12 Please Run
-11:02:25 **** Incremental Build of configuration Debug for project 16.02.13 DIO Testing ****
-Info: Internal Builder is used for build
-arm-frc-linux-gnueabi-g++ -std=c++1y "-IC:\\Users\\FYRE5480/wpilib/cpp/current/include" "-IC:\\Users\\FYRE5480\\Desktop\\FYRE-Programming-2015-2016\\eclipseWorkspace\\16.02.13 DIO Testing\\src" -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Robot.o" "..\\src\\Robot.cpp" 
-arm-frc-linux-gnueabi-g++ "-LC:\\Users\\FYRE5480/wpilib/cpp/current/lib" -Wl,-rpath,/opt/GenICam_v2_3/bin/Linux_armv7-a,-rpath,/usr/local/frc/rpath-lib -o FRCUserProgram "src\\Robot.o" -lwpi 
-Info: Nothing to build for 16.02.10 Distance Sensor Tester Code
-Info: Nothing to build for 16.02.12 Cleaned And Stuff
-Info: Nothing to build for 16.02.12 Please Run
-Info: Nothing to build for 16.02.13 DIO Testing
-Info: Nothing to build for 16.02.13 DIO Testing
-Info: Nothing to build for 16.02.13 DIO Testing
-Info: Nothing to build for 16.02.13 DIO Testing
-Info: Nothing to build for 16.02.13 DIO Testing
-11:07:56 **** Incremental Build of configuration Debug for project 16.02.13 DIO Testing ****
-Info: Internal Builder is used for build
-arm-frc-linux-gnueabi-g++ -std=c++1y "-IC:\\Users\\FYRE5480/wpilib/cpp/current/include" "-IC:\\Users\\FYRE5480\\Desktop\\FYRE-Programming-2015-2016\\eclipseWorkspace\\16.02.13 DIO Testing\\src" -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Robot.o" "..\\src\\Robot.cpp" 
-arm-frc-linux-gnueabi-g++ "-LC:\\Users\\FYRE5480/wpilib/cpp/current/lib" -Wl,-rpath,/opt/GenICam_v2_3/bin/Linux_armv7-a,-rpath,/usr/local/frc/rpath-lib -o FRCUserProgram "src\\Robot.o" -lwpi 
-Info: Nothing to build for 16.02.13 DIO Testing
-11:11:04 **** Incremental Build of configuration Debug for project 16.02.13 DIO Testing ****
-Info: Internal Builder is used for build
-arm-frc-linux-gnueabi-g++ -std=c++1y "-IC:\\Users\\FYRE5480/wpilib/cpp/current/include" "-IC:\\Users\\FYRE5480\\Desktop\\FYRE-Programming-2015-2016\\eclipseWorkspace\\16.02.13 DIO Testing\\src" -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Robot.o" "..\\src\\Robot.cpp" 
-arm-frc-linux-gnueabi-g++ "-LC:\\Users\\FYRE5480/wpilib/cpp/current/lib" -Wl,-rpath,/opt/GenICam_v2_3/bin/Linux_armv7-a,-rpath,/usr/local/frc/rpath-lib -o FRCUserProgram "src\\Robot.o" -lwpi 
-11:12:34 **** Incremental Build of configuration Debug for project 16.02.13 DIO Testing ****
-Info: Internal Builder is used for build
-arm-frc-linux-gnueabi-g++ -std=c++1y "-IC:\\Users\\FYRE5480/wpilib/cpp/current/include" "-IC:\\Users\\FYRE5480\\Desktop\\FYRE-Programming-2015-2016\\eclipseWorkspace\\16.02.13 DIO Testing\\src" -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Robot.o" "..\\src\\Robot.cpp" 
-arm-frc-linux-gnueabi-g++ "-LC:\\Users\\FYRE5480/wpilib/cpp/current/lib" -Wl,-rpath,/opt/GenICam_v2_3/bin/Linux_armv7-a,-rpath,/usr/local/frc/rpath-lib -o FRCUserProgram "src\\Robot.o" -lwpi 
-Info: Nothing to build for 16.02.13 DIO Testing
-12:00:38 **** Rebuild of configuration Debug for project 16.02.13 Using Pulse ****
-Info: Internal Builder is used for build
-arm-frc-linux-gnueabi-g++ -std=c++1y "-IC:\\Users\\FYRE5480/wpilib/cpp/current/include" "-IC:\\Users\\FYRE5480\\Desktop\\FYRE-Programming-2015-2016\\eclipseWorkspace\\16.02.13 Using Pulse\\src" -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Robot.o" "..\\src\\Robot.cpp" 
-arm-frc-linux-gnueabi-g++ "-LC:\\Users\\FYRE5480/wpilib/cpp/current/lib" -Wl,-rpath,/opt/GenICam_v2_3/bin/Linux_armv7-a,-rpath,/usr/local/frc/rpath-lib -o FRCUserProgram "src\\Robot.o" -lwpi 
-Info: Nothing to build for 16.02.13 Using Pulse
-Info: Nothing to build for 16.02.13 Using Pulse
-Info: Nothing to build for 16.02.13 Using Pulse
-12:06:30 **** Incremental Build of configuration Debug for project 16.02.13 Using Pulse ****
-Info: Internal Builder is used for build
-arm-frc-linux-gnueabi-g++ -std=c++1y "-IC:\\Users\\FYRE5480/wpilib/cpp/current/include" "-IC:\\Users\\FYRE5480\\Desktop\\FYRE-Programming-2015-2016\\eclipseWorkspace\\16.02.13 Using Pulse\\src" -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Robot.o" "..\\src\\Robot.cpp" 
-arm-frc-linux-gnueabi-g++ "-LC:\\Users\\FYRE5480/wpilib/cpp/current/lib" -Wl,-rpath,/opt/GenICam_v2_3/bin/Linux_armv7-a,-rpath,/usr/local/frc/rpath-lib -o FRCUserProgram "src\\Robot.o" -lwpi 
-Info: Nothing to build for 16.02.13 Using Pulse
-Info: Nothing to build for 16.02.13 Using Pulse
-12:07:50 **** Incremental Build of configuration Debug for project 16.02.13 Using Pulse ****
-Info: Internal Builder is used for build
-arm-frc-linux-gnueabi-g++ -std=c++1y "-IC:\\Users\\FYRE5480/wpilib/cpp/current/include" "-IC:\\Users\\FYRE5480\\Desktop\\FYRE-Programming-2015-2016\\eclipseWorkspace\\16.02.13 Using Pulse\\src" -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Robot.o" "..\\src\\Robot.cpp" 
-arm-frc-linux-gnueabi-g++ "-LC:\\Users\\FYRE5480/wpilib/cpp/current/lib" -Wl,-rpath,/opt/GenICam_v2_3/bin/Linux_armv7-a,-rpath,/usr/local/frc/rpath-lib -o FRCUserProgram "src\\Robot.o" -lwpi 
-Info: Nothing to build for 16.02.13 Using Pulse
-12:09:16 **** Incremental Build of configuration Debug for project 16.02.13 Using Pulse ****
-Info: Internal Builder is used for build
-arm-frc-linux-gnueabi-g++ -std=c++1y "-IC:\\Users\\FYRE5480/wpilib/cpp/current/include" "-IC:\\Users\\FYRE5480\\Desktop\\FYRE-Programming-2015-2016\\eclipseWorkspace\\16.02.13 Using Pulse\\src" -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Robot.o" "..\\src\\Robot.cpp" 
-arm-frc-linux-gnueabi-g++ "-LC:\\Users\\FYRE5480/wpilib/cpp/current/lib" -Wl,-rpath,/opt/GenICam_v2_3/bin/Linux_armv7-a,-rpath,/usr/local/frc/rpath-lib -o FRCUserProgram "src\\Robot.o" -lwpi 
-Info: Nothing to build for 16.02.13 Using Pulse
-12:11:28 **** Incremental Build of configuration Debug for project 16.02.13 Using Pulse ****
-Info: Internal Builder is used for build
-arm-frc-linux-gnueabi-g++ -std=c++1y "-IC:\\Users\\FYRE5480/wpilib/cpp/current/include" "-IC:\\Users\\FYRE5480\\Desktop\\FYRE-Programming-2015-2016\\eclipseWorkspace\\16.02.13 Using Pulse\\src" -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Robot.o" "..\\src\\Robot.cpp" 
-arm-frc-linux-gnueabi-g++ "-LC:\\Users\\FYRE5480/wpilib/cpp/current/lib" -Wl,-rpath,/opt/GenICam_v2_3/bin/Linux_armv7-a,-rpath,/usr/local/frc/rpath-lib -o FRCUserProgram "src\\Robot.o" -lwpi 
-Info: Nothing to build for 16.02.13 Using Pulse
-12:13:39 **** Incremental Build of configuration Debug for project 16.02.13 Using Pulse ****
-Info: Internal Builder is used for build
-arm-frc-linux-gnueabi-g++ -std=c++1y "-IC:\\Users\\FYRE5480/wpilib/cpp/current/include" "-IC:\\Users\\FYRE5480\\Desktop\\FYRE-Programming-2015-2016\\eclipseWorkspace\\16.02.13 Using Pulse\\src" -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Robot.o" "..\\src\\Robot.cpp" 
-arm-frc-linux-gnueabi-g++ "-LC:\\Users\\FYRE5480/wpilib/cpp/current/lib" -Wl,-rpath,/opt/GenICam_v2_3/bin/Linux_armv7-a,-rpath,/usr/local/frc/rpath-lib -o FRCUserProgram "src\\Robot.o" -lwpi 
-Info: Nothing to build for 16.02.13 Using Pulse
-12:19:01 **** Incremental Build of configuration Debug for project 16.02.13 Using Pulse ****
-Info: Internal Builder is used for build
-arm-frc-linux-gnueabi-g++ -std=c++1y "-IC:\\Users\\FYRE5480/wpilib/cpp/current/include" "-IC:\\Users\\FYRE5480\\Desktop\\FYRE-Programming-2015-2016\\eclipseWorkspace\\16.02.13 Using Pulse\\src" -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Robot.o" "..\\src\\Robot.cpp" 
-arm-frc-linux-gnueabi-g++ "-LC:\\Users\\FYRE5480/wpilib/cpp/current/lib" -Wl,-rpath,/opt/GenICam_v2_3/bin/Linux_armv7-a,-rpath,/usr/local/frc/rpath-lib -o FRCUserProgram "src\\Robot.o" -lwpi 
-Info: Nothing to build for 16.02.13 Using Pulse
-12:22:24 **** Incremental Build of configuration Debug for project 16.02.13 Using Pulse ****
-Info: Internal Builder is used for build
-arm-frc-linux-gnueabi-g++ -std=c++1y "-IC:\\Users\\FYRE5480/wpilib/cpp/current/include" "-IC:\\Users\\FYRE5480\\Desktop\\FYRE-Programming-2015-2016\\eclipseWorkspace\\16.02.13 Using Pulse\\src" -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Robot.o" "..\\src\\Robot.cpp" 
-arm-frc-linux-gnueabi-g++ "-LC:\\Users\\FYRE5480/wpilib/cpp/current/lib" -Wl,-rpath,/opt/GenICam_v2_3/bin/Linux_armv7-a,-rpath,/usr/local/frc/rpath-lib -o FRCUserProgram "src\\Robot.o" -lwpi 
-Info: Nothing to build for 16.02.13 Using Pulse
-12:23:52 **** Incremental Build of configuration Debug for project 16.02.13 Using Pulse ****
-Info: Internal Builder is used for build
-arm-frc-linux-gnueabi-g++ -std=c++1y "-IC:\\Users\\FYRE5480/wpilib/cpp/current/include" "-IC:\\Users\\FYRE5480\\Desktop\\FYRE-Programming-2015-2016\\eclipseWorkspace\\16.02.13 Using Pulse\\src" -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Robot.o" "..\\src\\Robot.cpp" 
-arm-frc-linux-gnueabi-g++ "-LC:\\Users\\FYRE5480/wpilib/cpp/current/lib" -Wl,-rpath,/opt/GenICam_v2_3/bin/Linux_armv7-a,-rpath,/usr/local/frc/rpath-lib -o FRCUserProgram "src\\Robot.o" -lwpi 
-Info: Nothing to build for 16.02.13 Using Pulse
-14:06:02 **** Rebuild of configuration Debug for project 16.02.13 New Dist Sensor ****
-Info: Internal Builder is used for build
-arm-frc-linux-gnueabi-g++ -std=c++1y "-IC:\\Users\\FYRE5480/wpilib/cpp/current/include" "-IC:\\Users\\FYRE5480\\Desktop\\FYRE-Programming-2015-2016\\eclipseWorkspace\\16.02.13 New Dist Sensor\\src" -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Robot.o" "..\\src\\Robot.cpp" 
-arm-frc-linux-gnueabi-g++ "-LC:\\Users\\FYRE5480/wpilib/cpp/current/lib" -Wl,-rpath,/opt/GenICam_v2_3/bin/Linux_armv7-a,-rpath,/usr/local/frc/rpath-lib -o FRCUserProgram "src\\Robot.o" -lwpi 
-14:21:34 **** Rebuild of configuration Debug for project 16.02.13 New Dist Sensor ****
-Info: Internal Builder is used for build
-arm-frc-linux-gnueabi-g++ -std=c++1y "-IC:\\Users\\FYRE5480/wpilib/cpp/current/include" "-IC:\\Users\\FYRE5480\\Desktop\\FYRE-Programming-2015-2016\\eclipseWorkspace\\16.02.13 New Dist Sensor\\src" -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Robot.o" "..\\src\\Robot.cpp" 
-..\src\Robot.cpp: In member function 'void Robot::ReadDistance()':
-..\src\Robot.cpp:36:2: error: expected ';' before '}' token
-  }
-  ^
-14:21:42 **** Incremental Build of configuration Debug for project 16.02.13 Using Pulse ****
-Info: Internal Builder is used for build
-arm-frc-linux-gnueabi-g++ -std=c++1y "-IC:\\Users\\FYRE5480/wpilib/cpp/current/include" "-IC:\\Users\\FYRE5480\\Desktop\\FYRE-Programming-2015-2016\\eclipseWorkspace\\16.02.13 Using Pulse\\src" -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Robot.o" "..\\src\\Robot.cpp" 
-arm-frc-linux-gnueabi-g++ "-LC:\\Users\\FYRE5480/wpilib/cpp/current/lib" -Wl,-rpath,/opt/GenICam_v2_3/bin/Linux_armv7-a,-rpath,/usr/local/frc/rpath-lib -o FRCUserProgram "src\\Robot.o" -lwpi 
-Info: Nothing to build for 16.02.13 New Dist Sensor
-Info: Nothing to build for 16.02.13 New Dist Sensor
-Info: Nothing to build for 16.02.13 New Dist Sensor
-14:28:26 **** Incremental Build of configuration Debug for project 16.02.13 New Dist Sensor ****
-Info: Internal Builder is used for build
-arm-frc-linux-gnueabi-g++ -std=c++1y "-IC:\\Users\\FYRE5480/wpilib/cpp/current/include" "-IC:\\Users\\FYRE5480\\Desktop\\FYRE-Programming-2015-2016\\eclipseWorkspace\\16.02.13 New Dist Sensor\\src" -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Robot.o" "..\\src\\Robot.cpp" 
-arm-frc-linux-gnueabi-g++ "-LC:\\Users\\FYRE5480/wpilib/cpp/current/lib" -Wl,-rpath,/opt/GenICam_v2_3/bin/Linux_armv7-a,-rpath,/usr/local/frc/rpath-lib -o FRCUserProgram "src\\Robot.o" -lwpi 
-14:30:16 **** Incremental Build of configuration Debug for project 16.02.13 New Dist Sensor ****
-Info: Internal Builder is used for build
-arm-frc-linux-gnueabi-g++ -std=c++1y "-IC:\\Users\\FYRE5480/wpilib/cpp/current/include" "-IC:\\Users\\FYRE5480\\Desktop\\FYRE-Programming-2015-2016\\eclipseWorkspace\\16.02.13 New Dist Sensor\\src" -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Robot.o" "..\\src\\Robot.cpp" 
-arm-frc-linux-gnueabi-g++ "-LC:\\Users\\FYRE5480/wpilib/cpp/current/lib" -Wl,-rpath,/opt/GenICam_v2_3/bin/Linux_armv7-a,-rpath,/usr/local/frc/rpath-lib -o FRCUserProgram "src\\Robot.o" -lwpi 
-Info: Nothing to build for 16.02.13 New Dist Sensor
-14:32:06 **** Incremental Build of configuration Debug for project 16.02.13 New Dist Sensor ****
+15:25:15 **** Clean-only build of configuration Debug for project 16.02.13 New Dist Sensor ****
+rm -rf src/Robot.d FRCUserProgram src/Robot.o 
+Cannot run program "rm": Launching failed
+
+Error: Program "rm" not found in PATH
+PATH=[\usr\local\bin;C:/Program Files/Java/jre1.8.0_65/bin/server;C:/Program Files/Java/jre1.8.0_65/bin;C:/Program Files/Java/jre1.8.0_65/lib/amd64;C:\ProgramData\Oracle\Java\javapath;C:\Program Files\Dell\DW WLAN Card;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Intel\Services\IPT\;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\Program Files (x86)\Intel\OpenCL SDK\2.0\bin\x86;C:\Program Files (x86)\Intel\OpenCL SDK\2.0\bin\x64;C:\frc\bin;C:\Program Files (x86)\CMake\bin;C:\Program Files\Git\cmd;C:\Program Files\TortoiseHg\;C:\Program Files\Microsoft Windows Performance Toolkit\;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\Program Files (x86)\Microsoft VS Code\bin; C:\Windows\System32;C:\Program Files\eclipse]
+
+15:25:16 **** Clean-only build of configuration Debug for project 16.02.13 New Dist Sensor ****
+15:25:45 **** Rebuild of configuration Debug for project 16.02.13 New Dist Sensor ****
 Info: Internal Builder is used for build
 arm-frc-linux-gnueabi-g++ -std=c++1y "-IC:\\Users\\FYRE5480/wpilib/cpp/current/include" "-IC:\\Users\\FYRE5480\\Desktop\\FYRE-Programming-2015-2016\\eclipseWorkspace\\16.02.13 New Dist Sensor\\src" -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Robot.o" "..\\src\\Robot.cpp" 
 arm-frc-linux-gnueabi-g++ "-LC:\\Users\\FYRE5480/wpilib/cpp/current/lib" -Wl,-rpath,/opt/GenICam_v2_3/bin/Linux_armv7-a,-rpath,/usr/local/frc/rpath-lib -o FRCUserProgram "src\\Robot.o" -lwpi 
 Info: Nothing to build for 16.02.13 New Dist Sensor
 Info: Nothing to build for 16.02.13 New Dist Sensor
-14:46:11 **** Incremental Build of configuration Debug for project 16.02.13 New Dist Sensor ****
+15:28:32 **** Rebuild of configuration Debug for project 16.02.13 Working ****
+Info: Internal Builder is used for build
+arm-frc-linux-gnueabi-g++ -std=c++1y "-IC:\\Users\\FYRE5480/wpilib/cpp/current/include" "-IC:\\Users\\FYRE5480\\Desktop\\FYRE-Programming-2015-2016\\eclipseWorkspace\\16.02.13 Working\\src" -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Robot.o" "..\\src\\Robot.cpp" 
+arm-frc-linux-gnueabi-g++ "-LC:\\Users\\FYRE5480/wpilib/cpp/current/lib" -Wl,-rpath,/opt/GenICam_v2_3/bin/Linux_armv7-a,-rpath,/usr/local/frc/rpath-lib -o FRCUserProgram "src\\Robot.o" -lwpi 
+Info: Nothing to build for 16.02.13 New Dist Sensor
+15:30:38 **** Rebuild of configuration Debug for project 16.02.13 Working ****
+Info: Internal Builder is used for build
+arm-frc-linux-gnueabi-g++ -std=c++1y "-IC:\\Users\\FYRE5480/wpilib/cpp/current/include" "-IC:\\Users\\FYRE5480\\Desktop\\FYRE-Programming-2015-2016\\eclipseWorkspace\\16.02.13 Working\\src" -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Robot.o" "..\\src\\Robot.cpp" 
+arm-frc-linux-gnueabi-g++ "-LC:\\Users\\FYRE5480/wpilib/cpp/current/lib" -Wl,-rpath,/opt/GenICam_v2_3/bin/Linux_armv7-a,-rpath,/usr/local/frc/rpath-lib -o FRCUserProgram "src\\Robot.o" -lwpi 
+Info: Nothing to build for 16.02.13 Working
+Info: Nothing to build for 16.02.13 New Dist Sensor
+Info: Nothing to build for 16.02.13 Working
+Info: Nothing to build for 16.02.13 Working
+Info: Nothing to build for 16.02.13 New Dist Sensor
+Info: Nothing to build for 16.02.13 Working
+Info: Nothing to build for 16.02.13 Working
+Info: Nothing to build for 16.02.13 New Dist Sensor
+Info: Nothing to build for 16.02.13 Working
+Info: Nothing to build for 16.02.13 New Dist Sensor
+15:37:41 **** Incremental Build of configuration Debug for project 16.02.13 Working ****
+Info: Internal Builder is used for build
+arm-frc-linux-gnueabi-g++ -std=c++1y "-IC:\\Users\\FYRE5480/wpilib/cpp/current/include" "-IC:\\Users\\FYRE5480\\Desktop\\FYRE-Programming-2015-2016\\eclipseWorkspace\\16.02.13 Working\\src" -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Robot.o" "..\\src\\Robot.cpp" 
+arm-frc-linux-gnueabi-g++ "-LC:\\Users\\FYRE5480/wpilib/cpp/current/lib" -Wl,-rpath,/opt/GenICam_v2_3/bin/Linux_armv7-a,-rpath,/usr/local/frc/rpath-lib -o FRCUserProgram "src\\Robot.o" -lwpi 
+Info: Nothing to build for 16.02.13 Working
+Info: Nothing to build for 16.02.13 New Dist Sensor
+Info: Nothing to build for 16.02.13 Working
+15:41:02 **** Incremental Build of configuration Debug for project 16.02.13 New Dist Sensor ****
+Info: Internal Builder is used for build
+arm-frc-linux-gnueabi-g++ -std=c++1y "-IC:\\Users\\FYRE5480/wpilib/cpp/current/include" "-IC:\\Users\\FYRE5480\\Desktop\\FYRE-Programming-2015-2016\\eclipseWorkspace\\16.02.13 New Dist Sensor\\src" -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Robot.o" "..\\src\\Robot.cpp" 
+arm-frc-linux-gnueabi-g++ "-LC:\\Users\\FYRE5480/wpilib/cpp/current/lib" -Wl,-rpath,/opt/GenICam_v2_3/bin/Linux_armv7-a,-rpath,/usr/local/frc/rpath-lib -o FRCUserProgram "src\\Robot.o" -lwpi 
+Info: Nothing to build for 16.02.13 New Dist Sensor
+Info: Nothing to build for 16.02.13 Working
+Info: Nothing to build for 16.02.13 New Dist Sensor
+Info: Nothing to build for 16.02.13 Working
+Info: Nothing to build for 16.02.13 New Dist Sensor
+Info: Nothing to build for 16.02.13 New Dist Sensor
+15:43:24 **** Incremental Build of configuration Debug for project 16.02.13 New Dist Sensor ****
 Info: Internal Builder is used for build
 arm-frc-linux-gnueabi-g++ -std=c++1y "-IC:\\Users\\FYRE5480/wpilib/cpp/current/include" "-IC:\\Users\\FYRE5480\\Desktop\\FYRE-Programming-2015-2016\\eclipseWorkspace\\16.02.13 New Dist Sensor\\src" -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Robot.o" "..\\src\\Robot.cpp" 
 arm-frc-linux-gnueabi-g++ "-LC:\\Users\\FYRE5480/wpilib/cpp/current/lib" -Wl,-rpath,/opt/GenICam_v2_3/bin/Linux_armv7-a,-rpath,/usr/local/frc/rpath-lib -o FRCUserProgram "src\\Robot.o" -lwpi 

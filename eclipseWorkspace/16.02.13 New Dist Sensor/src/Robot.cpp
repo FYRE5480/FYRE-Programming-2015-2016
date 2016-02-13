@@ -23,17 +23,18 @@ private:
 
 	void TeleopInit()
 	{
-
+//		distanceSensor->InitAccumulator();
 	}
 
 	void TeleopPeriodic()
 	{
 //		ReadDistance();
-		SmartDashboard::GetNumber("the distance from the distance sensor is", distanceSensor->GetAverageValue());
+		SmartDashboard::PutNumber("please work", 1);
+		SmartDashboard::PutNumber("the distance from the distance sensor is", distanceSensor->GetAverageValue());
 	}
 
 	void ReadDistance() {
-		SmartDashboard::GetNumber("the distance from the distance sensor is", distanceSensor->GetValue());
+//		SmartDashboard::GetNumber("the distance from the distance sensor is", distanceSensor->GetValue());
 	}
 
 	void TestPeriodic()

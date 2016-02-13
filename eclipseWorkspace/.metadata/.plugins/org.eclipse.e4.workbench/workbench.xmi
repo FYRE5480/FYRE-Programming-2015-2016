@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="ASCII"?>
 <application:Application xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:advanced="http://www.eclipse.org/ui/2010/UIModel/application/ui/advanced" xmlns:application="http://www.eclipse.org/ui/2010/UIModel/application" xmlns:basic="http://www.eclipse.org/ui/2010/UIModel/application/ui/basic" xmlns:menu="http://www.eclipse.org/ui/2010/UIModel/application/ui/menu" xmi:id="_vvFowNKKEeWp1sJtnGQwvA" elementId="org.eclipse.e4.legacy.ide.application" contributorURI="platform:/plugin/org.eclipse.platform" selectedElement="_vvFowdKKEeWp1sJtnGQwvA" bindingContexts="_vvHeY9KKEeWp1sJtnGQwvA">
-  <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;workbench>&#xD;&#xA;&lt;mruList>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.cdt.ui.editor.CEditor&quot; name=&quot;Robot.cpp&quot; tooltip=&quot;16.02.13 Using Pulse/src/Robot.cpp&quot;>&#xD;&#xA;&lt;persistable path=&quot;/16.02.13 Using Pulse/src/Robot.cpp&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.cdt.ui.editor.CEditor&quot; name=&quot;Robot.cpp&quot; tooltip=&quot;16.02.13 New Dist Sensor/src/Robot.cpp&quot;>&#xD;&#xA;&lt;persistable path=&quot;/16.02.13 New Dist Sensor/src/Robot.cpp&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.cdt.ui.editor.CEditor&quot; name=&quot;Robot.cpp&quot; tooltip=&quot;16.02.10 Distance Sensor Tester Code/src/Robot.cpp&quot;>&#xD;&#xA;&lt;persistable path=&quot;/16.02.10 Distance Sensor Tester Code/src/Robot.cpp&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.cdt.ui.editor.CEditor&quot; name=&quot;Robot.cpp&quot; tooltip=&quot;16.02.13 DIO Testing/src/Robot.cpp&quot;>&#xD;&#xA;&lt;persistable path=&quot;/16.02.13 DIO Testing/src/Robot.cpp&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.cdt.ui.editor.CEditor&quot; name=&quot;Robot.cpp&quot; tooltip=&quot;16.02.12 Please Run/src/Robot.cpp&quot;>&#xD;&#xA;&lt;persistable path=&quot;/16.02.12 Please Run/src/Robot.cpp&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.cdt.ui.editor.CEditor&quot; name=&quot;Robot.cpp&quot; tooltip=&quot;16.02.12 Cleaned And Stuff/src/Robot.cpp&quot;>&#xD;&#xA;&lt;persistable path=&quot;/16.02.12 Cleaned And Stuff/src/Robot.cpp&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;/mruList>&#xD;&#xA;&lt;/workbench>"/>
+  <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;workbench>&#xD;&#xA;&lt;mruList>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.cdt.ui.editor.CEditor&quot; name=&quot;Robot.cpp&quot; tooltip=&quot;16.02.13 Working/src/Robot.cpp&quot;>&#xD;&#xA;&lt;persistable path=&quot;/16.02.13 Working/src/Robot.cpp&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.cdt.ui.editor.CEditor&quot; name=&quot;Robot.cpp&quot; tooltip=&quot;16.02.13 Using Pulse/src/Robot.cpp&quot;>&#xD;&#xA;&lt;persistable path=&quot;/16.02.13 Using Pulse/src/Robot.cpp&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.cdt.ui.editor.CEditor&quot; name=&quot;Robot.cpp&quot; tooltip=&quot;16.02.13 New Dist Sensor/src/Robot.cpp&quot;>&#xD;&#xA;&lt;persistable path=&quot;/16.02.13 New Dist Sensor/src/Robot.cpp&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.cdt.ui.editor.CEditor&quot; name=&quot;Robot.cpp&quot; tooltip=&quot;16.02.10 Distance Sensor Tester Code/src/Robot.cpp&quot;>&#xD;&#xA;&lt;persistable path=&quot;/16.02.10 Distance Sensor Tester Code/src/Robot.cpp&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.cdt.ui.editor.CEditor&quot; name=&quot;Robot.cpp&quot; tooltip=&quot;16.02.13 DIO Testing/src/Robot.cpp&quot;>&#xD;&#xA;&lt;persistable path=&quot;/16.02.13 DIO Testing/src/Robot.cpp&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.cdt.ui.editor.CEditor&quot; name=&quot;Robot.cpp&quot; tooltip=&quot;16.02.12 Please Run/src/Robot.cpp&quot;>&#xD;&#xA;&lt;persistable path=&quot;/16.02.12 Please Run/src/Robot.cpp&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.cdt.ui.editor.CEditor&quot; name=&quot;Robot.cpp&quot; tooltip=&quot;16.02.12 Cleaned And Stuff/src/Robot.cpp&quot;>&#xD;&#xA;&lt;persistable path=&quot;/16.02.12 Cleaned And Stuff/src/Robot.cpp&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;/mruList>&#xD;&#xA;&lt;/workbench>"/>
   <tags>activeSchemeId:org.eclipse.ui.defaultAcceleratorConfiguration</tags>
   <tags>ModelMigrationProcessor.001</tags>
   <children xsi:type="basic:TrimmedWindow" xmi:id="_vvFowdKKEeWp1sJtnGQwvA" elementId="IDEWindow" contributorURI="platform:/plugin/org.eclipse.platform" selectedElement="_vvFowtKKEeWp1sJtnGQwvA" label="%trimmedwindow.label.eclipseSDK" x="0" y="0" width="1024" height="768">
@@ -71,15 +71,14 @@
           <tags>persp.actionSet:org.eclipse.debug.ui.profileActionSet</tags>
           <tags>persp.viewSC:org.eclipse.mylyn.tasks.ui.views.tasks</tags>
           <tags>persp.newWizSC:org.eclipse.mylyn.tasks.ui.wizards.new.repository.task</tags>
-          <children xsi:type="basic:PartSashContainer" xmi:id="_vvFoxdKKEeWp1sJtnGQwvA" selectedElement="_vvFoxtKKEeWp1sJtnGQwvA" horizontal="true">
+          <children xsi:type="basic:PartSashContainer" xmi:id="_vvFoxdKKEeWp1sJtnGQwvA" selectedElement="_vvFoy9KKEeWp1sJtnGQwvA" horizontal="true">
             <children xsi:type="basic:PartStack" xmi:id="_vvFoxtKKEeWp1sJtnGQwvA" elementId="topLeft" containerData="2500" selectedElement="_vvFox9KKEeWp1sJtnGQwvA">
-              <tags>active</tags>
               <children xsi:type="advanced:Placeholder" xmi:id="_vvFox9KKEeWp1sJtnGQwvA" elementId="org.eclipse.ui.navigator.ProjectExplorer" ref="_vvGQsdKKEeWp1sJtnGQwvA"/>
               <children xsi:type="advanced:Placeholder" xmi:id="_vvFoyNKKEeWp1sJtnGQwvA" elementId="org.eclipse.cdt.ui.CView" toBeRendered="false" ref="_vvGQztKKEeWp1sJtnGQwvA"/>
               <children xsi:type="advanced:Placeholder" xmi:id="_vvFoydKKEeWp1sJtnGQwvA" elementId="org.eclipse.ui.views.ResourceNavigator" toBeRendered="false" ref="_vvGQz9KKEeWp1sJtnGQwvA"/>
               <children xsi:type="advanced:Placeholder" xmi:id="_vvFoytKKEeWp1sJtnGQwvA" elementId="org.eclipse.ui.views.BookmarkView" toBeRendered="false" ref="_vvGQ0NKKEeWp1sJtnGQwvA"/>
             </children>
-            <children xsi:type="basic:PartSashContainer" xmi:id="_vvFoy9KKEeWp1sJtnGQwvA" containerData="7500" selectedElement="_vvFo0tKKEeWp1sJtnGQwvA">
+            <children xsi:type="basic:PartSashContainer" xmi:id="_vvFoy9KKEeWp1sJtnGQwvA" containerData="7500" selectedElement="_vvFozNKKEeWp1sJtnGQwvA">
               <children xsi:type="basic:PartSashContainer" xmi:id="_vvFozNKKEeWp1sJtnGQwvA" containerData="7500" selectedElement="_vvFozdKKEeWp1sJtnGQwvA" horizontal="true">
                 <children xsi:type="advanced:Placeholder" xmi:id="_vvFozdKKEeWp1sJtnGQwvA" elementId="org.eclipse.ui.editorss" containerData="7500" ref="_vvGQq9KKEeWp1sJtnGQwvA"/>
                 <children xsi:type="basic:PartStack" xmi:id="_vvFoztKKEeWp1sJtnGQwvA" elementId="topRight" toBeRendered="false" containerData="2500">
@@ -123,11 +122,14 @@
     </sharedElements>
     <sharedElements xsi:type="advanced:Area" xmi:id="_vvGQq9KKEeWp1sJtnGQwvA" elementId="org.eclipse.ui.editorss" selectedElement="_vvGQrNKKEeWp1sJtnGQwvA">
       <children xsi:type="basic:PartStack" xmi:id="_vvGQrNKKEeWp1sJtnGQwvA" elementId="PartStack@4a4357f5" selectedElement="_XtgH8NKeEeW30YyXBYK8BA">
+        <tags>active</tags>
         <children xsi:type="basic:Part" xmi:id="_XtgH8NKeEeW30YyXBYK8BA" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="Robot.cpp" iconURI="platform:/plugin/org.eclipse.cdt.ui/icons/obj16/c_file_obj.gif" closeable="true">
-          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;editor id=&quot;org.eclipse.cdt.ui.editor.CEditor&quot; name=&quot;Robot.cpp&quot; partName=&quot;Robot.cpp&quot; title=&quot;Robot.cpp&quot; tooltip=&quot;16.02.13 New Dist Sensor/src/Robot.cpp&quot;>&#xD;&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/16.02.13 New Dist Sensor/src/Robot.cpp&quot;/>&#xD;&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;0&quot; selectionOffset=&quot;444&quot; selectionTopPixel=&quot;230&quot;/>&#xD;&#xA;&lt;/editor>"/>
+          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;editor id=&quot;org.eclipse.cdt.ui.editor.CEditor&quot; name=&quot;Robot.cpp&quot; partName=&quot;Robot.cpp&quot; title=&quot;Robot.cpp&quot; tooltip=&quot;16.02.13 New Dist Sensor/src/Robot.cpp&quot;>&#xD;&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/16.02.13 New Dist Sensor/src/Robot.cpp&quot;/>&#xD;&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;0&quot; selectionOffset=&quot;333&quot; selectionTopPixel=&quot;154&quot;/>&#xD;&#xA;&lt;/editor>"/>
           <tags>Editor</tags>
           <tags>org.eclipse.cdt.ui.editor.CEditor</tags>
           <tags>removeOnHide</tags>
+          <tags>active</tags>
+          <tags>activeOnClose</tags>
         </children>
       </children>
     </sharedElements>
@@ -135,8 +137,6 @@
       <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;view CommonNavigator.LINKING_ENABLED=&quot;0&quot; currentWorkingSetName=&quot;Aggregate for window 1455170210348&quot; org.eclipse.cdt.ui.cview.groupincludes=&quot;false&quot; org.eclipse.cdt.ui.cview.groupmacros=&quot;false&quot; org.eclipse.cdt.ui.editor.CUChildren=&quot;true&quot; org.eclipse.ui.navigator.resources.workingSets.showTopLevelWorkingSets=&quot;0&quot;/>"/>
       <tags>View</tags>
       <tags>categoryTag:General</tags>
-      <tags>active</tags>
-      <tags>activeOnClose</tags>
       <menus xmi:id="_vvGQstKKEeWp1sJtnGQwvA" elementId="org.eclipse.ui.navigator.ProjectExplorer">
         <tags>ViewMenu</tags>
         <tags>menuContribution:menu</tags>
@@ -278,7 +278,7 @@
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_vvGQ9dKKEeWp1sJtnGQwvA" elementId="org.eclipse.ui.workbench.file">
         <tags>Draggable</tags>
-        <children xsi:type="menu:HandledToolItem" xmi:id="_-_xGENKhEeWejqmp2Xah_g" elementId="print" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/print_edit.png" tooltip="Print" command="_vvJ779KKEeWp1sJtnGQwvA"/>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_PqdP0NKkEeWIMfnHlx34qQ" elementId="print" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/print_edit.png" tooltip="Print" command="_vvJ779KKEeWp1sJtnGQwvA"/>
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_vvGRBdKKEeWp1sJtnGQwvA" elementId="additions" toBeRendered="false">
         <tags>toolbarSeparator</tags>
@@ -305,7 +305,7 @@
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_vvGRTdKKEeWp1sJtnGQwvA" elementId="org.eclipse.ui.workbench.navigate">
         <tags>Draggable</tags>
-        <children xsi:type="menu:HandledToolItem" xmi:id="__AWU4NKhEeWejqmp2Xah_g" elementId="org.eclipse.ui.window.pinEditor" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/pin_editor.png" tooltip="Pin Editor" type="Check" command="_vvJ7m9KKEeWp1sJtnGQwvA"/>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_PqwKxNKkEeWIMfnHlx34qQ" elementId="org.eclipse.ui.window.pinEditor" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/pin_editor.png" tooltip="Pin Editor" type="Check" command="_vvJ7m9KKEeWp1sJtnGQwvA"/>
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_vvGRWNKKEeWp1sJtnGQwvA" elementId="group.editor" toBeRendered="false">
         <tags>toolbarSeparator</tags>
