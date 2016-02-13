@@ -2521,3 +2521,441 @@ java.io.IOException: Cannot run program "C:\Program Files (x86)\Microsoft Visual
 
 !ENTRY WPILib_CPP_Robot_Development 1 0 2016-02-13 11:12:48.288
 !MESSAGE Targets: deploy, Mode: run
+
+!ENTRY org.eclipse.equinox.p2.director 4 10054 2016-02-13 11:22:00.087
+!MESSAGE Cannot complete the install because of a conflicting dependency.
+!SUBENTRY 1 org.eclipse.equinox.p2.director 4 0 2016-02-13 11:22:00.087
+!MESSAGE Software being installed: Robot C++ Development 0.1.0.201602112135 (edu.wpi.first.wpilib.plugins.cpp.feature.feature.group 0.1.0.201602112135)
+!SUBENTRY 1 org.eclipse.equinox.p2.director 4 0 2016-02-13 11:22:00.088
+!MESSAGE Software currently installed: Robot Java Development 0.1.0.201601072029 (edu.wpi.first.wpilib.plugins.java.feature.feature.group 0.1.0.201601072029)
+!SUBENTRY 1 org.eclipse.equinox.p2.director 4 1 2016-02-13 11:22:00.088
+!MESSAGE Only one of the following can be installed at once: 
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2016-02-13 11:22:00.088
+!MESSAGE WPILib_Riolog 0.1.0.201601072029 (edu.wpi.first.wpilib.plugins.riolog 0.1.0.201601072029)
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2016-02-13 11:22:00.088
+!MESSAGE WPILib_Riolog 0.1.0.201602112135 (edu.wpi.first.wpilib.plugins.riolog 0.1.0.201602112135)
+!SUBENTRY 1 org.eclipse.equinox.p2.director 4 1 2016-02-13 11:22:00.088
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2016-02-13 11:22:00.088
+!MESSAGE From: WPILib Robot Development Core 0.1.0.201601072029 (edu.wpi.first.wpilib.plugins.core.feature.feature.group 0.1.0.201601072029)
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2016-02-13 11:22:00.088
+!MESSAGE To: edu.wpi.first.wpilib.plugins.riolog [0.1.0.201601072029]
+!SUBENTRY 1 org.eclipse.equinox.p2.director 4 1 2016-02-13 11:22:00.088
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2016-02-13 11:22:00.089
+!MESSAGE From: WPILib Robot Development Core 0.1.0.201602112135 (edu.wpi.first.wpilib.plugins.core.feature.feature.group 0.1.0.201602112135)
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2016-02-13 11:22:00.089
+!MESSAGE To: edu.wpi.first.wpilib.plugins.riolog [0.1.0.201602112135]
+!SUBENTRY 1 org.eclipse.equinox.p2.director 4 1 2016-02-13 11:22:00.089
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2016-02-13 11:22:00.089
+!MESSAGE From: Robot C++ Development 0.1.0.201602112135 (edu.wpi.first.wpilib.plugins.cpp.feature.feature.group 0.1.0.201602112135)
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2016-02-13 11:22:00.089
+!MESSAGE To: edu.wpi.first.wpilib.plugins.core.feature.feature.group [0.1.0.201602112135]
+!SUBENTRY 1 org.eclipse.equinox.p2.director 4 1 2016-02-13 11:22:00.089
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2016-02-13 11:22:00.089
+!MESSAGE From: Robot Java Development 0.1.0.201601072029 (edu.wpi.first.wpilib.plugins.java.feature.feature.group 0.1.0.201601072029)
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2016-02-13 11:22:00.090
+!MESSAGE To: edu.wpi.first.wpilib.plugins.core.feature.feature.group [0.1.0.201601072029]
+
+!ENTRY org.eclipse.equinox.p2.operations 4 0 2016-02-13 11:22:50.928
+!MESSAGE Operation details
+!SUBENTRY 1 org.eclipse.equinox.p2.director 4 10054 2016-02-13 11:22:50.928
+!MESSAGE Cannot complete the install because of a conflicting dependency.
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2016-02-13 11:22:50.928
+!MESSAGE Software being installed: Robot C++ Development 0.1.0.201602112135 (edu.wpi.first.wpilib.plugins.cpp.feature.feature.group 0.1.0.201602112135)
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2016-02-13 11:22:50.928
+!MESSAGE Software currently installed: Robot Java Development 0.1.0.201601072029 (edu.wpi.first.wpilib.plugins.java.feature.feature.group 0.1.0.201601072029)
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2016-02-13 11:22:50.929
+!MESSAGE Only one of the following can be installed at once: 
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2016-02-13 11:22:50.929
+!MESSAGE WPILib_Riolog 0.1.0.201601072029 (edu.wpi.first.wpilib.plugins.riolog 0.1.0.201601072029)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2016-02-13 11:22:50.929
+!MESSAGE WPILib_Riolog 0.1.0.201602112135 (edu.wpi.first.wpilib.plugins.riolog 0.1.0.201602112135)
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2016-02-13 11:22:50.929
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2016-02-13 11:22:50.929
+!MESSAGE From: WPILib Robot Development Core 0.1.0.201601072029 (edu.wpi.first.wpilib.plugins.core.feature.feature.group 0.1.0.201601072029)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2016-02-13 11:22:50.929
+!MESSAGE To: edu.wpi.first.wpilib.plugins.riolog [0.1.0.201601072029]
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2016-02-13 11:22:50.929
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2016-02-13 11:22:50.929
+!MESSAGE From: WPILib Robot Development Core 0.1.0.201602112135 (edu.wpi.first.wpilib.plugins.core.feature.feature.group 0.1.0.201602112135)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2016-02-13 11:22:50.929
+!MESSAGE To: edu.wpi.first.wpilib.plugins.riolog [0.1.0.201602112135]
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2016-02-13 11:22:50.929
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2016-02-13 11:22:50.929
+!MESSAGE From: Robot C++ Development 0.1.0.201602112135 (edu.wpi.first.wpilib.plugins.cpp.feature.feature.group 0.1.0.201602112135)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2016-02-13 11:22:50.929
+!MESSAGE To: edu.wpi.first.wpilib.plugins.core.feature.feature.group [0.1.0.201602112135]
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2016-02-13 11:22:50.930
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2016-02-13 11:22:50.930
+!MESSAGE From: Robot Java Development 0.1.0.201601072029 (edu.wpi.first.wpilib.plugins.java.feature.feature.group 0.1.0.201601072029)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2016-02-13 11:22:50.930
+!MESSAGE To: edu.wpi.first.wpilib.plugins.core.feature.feature.group [0.1.0.201601072029]
+
+!ENTRY org.eclipse.equinox.p2.operations 4 0 2016-02-13 11:22:51.192
+!MESSAGE Operation details
+!SUBENTRY 1 org.eclipse.equinox.p2.director 4 10054 2016-02-13 11:22:51.192
+!MESSAGE Cannot complete the install because of a conflicting dependency.
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2016-02-13 11:22:51.192
+!MESSAGE Software being installed: Robot C++ Development 0.1.0.201602112135 (edu.wpi.first.wpilib.plugins.cpp.feature.feature.group 0.1.0.201602112135)
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2016-02-13 11:22:51.193
+!MESSAGE Software currently installed: Robot Java Development 0.1.0.201601072029 (edu.wpi.first.wpilib.plugins.java.feature.feature.group 0.1.0.201601072029)
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2016-02-13 11:22:51.193
+!MESSAGE Only one of the following can be installed at once: 
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2016-02-13 11:22:51.193
+!MESSAGE WPILib_Riolog 0.1.0.201601072029 (edu.wpi.first.wpilib.plugins.riolog 0.1.0.201601072029)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2016-02-13 11:22:51.193
+!MESSAGE WPILib_Riolog 0.1.0.201602112135 (edu.wpi.first.wpilib.plugins.riolog 0.1.0.201602112135)
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2016-02-13 11:22:51.193
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2016-02-13 11:22:51.193
+!MESSAGE From: WPILib Robot Development Core 0.1.0.201601072029 (edu.wpi.first.wpilib.plugins.core.feature.feature.group 0.1.0.201601072029)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2016-02-13 11:22:51.193
+!MESSAGE To: edu.wpi.first.wpilib.plugins.riolog [0.1.0.201601072029]
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2016-02-13 11:22:51.193
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2016-02-13 11:22:51.193
+!MESSAGE From: WPILib Robot Development Core 0.1.0.201602112135 (edu.wpi.first.wpilib.plugins.core.feature.feature.group 0.1.0.201602112135)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2016-02-13 11:22:51.193
+!MESSAGE To: edu.wpi.first.wpilib.plugins.riolog [0.1.0.201602112135]
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2016-02-13 11:22:51.193
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2016-02-13 11:22:51.193
+!MESSAGE From: Robot C++ Development 0.1.0.201602112135 (edu.wpi.first.wpilib.plugins.cpp.feature.feature.group 0.1.0.201602112135)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2016-02-13 11:22:51.193
+!MESSAGE To: edu.wpi.first.wpilib.plugins.core.feature.feature.group [0.1.0.201602112135]
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2016-02-13 11:22:51.193
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2016-02-13 11:22:51.194
+!MESSAGE From: Robot Java Development 0.1.0.201601072029 (edu.wpi.first.wpilib.plugins.java.feature.feature.group 0.1.0.201601072029)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2016-02-13 11:22:51.194
+!MESSAGE To: edu.wpi.first.wpilib.plugins.core.feature.feature.group [0.1.0.201601072029]
+
+!ENTRY org.eclipse.equinox.p2.operations 4 0 2016-02-13 11:22:51.469
+!MESSAGE Operation details
+!SUBENTRY 1 org.eclipse.equinox.p2.director 4 10054 2016-02-13 11:22:51.469
+!MESSAGE Cannot complete the install because of a conflicting dependency.
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2016-02-13 11:22:51.469
+!MESSAGE Software being installed: Robot C++ Development 0.1.0.201602112135 (edu.wpi.first.wpilib.plugins.cpp.feature.feature.group 0.1.0.201602112135)
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2016-02-13 11:22:51.469
+!MESSAGE Software currently installed: Robot Java Development 0.1.0.201601072029 (edu.wpi.first.wpilib.plugins.java.feature.feature.group 0.1.0.201601072029)
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2016-02-13 11:22:51.469
+!MESSAGE Only one of the following can be installed at once: 
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2016-02-13 11:22:51.469
+!MESSAGE WPILib_Riolog 0.1.0.201601072029 (edu.wpi.first.wpilib.plugins.riolog 0.1.0.201601072029)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2016-02-13 11:22:51.470
+!MESSAGE WPILib_Riolog 0.1.0.201602112135 (edu.wpi.first.wpilib.plugins.riolog 0.1.0.201602112135)
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2016-02-13 11:22:51.470
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2016-02-13 11:22:51.470
+!MESSAGE From: WPILib Robot Development Core 0.1.0.201601072029 (edu.wpi.first.wpilib.plugins.core.feature.feature.group 0.1.0.201601072029)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2016-02-13 11:22:51.470
+!MESSAGE To: edu.wpi.first.wpilib.plugins.riolog [0.1.0.201601072029]
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2016-02-13 11:22:51.470
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2016-02-13 11:22:51.470
+!MESSAGE From: WPILib Robot Development Core 0.1.0.201602112135 (edu.wpi.first.wpilib.plugins.core.feature.feature.group 0.1.0.201602112135)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2016-02-13 11:22:51.470
+!MESSAGE To: edu.wpi.first.wpilib.plugins.riolog [0.1.0.201602112135]
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2016-02-13 11:22:51.470
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2016-02-13 11:22:51.470
+!MESSAGE From: Robot C++ Development 0.1.0.201602112135 (edu.wpi.first.wpilib.plugins.cpp.feature.feature.group 0.1.0.201602112135)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2016-02-13 11:22:51.470
+!MESSAGE To: edu.wpi.first.wpilib.plugins.core.feature.feature.group [0.1.0.201602112135]
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2016-02-13 11:22:51.470
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2016-02-13 11:22:51.470
+!MESSAGE From: Robot Java Development 0.1.0.201601072029 (edu.wpi.first.wpilib.plugins.java.feature.feature.group 0.1.0.201601072029)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2016-02-13 11:22:51.470
+!MESSAGE To: edu.wpi.first.wpilib.plugins.core.feature.feature.group [0.1.0.201601072029]
+
+!ENTRY org.eclipse.equinox.p2.operations 4 0 2016-02-13 11:22:51.552
+!MESSAGE Operation details
+!SUBENTRY 1 org.eclipse.equinox.p2.director 4 10054 2016-02-13 11:22:51.553
+!MESSAGE Cannot complete the install because of a conflicting dependency.
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2016-02-13 11:22:51.553
+!MESSAGE Software being installed: Robot C++ Development 0.1.0.201602112135 (edu.wpi.first.wpilib.plugins.cpp.feature.feature.group 0.1.0.201602112135)
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2016-02-13 11:22:51.553
+!MESSAGE Software currently installed: Robot Java Development 0.1.0.201601072029 (edu.wpi.first.wpilib.plugins.java.feature.feature.group 0.1.0.201601072029)
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2016-02-13 11:22:51.553
+!MESSAGE Only one of the following can be installed at once: 
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2016-02-13 11:22:51.553
+!MESSAGE WPILib_Riolog 0.1.0.201601072029 (edu.wpi.first.wpilib.plugins.riolog 0.1.0.201601072029)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2016-02-13 11:22:51.553
+!MESSAGE WPILib_Riolog 0.1.0.201602112135 (edu.wpi.first.wpilib.plugins.riolog 0.1.0.201602112135)
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2016-02-13 11:22:51.553
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2016-02-13 11:22:51.553
+!MESSAGE From: WPILib Robot Development Core 0.1.0.201601072029 (edu.wpi.first.wpilib.plugins.core.feature.feature.group 0.1.0.201601072029)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2016-02-13 11:22:51.554
+!MESSAGE To: edu.wpi.first.wpilib.plugins.riolog [0.1.0.201601072029]
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2016-02-13 11:22:51.554
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2016-02-13 11:22:51.554
+!MESSAGE From: WPILib Robot Development Core 0.1.0.201602112135 (edu.wpi.first.wpilib.plugins.core.feature.feature.group 0.1.0.201602112135)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2016-02-13 11:22:51.554
+!MESSAGE To: edu.wpi.first.wpilib.plugins.riolog [0.1.0.201602112135]
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2016-02-13 11:22:51.554
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2016-02-13 11:22:51.554
+!MESSAGE From: Robot C++ Development 0.1.0.201602112135 (edu.wpi.first.wpilib.plugins.cpp.feature.feature.group 0.1.0.201602112135)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2016-02-13 11:22:51.554
+!MESSAGE To: edu.wpi.first.wpilib.plugins.core.feature.feature.group [0.1.0.201602112135]
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2016-02-13 11:22:51.554
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2016-02-13 11:22:51.554
+!MESSAGE From: Robot Java Development 0.1.0.201601072029 (edu.wpi.first.wpilib.plugins.java.feature.feature.group 0.1.0.201601072029)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2016-02-13 11:22:51.555
+!MESSAGE To: edu.wpi.first.wpilib.plugins.core.feature.feature.group [0.1.0.201601072029]
+!SESSION 2016-02-13 11:26:24.570 -----------------------------------------------
+eclipse.buildId=4.5.1.M20150904-0015
+java.version=1.8.0_65
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.cpp.product -product org.eclipse.epp.package.cpp.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.cpp.product -data file:/C:/Users/FYRE5480/Desktop/FYRE-Programming-2015-2016/eclipseWorkspace/ -product org.eclipse.epp.package.cpp.product
+
+!ENTRY org.eclipse.cdt.core 4 0 2016-02-13 11:27:40.616
+!MESSAGE Error: Cannot run program "gcc": Launching failed
+!STACK 0
+java.io.IOException: Cannot run program "gcc": Launching failed
+	at org.eclipse.cdt.utils.spawner.Spawner.exec(Spawner.java:349)
+	at org.eclipse.cdt.utils.spawner.Spawner.<init>(Spawner.java:91)
+	at org.eclipse.cdt.utils.spawner.ProcessFactory.exec(ProcessFactory.java:91)
+	at org.eclipse.cdt.core.CommandLauncher.execute(CommandLauncher.java:194)
+	at org.eclipse.cdt.internal.core.BuildRunnerHelper.build(BuildRunnerHelper.java:263)
+	at org.eclipse.cdt.managedbuilder.language.settings.providers.AbstractBuiltinSpecsDetector.runProgramForLanguage(AbstractBuiltinSpecsDetector.java:759)
+	at org.eclipse.cdt.managedbuilder.language.settings.providers.AbstractBuiltinSpecsDetector.runForLanguage(AbstractBuiltinSpecsDetector.java:689)
+	at org.eclipse.cdt.managedbuilder.language.settings.providers.AbstractBuiltinSpecsDetector.runForEachLanguage(AbstractBuiltinSpecsDetector.java:562)
+	at org.eclipse.cdt.managedbuilder.language.settings.providers.AbstractBuiltinSpecsDetector$1.runInWorkspace(AbstractBuiltinSpecsDetector.java:496)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:39)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.cdt.core 4 0 2016-02-13 11:27:41.481
+!MESSAGE Error: Cannot run program "g++": Launching failed
+!STACK 0
+java.io.IOException: Cannot run program "g++": Launching failed
+	at org.eclipse.cdt.utils.spawner.Spawner.exec(Spawner.java:349)
+	at org.eclipse.cdt.utils.spawner.Spawner.<init>(Spawner.java:91)
+	at org.eclipse.cdt.utils.spawner.ProcessFactory.exec(ProcessFactory.java:91)
+	at org.eclipse.cdt.core.CommandLauncher.execute(CommandLauncher.java:194)
+	at org.eclipse.cdt.internal.core.BuildRunnerHelper.build(BuildRunnerHelper.java:263)
+	at org.eclipse.cdt.managedbuilder.language.settings.providers.AbstractBuiltinSpecsDetector.runProgramForLanguage(AbstractBuiltinSpecsDetector.java:759)
+	at org.eclipse.cdt.managedbuilder.language.settings.providers.AbstractBuiltinSpecsDetector.runForLanguage(AbstractBuiltinSpecsDetector.java:689)
+	at org.eclipse.cdt.managedbuilder.language.settings.providers.AbstractBuiltinSpecsDetector.runForEachLanguage(AbstractBuiltinSpecsDetector.java:562)
+	at org.eclipse.cdt.managedbuilder.language.settings.providers.AbstractBuiltinSpecsDetector$1.runInWorkspace(AbstractBuiltinSpecsDetector.java:496)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:39)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.cdt.core 4 0 2016-02-13 11:27:42.128
+!MESSAGE Error: Cannot run program "gcc": Launching failed
+!STACK 0
+java.io.IOException: Cannot run program "gcc": Launching failed
+	at org.eclipse.cdt.utils.spawner.Spawner.exec(Spawner.java:349)
+	at org.eclipse.cdt.utils.spawner.Spawner.<init>(Spawner.java:91)
+	at org.eclipse.cdt.utils.spawner.ProcessFactory.exec(ProcessFactory.java:91)
+	at org.eclipse.cdt.core.CommandLauncher.execute(CommandLauncher.java:194)
+	at org.eclipse.cdt.internal.core.BuildRunnerHelper.build(BuildRunnerHelper.java:263)
+	at org.eclipse.cdt.managedbuilder.language.settings.providers.AbstractBuiltinSpecsDetector.runProgramForLanguage(AbstractBuiltinSpecsDetector.java:759)
+	at org.eclipse.cdt.managedbuilder.language.settings.providers.AbstractBuiltinSpecsDetector.runForLanguage(AbstractBuiltinSpecsDetector.java:689)
+	at org.eclipse.cdt.managedbuilder.language.settings.providers.AbstractBuiltinSpecsDetector.runForEachLanguage(AbstractBuiltinSpecsDetector.java:562)
+	at org.eclipse.cdt.managedbuilder.language.settings.providers.AbstractBuiltinSpecsDetector$1.runInWorkspace(AbstractBuiltinSpecsDetector.java:496)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:39)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.cdt.core 4 0 2016-02-13 11:27:43.442
+!MESSAGE Error: Cannot run program "C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\amd64\cl": Launching failed
+!STACK 0
+java.io.IOException: Cannot run program "C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\amd64\cl": Launching failed
+	at org.eclipse.cdt.utils.spawner.Spawner.exec(Spawner.java:349)
+	at org.eclipse.cdt.utils.spawner.Spawner.<init>(Spawner.java:91)
+	at org.eclipse.cdt.utils.spawner.ProcessFactory.exec(ProcessFactory.java:91)
+	at org.eclipse.cdt.core.CommandLauncher.execute(CommandLauncher.java:194)
+	at org.eclipse.cdt.internal.core.BuildRunnerHelper.build(BuildRunnerHelper.java:263)
+	at org.eclipse.cdt.managedbuilder.language.settings.providers.AbstractBuiltinSpecsDetector.runProgramForLanguage(AbstractBuiltinSpecsDetector.java:759)
+	at org.eclipse.cdt.managedbuilder.language.settings.providers.AbstractBuiltinSpecsDetector.runForLanguage(AbstractBuiltinSpecsDetector.java:689)
+	at org.eclipse.cdt.managedbuilder.language.settings.providers.AbstractBuiltinSpecsDetector.runForEachLanguage(AbstractBuiltinSpecsDetector.java:562)
+	at org.eclipse.cdt.managedbuilder.language.settings.providers.AbstractBuiltinSpecsDetector$1.runInWorkspace(AbstractBuiltinSpecsDetector.java:496)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:39)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY edu.wpi.first.wpilib.plugins.core 1 0 2016-02-13 11:27:43.516
+!MESSAGE Installing tools if necessary
+
+!ENTRY edu.wpi.first.wpilib.plugins.core 1 0 2016-02-13 11:27:43.518
+!MESSAGE Install necessary for tools
+
+!ENTRY org.eclipse.egit.ui 2 0 2016-02-13 11:27:52.558
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\FYRE5480'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY edu.wpi.first.wpilib.plugins.core 1 0 2016-02-13 11:27:53.409
+!MESSAGE Installedtools
+
+!ENTRY edu.wpi.first.wpilib.plugins.core 1 0 2016-02-13 11:27:53.476
+!MESSAGE Installing cpp if necessary
+
+!ENTRY edu.wpi.first.wpilib.plugins.core 1 0 2016-02-13 11:27:53.482
+!MESSAGE Install necessary for cpp
+
+!ENTRY edu.wpi.first.wpilib.plugins.core 1 0 2016-02-13 11:28:09.644
+!MESSAGE Installedcpp
+
+!ENTRY edu.wpi.first.wpilib.plugins.core 1 0 2016-02-13 11:28:09.705
+!MESSAGE Installing java if necessary
+
+!ENTRY edu.wpi.first.wpilib.plugins.core 1 0 2016-02-13 11:28:09.707
+!MESSAGE Install necessary for java
+
+!ENTRY org.eclipse.jface 4 0 2016-02-13 11:28:09.817
+!MESSAGE Unhandled event loop exception during blocked modal context.
+!STACK 0
+org.eclipse.swt.SWTException: Failed to execute runnable (org.eclipse.swt.SWTException: Widget is disposed)
+	at org.eclipse.swt.SWT.error(SWT.java:4491)
+	at org.eclipse.swt.SWT.error(SWT.java:4406)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:138)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4155)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3772)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.block(ModalContext.java:172)
+	at org.eclipse.jface.operation.ModalContext.run(ModalContext.java:387)
+	at org.eclipse.jface.dialogs.ProgressMonitorDialog.run(ProgressMonitorDialog.java:500)
+	at org.eclipse.ui.internal.progress.ProgressMonitorJobsDialog.run(ProgressMonitorJobsDialog.java:284)
+	at org.eclipse.ui.internal.ide.application.IDEWorkbenchAdvisor.disconnectFromWorkspace(IDEWorkbenchAdvisor.java:460)
+	at org.eclipse.ui.internal.ide.application.IDEWorkbenchAdvisor.postShutdown(IDEWorkbenchAdvisor.java:306)
+	at org.eclipse.ui.internal.Workbench.shutdown(Workbench.java:3143)
+	at org.eclipse.ui.internal.Workbench.busyClose(Workbench.java:1161)
+	at org.eclipse.ui.internal.Workbench.access$21(Workbench.java:1073)
+	at org.eclipse.ui.internal.Workbench$19.run(Workbench.java:1414)
+	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:70)
+	at org.eclipse.ui.internal.Workbench.close(Workbench.java:1411)
+	at org.eclipse.ui.internal.Workbench.close(Workbench.java:1384)
+	at org.eclipse.ui.internal.WorkbenchWindow.busyClose(WorkbenchWindow.java:1571)
+	at org.eclipse.ui.internal.WorkbenchWindow.access$16(WorkbenchWindow.java:1542)
+	at org.eclipse.ui.internal.WorkbenchWindow$11.run(WorkbenchWindow.java:1603)
+	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:70)
+	at org.eclipse.ui.internal.WorkbenchWindow.close(WorkbenchWindow.java:1600)
+	at org.eclipse.ui.internal.WorkbenchWindow.close(WorkbenchWindow.java:1614)
+	at org.eclipse.ui.internal.WorkbenchWindow$6.close(WorkbenchWindow.java:523)
+	at org.eclipse.e4.ui.workbench.renderers.swt.WBWRenderer$7.shellClosed(WBWRenderer.java:518)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:98)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4362)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1113)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1137)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1122)
+	at org.eclipse.swt.widgets.Decorations.closeWidget(Decorations.java:308)
+	at org.eclipse.swt.widgets.Decorations.WM_CLOSE(Decorations.java:1703)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4678)
+	at org.eclipse.swt.widgets.Canvas.windowProc(Canvas.java:339)
+	at org.eclipse.swt.widgets.Decorations.windowProc(Decorations.java:1633)
+	at org.eclipse.swt.widgets.Shell.windowProc(Shell.java:2117)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5050)
+	at org.eclipse.swt.internal.win32.OS.DefWindowProcW(Native Method)
+	at org.eclipse.swt.internal.win32.OS.DefWindowProc(OS.java:2544)
+	at org.eclipse.swt.widgets.Shell.callWindowProc(Shell.java:498)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4774)
+	at org.eclipse.swt.widgets.Canvas.windowProc(Canvas.java:339)
+	at org.eclipse.swt.widgets.Decorations.windowProc(Decorations.java:1633)
+	at org.eclipse.swt.widgets.Shell.windowProc(Shell.java:2117)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5050)
+	at org.eclipse.swt.internal.win32.OS.DefWindowProcW(Native Method)
+	at org.eclipse.swt.internal.win32.OS.DefWindowProc(OS.java:2544)
+	at org.eclipse.swt.widgets.Shell.callWindowProc(Shell.java:498)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4774)
+	at org.eclipse.swt.widgets.Canvas.windowProc(Canvas.java:339)
+	at org.eclipse.swt.widgets.Decorations.windowProc(Decorations.java:1633)
+	at org.eclipse.swt.widgets.Shell.windowProc(Shell.java:2117)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5050)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessageW(Native Method)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessage(OS.java:2549)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3767)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$4.run(PartRenderingEngine.java:1127)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:337)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1018)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:156)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:654)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:337)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:598)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:139)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:380)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:235)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:669)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
+Caused by: org.eclipse.swt.SWTException: Widget is disposed
+	at org.eclipse.swt.SWT.error(SWT.java:4491)
+	at org.eclipse.swt.SWT.error(SWT.java:4406)
+	at org.eclipse.swt.SWT.error(SWT.java:4377)
+	at org.eclipse.swt.widgets.Widget.error(Widget.java:482)
+	at org.eclipse.swt.widgets.Widget.checkWidget(Widget.java:354)
+	at org.eclipse.swt.widgets.Tree.getSelection(Tree.java:3446)
+	at org.eclipse.jface.viewers.TreeViewer.getSelection(TreeViewer.java:232)
+	at org.eclipse.jface.viewers.TreeViewer.setSelection(TreeViewer.java:311)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.setSelectionToWidget(AbstractTreeViewer.java:2545)
+	at org.eclipse.ui.navigator.CommonViewer.setSelectionToWidget(CommonViewer.java:437)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.setSelectionToWidget(AbstractTreeViewer.java:3001)
+	at org.eclipse.jface.viewers.StructuredViewer.preservingSelection(StructuredViewer.java:1469)
+	at org.eclipse.jface.viewers.TreeViewer.preservingSelection(TreeViewer.java:366)
+	at org.eclipse.jface.viewers.StructuredViewer.preservingSelection(StructuredViewer.java:1423)
+	at org.eclipse.jface.viewers.StructuredViewer.refresh(StructuredViewer.java:1551)
+	at org.eclipse.jface.viewers.ColumnViewer.refresh(ColumnViewer.java:534)
+	at org.eclipse.ui.navigator.CommonViewer.refresh(CommonViewer.java:347)
+	at org.eclipse.ui.navigator.CommonViewer.refresh(CommonViewer.java:490)
+	at org.eclipse.jface.viewers.StructuredViewer.refresh(StructuredViewer.java:1482)
+	at org.eclipse.jface.viewers.StructuredViewer.setFilters(StructuredViewer.java:1649)
+	at org.eclipse.ui.internal.navigator.NavigatorFilterService.updateViewer(NavigatorFilterService.java:270)
+	at org.eclipse.ui.internal.navigator.resources.actions.WorkingSetActionProvider.setWorkingSetFilter(WorkingSetActionProvider.java:279)
+	at org.eclipse.ui.internal.navigator.resources.actions.WorkingSetActionProvider.setWorkingSetFilter(WorkingSetActionProvider.java:262)
+	at org.eclipse.ui.internal.navigator.resources.actions.WorkingSetActionProvider.setWorkingSet(WorkingSetActionProvider.java:309)
+	at org.eclipse.ui.internal.navigator.resources.actions.WorkingSetActionProvider.initWorkingSetFilter(WorkingSetActionProvider.java:257)
+	at org.eclipse.ui.internal.navigator.resources.actions.WorkingSetActionProvider$4.run(WorkingSetActionProvider.java:347)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:35)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:135)
+	... 76 more
+
+!ENTRY org.eclipse.equinox.p2.transport.ecf 2 0 2016-02-13 11:28:10.242
+!MESSAGE Connection to http://download.eclipse.org/technology/epp/packages/mars/p2.index failed on Connection timed out: connect. Retry attempt 0 started
+!STACK 0
+java.net.ConnectException: Connection timed out: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.doConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connect(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at org.eclipse.ecf.internal.provider.filetransfer.httpclient4.ECFHttpClientProtocolSocketFactory.connectSocket(ECFHttpClientProtocolSocketFactory.java:86)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:177)
+	at org.apache.http.impl.conn.AbstractPoolEntry.open(AbstractPoolEntry.java:144)
+	at org.apache.http.impl.conn.AbstractPooledConnAdapter.open(AbstractPooledConnAdapter.java:131)
+	at org.apache.http.impl.client.DefaultRequestDirector.tryConnect(DefaultRequestDirector.java:611)
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:446)
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:863)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer.performConnect(HttpClientRetrieveFileTransfer.java:1077)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer.access$0(HttpClientRetrieveFileTransfer.java:1068)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer$1.performFileTransfer(HttpClientRetrieveFileTransfer.java:1064)
+	at org.eclipse.ecf.filetransfer.FileTransferJob.run(FileTransferJob.java:73)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY edu.wpi.first.wpilib.plugins.core 1 0 2016-02-13 11:28:15.630
+!MESSAGE Installedjava
