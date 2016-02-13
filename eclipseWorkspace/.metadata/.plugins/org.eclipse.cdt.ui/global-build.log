@@ -353,3 +353,41 @@ arm-frc-linux-gnueabi-g++ -std=c++1y "-IC:\\Users\\gsera/wpilib/cpp/current/incl
 ..\src\Robot.cpp:84:19: error: request for member 'HasPeriodPassed' in '((Robot*)this)->Robot::distTimer', which is of pointer type 'Timer*' (maybe you meant to use '->' ?)
    while(distTimer.HasPeriodPassed(0.000010) == 0) {
                    ^
+11:01:06 **** Rebuild of configuration Debug for project 16.02.10 Distance Sensor Tester Code ****
+Info: Internal Builder is used for build
+arm-frc-linux-gnueabi-g++ -std=c++1y "-IC:\\Users\\FYRE5480/wpilib/cpp/current/include" "-IC:\\Users\\FYRE5480\\Desktop\\FYRE-Programming-2015-2016\\eclipseWorkspace\\16.02.10 Distance Sensor Tester Code\\src" -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Robot.o" "..\\src\\Robot.cpp" 
+..\src\Robot.cpp: In member function 'void Robot::ReadDistance()':
+..\src\Robot.cpp:154:8: warning: unused variable 'buff' [-Wunused-variable]
+   byte buff[TO_READ];
+        ^
+arm-frc-linux-gnueabi-g++ "-LC:\\Users\\FYRE5480/wpilib/cpp/current/lib" -Wl,-rpath,/opt/GenICam_v2_3/bin/Linux_armv7-a,-rpath,/usr/local/frc/rpath-lib -o FRCUserProgram "src\\Robot.o" -lwpi 
+11:01:22 **** Rebuild of configuration Debug for project 16.02.12 Cleaned And Stuff ****
+Info: Internal Builder is used for build
+arm-frc-linux-gnueabi-g++ -std=c++1y "-IC:\\Users\\FYRE5480/wpilib/cpp/current/include" "-IC:\\Users\\FYRE5480\\Desktop\\FYRE-Programming-2015-2016\\eclipseWorkspace\\16.02.12 Cleaned And Stuff\\src" -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Robot.o" "..\\src\\Robot.cpp" 
+arm-frc-linux-gnueabi-g++ "-LC:\\Users\\FYRE5480/wpilib/cpp/current/lib" -Wl,-rpath,/opt/GenICam_v2_3/bin/Linux_armv7-a,-rpath,/usr/local/frc/rpath-lib -o FRCUserProgram "src\\Robot.o" -lwpi 
+11:01:35 **** Rebuild of configuration Debug for project 16.02.12 Please Run ****
+Info: Internal Builder is used for build
+arm-frc-linux-gnueabi-g++ -std=c++1y "-IC:\\Users\\FYRE5480/wpilib/cpp/current/include" "-IC:\\Users\\FYRE5480\\Desktop\\FYRE-Programming-2015-2016\\eclipseWorkspace\\16.02.12 Please Run\\src" -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Robot.o" "..\\src\\Robot.cpp" 
+arm-frc-linux-gnueabi-g++ "-LC:\\Users\\FYRE5480/wpilib/cpp/current/lib" -Wl,-rpath,/opt/GenICam_v2_3/bin/Linux_armv7-a,-rpath,/usr/local/frc/rpath-lib -o FRCUserProgram "src\\Robot.o" -lwpi 
+11:01:47 **** Rebuild of configuration Debug for project 16.02.13 DIO Testing ****
+Info: Internal Builder is used for build
+arm-frc-linux-gnueabi-g++ -std=c++1y "-IC:\\Users\\FYRE5480/wpilib/cpp/current/include" "-IC:\\Users\\FYRE5480\\Desktop\\FYRE-Programming-2015-2016\\eclipseWorkspace\\16.02.13 DIO Testing\\src" -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Robot.o" "..\\src\\Robot.cpp" 
+..\src\Robot.cpp: In member function 'void Robot::ReadDistance()':
+..\src\Robot.cpp:76:19: error: request for member 'HasPeriodPassed' in '((Robot*)this)->Robot::distTimer', which is of pointer type 'Timer*' (maybe you meant to use '->' ?)
+   while(distTimer.HasPeriodPassed(0.000002) == 0) {
+                   ^
+..\src\Robot.cpp:84:19: error: request for member 'HasPeriodPassed' in '((Robot*)this)->Robot::distTimer', which is of pointer type 'Timer*' (maybe you meant to use '->' ?)
+   while(distTimer.HasPeriodPassed(0.000010) == 0) {
+                   ^
+Info: Nothing to build for 16.02.10 Distance Sensor Tester Code
+Info: Nothing to build for 16.02.12 Cleaned And Stuff
+Info: Nothing to build for 16.02.12 Please Run
+11:02:25 **** Incremental Build of configuration Debug for project 16.02.13 DIO Testing ****
+Info: Internal Builder is used for build
+arm-frc-linux-gnueabi-g++ -std=c++1y "-IC:\\Users\\FYRE5480/wpilib/cpp/current/include" "-IC:\\Users\\FYRE5480\\Desktop\\FYRE-Programming-2015-2016\\eclipseWorkspace\\16.02.13 DIO Testing\\src" -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Robot.o" "..\\src\\Robot.cpp" 
+arm-frc-linux-gnueabi-g++ "-LC:\\Users\\FYRE5480/wpilib/cpp/current/lib" -Wl,-rpath,/opt/GenICam_v2_3/bin/Linux_armv7-a,-rpath,/usr/local/frc/rpath-lib -o FRCUserProgram "src\\Robot.o" -lwpi 
+Info: Nothing to build for 16.02.10 Distance Sensor Tester Code
+Info: Nothing to build for 16.02.12 Cleaned And Stuff
+Info: Nothing to build for 16.02.12 Please Run
+Info: Nothing to build for 16.02.13 DIO Testing
+Info: Nothing to build for 16.02.13 DIO Testing

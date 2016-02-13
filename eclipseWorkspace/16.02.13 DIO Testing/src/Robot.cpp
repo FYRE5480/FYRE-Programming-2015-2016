@@ -73,7 +73,7 @@ private:
 		triggerPin->Set(0);
 
 		distTimer->Reset(); // delay of 2 microseconds
-		while(distTimer.HasPeriodPassed(0.000002) == 0) {
+		while(distTimer->HasPeriodPassed(0.000002) == 0) {
 			;
 		}
 
@@ -81,7 +81,7 @@ private:
 		triggerPin->Set(1);
 
 		distTimer->Reset(); // delay of 10 microseconds
-		while(distTimer.HasPeriodPassed(0.000010) == 0) {
+		while(distTimer->HasPeriodPassed(0.000010) == 0) {
 			;
 		}
 
