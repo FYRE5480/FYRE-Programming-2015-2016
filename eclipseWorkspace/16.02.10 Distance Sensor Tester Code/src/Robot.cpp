@@ -159,6 +159,7 @@ private:
 //		long n = i2cChannel2 -> Read();
 		i2cChannel2->Transaction(NULL, 0, anArray, TO_READ);
 		i2cChannel2->Read(ADXL_REG, 1, holderPtr);
+		i2cChannel2->Write(ADXL_REG, 1);
 		holdLen = sizeof(holderPtr);
 		SmartDashboard::PutNumber("Connected via i2c?", i2cChannel2->AddressOnly());
 		SmartDashboard::PutNumber("holdLen:", holdLen);
