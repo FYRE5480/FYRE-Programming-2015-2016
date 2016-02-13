@@ -1,0 +1,13 @@
+10:55:40 **** Incremental Build of configuration Debug for project 16.02.13 DIO Testing ****
+Info: Internal Builder is used for build
+arm-frc-linux-gnueabi-g++ -std=c++1y "-IC:\\Users\\gsera/wpilib/cpp/current/include" "-IC:\\Users\\gsera\\Desktop\\FYRE-Programming-2015-2016\\eclipseWorkspace\\16.02.13 DIO Testing\\src" -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Robot.o" "..\\src\\Robot.cpp" 
+..\src\Robot.cpp: In member function 'void Robot::ReadDistance()':
+..\src\Robot.cpp:76:19: error: request for member 'HasPeriodPassed' in '((Robot*)this)->Robot::distTimer', which is of pointer type 'Timer*' (maybe you meant to use '->' ?)
+   while(distTimer.HasPeriodPassed(0.000002) == 0) {
+                   ^
+..\src\Robot.cpp:84:19: error: request for member 'HasPeriodPassed' in '((Robot*)this)->Robot::distTimer', which is of pointer type 'Timer*' (maybe you meant to use '->' ?)
+   while(distTimer.HasPeriodPassed(0.000010) == 0) {
+                   ^
+
+10:55:41 Build Finished (took 1s.157ms)
+

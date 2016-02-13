@@ -250,3 +250,106 @@ arm-frc-linux-gnueabi-g++ "-LC:\\Users\\FYRE5480/wpilib/cpp/current/lib" -Wl,-rp
 Info: Nothing to build for 16.02.10 Distance Sensor Tester Code
 Info: Nothing to build for 16.02.12 Cleaned And Stuff
 Info: Nothing to build for 16.02.12 Please Run
+10:05:17 **** Rebuild of configuration Debug for project 16.02.13 DIO Testing ****
+Info: Internal Builder is used for build
+arm-frc-linux-gnueabi-g++ -std=c++1y "-IC:\\Users\\gsera/wpilib/cpp/current/include" "-IC:\\Users\\gsera\\Desktop\\FYRE-Programming-2015-2016\\eclipseWorkspace\\16.02.13 DIO Testing\\src" -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Robot.o" "..\\src\\Robot.cpp" 
+arm-frc-linux-gnueabi-g++ "-LC:\\Users\\gsera/wpilib/cpp/current/lib" -Wl,-rpath,/opt/GenICam_v2_3/bin/Linux_armv7-a,-rpath,/usr/local/frc/rpath-lib -o FRCUserProgram "src\\Robot.o" -lwpi 
+10:37:24 **** Incremental Build of configuration Debug for project 16.02.10 Distance Sensor Tester Code ****
+Info: Internal Builder is used for build
+arm-frc-linux-gnueabi-g++ -std=c++1y "-IC:\\Users\\gsera/wpilib/cpp/current/include" "-IC:\\Users\\gsera\\Desktop\\FYRE-Programming-2015-2016\\eclipseWorkspace\\16.02.10 Distance Sensor Tester Code\\src" -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Robot.o" "..\\src\\Robot.cpp" 
+..\src\Robot.cpp: In member function 'void Robot::ReadDistance()':
+..\src\Robot.cpp:154:8: warning: unused variable 'buff' [-Wunused-variable]
+   byte buff[TO_READ];
+        ^
+arm-frc-linux-gnueabi-g++ "-LC:\\Users\\gsera/wpilib/cpp/current/lib" -Wl,-rpath,/opt/GenICam_v2_3/bin/Linux_armv7-a,-rpath,/usr/local/frc/rpath-lib -o FRCUserProgram "src\\Robot.o" -lwpi 
+10:37:27 **** Rebuild of configuration Debug for project 16.02.12 Cleaned And Stuff ****
+Info: Internal Builder is used for build
+arm-frc-linux-gnueabi-g++ -std=c++1y "-IC:\\Users\\gsera/wpilib/cpp/current/include" "-IC:\\Users\\gsera\\Desktop\\FYRE-Programming-2015-2016\\eclipseWorkspace\\16.02.12 Cleaned And Stuff\\src" -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Robot.o" "..\\src\\Robot.cpp" 
+arm-frc-linux-gnueabi-g++ "-LC:\\Users\\gsera/wpilib/cpp/current/lib" -Wl,-rpath,/opt/GenICam_v2_3/bin/Linux_armv7-a,-rpath,/usr/local/frc/rpath-lib -o FRCUserProgram "src\\Robot.o" -lwpi 
+10:37:30 **** Rebuild of configuration Debug for project 16.02.12 Please Run ****
+Info: Internal Builder is used for build
+arm-frc-linux-gnueabi-g++ -std=c++1y "-IC:\\Users\\gsera/wpilib/cpp/current/include" "-IC:\\Users\\gsera\\Desktop\\FYRE-Programming-2015-2016\\eclipseWorkspace\\16.02.12 Please Run\\src" -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Robot.o" "..\\src\\Robot.cpp" 
+arm-frc-linux-gnueabi-g++ "-LC:\\Users\\gsera/wpilib/cpp/current/lib" -Wl,-rpath,/opt/GenICam_v2_3/bin/Linux_armv7-a,-rpath,/usr/local/frc/rpath-lib -o FRCUserProgram "src\\Robot.o" -lwpi 
+10:37:32 **** Rebuild of configuration Debug for project 16.02.13 DIO Testing ****
+Info: Internal Builder is used for build
+arm-frc-linux-gnueabi-g++ -std=c++1y "-IC:\\Users\\gsera/wpilib/cpp/current/include" "-IC:\\Users\\gsera\\Desktop\\FYRE-Programming-2015-2016\\eclipseWorkspace\\16.02.13 DIO Testing\\src" -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Robot.o" "..\\src\\Robot.cpp" 
+..\src\Robot.cpp: In member function 'void Robot::ReadDistance()':
+..\src\Robot.cpp:69:17: error: 'delay' was not declared in this scope
+   delay(0.000002); // 2 microseconds
+                 ^
+..\src\Robot.cpp:81:3: error: 'distance' was not declared in this scope
+   distance = duration/58.2;
+   ^
+..\src\Robot.cpp:81:3: note: suggested alternative:
+In file included from c:\frc\arm-frc-linux-gnueabi\include\c++\4.9.3\bits\stl_algobase.h:66:0,
+                 from c:\frc\arm-frc-linux-gnueabi\include\c++\4.9.3\bits\char_traits.h:39,
+                 from c:\frc\arm-frc-linux-gnueabi\include\c++\4.9.3\ios:40,
+                 from c:\frc\arm-frc-linux-gnueabi\include\c++\4.9.3\ostream:38,
+                 from c:\frc\arm-frc-linux-gnueabi\include\c++\4.9.3\iostream:39,
+                 from C:\Users\gsera/wpilib/cpp/current/include/WPILib.h:13,
+                 from ..\src\Robot.cpp:1:
+c:\frc\arm-frc-linux-gnueabi\include\c++\4.9.3\bits\stl_iterator_base_funcs.h:114:5: note:   'std::distance'
+     distance(_InputIterator __first, _InputIterator __last)
+     ^
+..\src\Robot.cpp:81:14: error: 'duration' was not declared in this scope
+   distance = duration/58.2;
+              ^
+..\src\Robot.cpp:81:14: note: suggested alternative:
+In file included from c:\frc\arm-frc-linux-gnueabi\include\c++\4.9.3\mutex:39:0,
+                 from C:\Users\gsera/wpilib/cpp/current/include/HAL/cpp/priority_mutex.h:11,
+                 from C:\Users\gsera/wpilib/cpp/current/include/ErrorBase.h:13,
+                 from C:\Users\gsera/wpilib/cpp/current/include/SensorBase.h:10,
+                 from C:\Users\gsera/wpilib/cpp/current/include/I2C.h:10,
+                 from C:\Users\gsera/wpilib/cpp/current/include/ADXL345_I2C.h:11,
+                 from C:\Users\gsera/wpilib/cpp/current/include/WPILib.h:15,
+                 from ..\src\Robot.cpp:1:
+c:\frc\arm-frc-linux-gnueabi\include\c++\4.9.3\chrono:64:14: note:   'std::chrono::duration'
+       struct duration;
+              ^
+..\src\Robot.cpp:83:19: error: 'maximumRange' was not declared in this scope
+   if (distance >= maximumRange || distance <= minimumRange){
+                   ^
+..\src\Robot.cpp:83:47: error: 'minimumRange' was not declared in this scope
+   if (distance >= maximumRange || distance <= minimumRange){
+                                               ^
+..\src\Robot.cpp:85:3: error: 'Serial' was not declared in this scope
+   Serial.println("-1");
+   ^
+..\src\Robot.cpp:86:3: error: 'val' was not declared in this scope
+   val = -1;
+   ^
+..\src\Robot.cpp:90:3: error: 'Serial' was not declared in this scope
+   Serial.println(distance);
+   ^
+..\src\Robot.cpp:91:3: error: 'val' was not declared in this scope
+   val = distance;
+   ^
+Info: Nothing to build for 16.02.10 Distance Sensor Tester Code
+Info: Nothing to build for 16.02.12 Cleaned And Stuff
+Info: Nothing to build for 16.02.12 Please Run
+10:55:15 **** Incremental Build of configuration Debug for project 16.02.13 DIO Testing ****
+Info: Internal Builder is used for build
+arm-frc-linux-gnueabi-g++ -std=c++1y "-IC:\\Users\\gsera/wpilib/cpp/current/include" "-IC:\\Users\\gsera\\Desktop\\FYRE-Programming-2015-2016\\eclipseWorkspace\\16.02.13 DIO Testing\\src" -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Robot.o" "..\\src\\Robot.cpp" 
+..\src\Robot.cpp: In member function 'void Robot::ReadDistance()':
+..\src\Robot.cpp:76:19: error: request for member 'HasPeriodPassed' in '((Robot*)this)->Robot::distTimer', which is of pointer type 'Timer*' (maybe you meant to use '->' ?)
+   while(distTimer.HasPeriodPassed(0.000002) == 0) {
+                   ^
+..\src\Robot.cpp:84:19: error: request for member 'HasPeriodPassed' in '((Robot*)this)->Robot::distTimer', which is of pointer type 'Timer*' (maybe you meant to use '->' ?)
+   while(distTimer.HasPeriodPassed(0.000010) == 0) {
+                   ^
+..\src\Robot.cpp:93:42: error: request for member 'HasPeriodPassed' in '((Robot*)this)->Robot::distTimer', which is of pointer type 'Timer*' (maybe you meant to use '->' ?)
+   while(echoPin->Get() == 0 && distTimer.HasPeriodPassed(0.5) == 1) {
+                                          ^
+Info: Nothing to build for 16.02.10 Distance Sensor Tester Code
+Info: Nothing to build for 16.02.12 Cleaned And Stuff
+Info: Nothing to build for 16.02.12 Please Run
+10:55:40 **** Incremental Build of configuration Debug for project 16.02.13 DIO Testing ****
+Info: Internal Builder is used for build
+arm-frc-linux-gnueabi-g++ -std=c++1y "-IC:\\Users\\gsera/wpilib/cpp/current/include" "-IC:\\Users\\gsera\\Desktop\\FYRE-Programming-2015-2016\\eclipseWorkspace\\16.02.13 DIO Testing\\src" -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Robot.o" "..\\src\\Robot.cpp" 
+..\src\Robot.cpp: In member function 'void Robot::ReadDistance()':
+..\src\Robot.cpp:76:19: error: request for member 'HasPeriodPassed' in '((Robot*)this)->Robot::distTimer', which is of pointer type 'Timer*' (maybe you meant to use '->' ?)
+   while(distTimer.HasPeriodPassed(0.000002) == 0) {
+                   ^
+..\src\Robot.cpp:84:19: error: request for member 'HasPeriodPassed' in '((Robot*)this)->Robot::distTimer', which is of pointer type 'Timer*' (maybe you meant to use '->' ?)
+   while(distTimer.HasPeriodPassed(0.000010) == 0) {
+                   ^
