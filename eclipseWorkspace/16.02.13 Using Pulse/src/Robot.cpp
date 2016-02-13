@@ -10,10 +10,10 @@ private:
 	std::string autoSelected;
 	DigitalOutput *triggerPin;
 	DigitalInput *echoPin;
-	Timer *distTimer;
+	int distTimer = 0;
 	int maximumRange = 200; // Maximum range needed
 	int minimumRange = 0; // Minimum range needed
-	long duration, distance; // Duration used to calculate distance
+	long duration = 0, distance = -1; // Duration used to calculate distance
 	long val;
 
 	void RobotInit()
@@ -50,12 +50,15 @@ private:
 
 	void TeleopInit()
 	{
-		SmartDashboard::PutNumber("In TeleopPeriodic:", 1);
+		SmartDashboard::PutNumber("In TeleopInit:", 1);
+		Wait(5);
+		SmartDashboard::PutNumber("Fine, whatever:", 1);
 	}
 
 	void TeleopPeriodic()
 	{
 		ReadDistance();
+
 	}
 
 	void ReadDistance() {
@@ -82,9 +85,12 @@ private:
 //		triggerPin->Set(0);
 
 //		duration = pulseIn(echoPin, HIGH); Arduino code.
-		distTimer->Reset();
-		while(echoPin->Get() == 0 && distTimer->HasPeriodPassed(0.5) == 1) {
-			duration = distTimer->Get();
+		duration = 0;
+		distTimer = 0;
+		while(echoPin->Get() == 0 && distTimer<1000) {
+//			duration = distTimer->Get();
+			distTimer++;
+			duration++;
 		}
 
 		//Calculate the distance (in cm) based on the speed of sound.
@@ -95,7 +101,7 @@ private:
 		val = -1;
 		}
 		else {
-		/* Send the distance to the computer using Serial protocol to indicate successful reading. */
+		/* Send the distance to the computer to indicate successful reading. */
 		val = distance;
 		}
 		SmartDashboard::PutNumber("Distance is:", val);
