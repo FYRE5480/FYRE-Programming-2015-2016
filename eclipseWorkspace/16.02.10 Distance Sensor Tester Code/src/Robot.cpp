@@ -157,16 +157,17 @@ private:
 //		i2cChannel2->Write(ADXL_REG, 1);
 //		i2cChannel2->Read(ADXL_REG, TO_READ, buff);    // request 1 bytes from slave device #8
 //		long n = i2cChannel2 -> Read();
-		i2cChannel2->Transaction(NULL, 0, anArray, TO_READ);
-		i2cChannel2->Read(ADXL_REG, 1, holderPtr);
+//		i2cChannel2->Transaction(NULL, 0, anArray, TO_READ);
+//		i2cChannel2->Read(ADXL_REG, 1, holderPtr);
+//		i2cChannel2->ReadOnly(ADXL_REG, holderPtr);
 		i2cChannel2->Write(ADXL_REG, 1);
-		holdLen = sizeof(holderPtr);
+//		holdLen = sizeof(holderPtr);
 		SmartDashboard::PutNumber("Connected via i2c?", i2cChannel2->AddressOnly());
-		SmartDashboard::PutNumber("holdLen:", holdLen);
-		SmartDashboard::PutNumber("sizeof(anArray):", sizeof(anArray));
+//		SmartDashboard::PutNumber("holdLen:", holdLen);
+//		SmartDashboard::PutNumber("sizeof(anArray):", sizeof(anArray));
 		SmartDashboard::PutNumber("Transaction return is a bool:", i2cChannel2->Transaction(NULL, 0, anArray, TO_READ));
-		SmartDashboard::PutNumber("i2c Transaction return:", anArray[0]);
-		SmartDashboard::PutNumber("i2c Read return:", holderPtr[0]);
+//		SmartDashboard::PutNumber("i2c Transaction return:", anArray[0]);
+//		SmartDashboard::PutNumber("i2c Read return:", holderPtr[0]);
 //		num++; // if putting 0 doesn't work
 	}
 

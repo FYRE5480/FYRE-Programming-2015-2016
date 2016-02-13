@@ -18,3 +18,122 @@ arm-frc-linux-gnueabi-g++ -std=c++1y "-IC:\\Users\\gsera/wpilib/cpp/current/incl
    byte buff[TO_READ];
         ^
 arm-frc-linux-gnueabi-g++ "-LC:\\Users\\gsera/wpilib/cpp/current/lib" -Wl,-rpath,/opt/GenICam_v2_3/bin/Linux_armv7-a,-rpath,/usr/local/frc/rpath-lib -o FRCUserProgram "src\\Robot.o" -lwpi 
+19:00:44 **** Incremental Build of configuration Debug for project 16.02.10 Distance Sensor Tester Code ****
+Info: Internal Builder is used for build
+arm-frc-linux-gnueabi-g++ -std=c++1y "-IC:\\Users\\FYRE5480/wpilib/cpp/current/include" "-IC:\\Users\\FYRE5480\\Desktop\\FYRE-Programming-2015-2016\\eclipseWorkspace\\16.02.10 Distance Sensor Tester Code\\src" -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Robot.o" "..\\src\\Robot.cpp" 
+..\src\Robot.cpp: In member function 'void Robot::ReadDistance()':
+..\src\Robot.cpp:154:8: warning: unused variable 'buff' [-Wunused-variable]
+   byte buff[TO_READ];
+        ^
+arm-frc-linux-gnueabi-g++ "-LC:\\Users\\FYRE5480/wpilib/cpp/current/lib" -Wl,-rpath,/opt/GenICam_v2_3/bin/Linux_armv7-a,-rpath,/usr/local/frc/rpath-lib -o FRCUserProgram "src\\Robot.o" -lwpi 
+Info: Nothing to build for 16.02.10 Distance Sensor Tester Code
+19:01:48 **** Incremental Build of configuration Debug for project 16.02.10 Distance Sensor Tester Code ****
+Info: Internal Builder is used for build
+arm-frc-linux-gnueabi-g++ -std=c++1y "-IC:\\Users\\FYRE5480/wpilib/cpp/current/include" "-IC:\\Users\\FYRE5480\\Desktop\\FYRE-Programming-2015-2016\\eclipseWorkspace\\16.02.10 Distance Sensor Tester Code\\src" -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Robot.o" "..\\src\\Robot.cpp" 
+..\src\Robot.cpp: In member function 'void Robot::ReadDistance()':
+..\src\Robot.cpp:162:47: error: no matching function for call to 'I2C::ReadOnly(int, int, uint8_t*&)'
+   i2cChannel2->ReadOnly(ADXL_REG, 1, holderPtr);
+                                               ^
+..\src\Robot.cpp:162:47: note: candidate is:
+In file included from C:\Users\FYRE5480/wpilib/cpp/current/include/ADXL345_I2C.h:11:0,
+                 from C:\Users\FYRE5480/wpilib/cpp/current/include/WPILib.h:15,
+                 from ..\src\Robot.cpp:1:
+C:\Users\FYRE5480/wpilib/cpp/current/include/I2C.h:35:8: note: bool I2C::ReadOnly(uint8_t, uint8_t*)
+   bool ReadOnly(uint8_t count, uint8_t *buffer);
+        ^
+C:\Users\FYRE5480/wpilib/cpp/current/include/I2C.h:35:8: note:   candidate expects 2 arguments, 3 provided
+..\src\Robot.cpp:154:8: warning: unused variable 'buff' [-Wunused-variable]
+   byte buff[TO_READ];
+        ^
+19:01:54 **** Incremental Build of configuration Debug for project 16.02.10 Distance Sensor Tester Code ****
+Info: Internal Builder is used for build
+arm-frc-linux-gnueabi-g++ -std=c++1y "-IC:\\Users\\FYRE5480/wpilib/cpp/current/include" "-IC:\\Users\\FYRE5480\\Desktop\\FYRE-Programming-2015-2016\\eclipseWorkspace\\16.02.10 Distance Sensor Tester Code\\src" -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Robot.o" "..\\src\\Robot.cpp" 
+..\src\Robot.cpp: In member function 'void Robot::ReadDistance()':
+..\src\Robot.cpp:162:47: error: no matching function for call to 'I2C::ReadOnly(int, int, uint8_t*&)'
+   i2cChannel2->ReadOnly(ADXL_REG, 1, holderPtr);
+                                               ^
+..\src\Robot.cpp:162:47: note: candidate is:
+In file included from C:\Users\FYRE5480/wpilib/cpp/current/include/ADXL345_I2C.h:11:0,
+                 from C:\Users\FYRE5480/wpilib/cpp/current/include/WPILib.h:15,
+                 from ..\src\Robot.cpp:1:
+C:\Users\FYRE5480/wpilib/cpp/current/include/I2C.h:35:8: note: bool I2C::ReadOnly(uint8_t, uint8_t*)
+   bool ReadOnly(uint8_t count, uint8_t *buffer);
+        ^
+C:\Users\FYRE5480/wpilib/cpp/current/include/I2C.h:35:8: note:   candidate expects 2 arguments, 3 provided
+..\src\Robot.cpp:154:8: warning: unused variable 'buff' [-Wunused-variable]
+   byte buff[TO_READ];
+        ^
+19:02:01 **** Incremental Build of configuration Debug for project 16.02.10 Distance Sensor Tester Code ****
+Info: Internal Builder is used for build
+arm-frc-linux-gnueabi-g++ -std=c++1y "-IC:\\Users\\FYRE5480/wpilib/cpp/current/include" "-IC:\\Users\\FYRE5480\\Desktop\\FYRE-Programming-2015-2016\\eclipseWorkspace\\16.02.10 Distance Sensor Tester Code\\src" -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Robot.o" "..\\src\\Robot.cpp" 
+..\src\Robot.cpp: In member function 'void Robot::ReadDistance()':
+..\src\Robot.cpp:162:47: error: no matching function for call to 'I2C::ReadOnly(int, int, uint8_t*&)'
+   i2cChannel2->ReadOnly(ADXL_REG, 1, holderPtr);
+                                               ^
+..\src\Robot.cpp:162:47: note: candidate is:
+In file included from C:\Users\FYRE5480/wpilib/cpp/current/include/ADXL345_I2C.h:11:0,
+                 from C:\Users\FYRE5480/wpilib/cpp/current/include/WPILib.h:15,
+                 from ..\src\Robot.cpp:1:
+C:\Users\FYRE5480/wpilib/cpp/current/include/I2C.h:35:8: note: bool I2C::ReadOnly(uint8_t, uint8_t*)
+   bool ReadOnly(uint8_t count, uint8_t *buffer);
+        ^
+C:\Users\FYRE5480/wpilib/cpp/current/include/I2C.h:35:8: note:   candidate expects 2 arguments, 3 provided
+..\src\Robot.cpp:154:8: warning: unused variable 'buff' [-Wunused-variable]
+   byte buff[TO_READ];
+        ^
+19:02:58 **** Incremental Build of configuration Debug for project 16.02.10 Distance Sensor Tester Code ****
+Info: Internal Builder is used for build
+arm-frc-linux-gnueabi-g++ -std=c++1y "-IC:\\Users\\FYRE5480/wpilib/cpp/current/include" "-IC:\\Users\\FYRE5480\\Desktop\\FYRE-Programming-2015-2016\\eclipseWorkspace\\16.02.10 Distance Sensor Tester Code\\src" -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Robot.o" "..\\src\\Robot.cpp" 
+..\src\Robot.cpp: In member function 'void Robot::ReadDistance()':
+..\src\Robot.cpp:162:36: error: invalid conversion from 'int' to 'uint8_t* {aka unsigned char*}' [-fpermissive]
+   i2cChannel2->ReadOnly(ADXL_REG, 1);
+                                    ^
+In file included from C:\Users\FYRE5480/wpilib/cpp/current/include/ADXL345_I2C.h:11:0,
+                 from C:\Users\FYRE5480/wpilib/cpp/current/include/WPILib.h:15,
+                 from ..\src\Robot.cpp:1:
+C:\Users\FYRE5480/wpilib/cpp/current/include/I2C.h:35:8: note: initializing argument 2 of 'bool I2C::ReadOnly(uint8_t, uint8_t*)'
+   bool ReadOnly(uint8_t count, uint8_t *buffer);
+        ^
+..\src\Robot.cpp:154:8: warning: unused variable 'buff' [-Wunused-variable]
+   byte buff[TO_READ];
+        ^
+19:03:31 **** Incremental Build of configuration Debug for project 16.02.10 Distance Sensor Tester Code ****
+Info: Internal Builder is used for build
+arm-frc-linux-gnueabi-g++ -std=c++1y "-IC:\\Users\\FYRE5480/wpilib/cpp/current/include" "-IC:\\Users\\FYRE5480\\Desktop\\FYRE-Programming-2015-2016\\eclipseWorkspace\\16.02.10 Distance Sensor Tester Code\\src" -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Robot.o" "..\\src\\Robot.cpp" 
+..\src\Robot.cpp: In member function 'void Robot::ReadDistance()':
+..\src\Robot.cpp:154:8: warning: unused variable 'buff' [-Wunused-variable]
+   byte buff[TO_READ];
+        ^
+arm-frc-linux-gnueabi-g++ "-LC:\\Users\\FYRE5480/wpilib/cpp/current/lib" -Wl,-rpath,/opt/GenICam_v2_3/bin/Linux_armv7-a,-rpath,/usr/local/frc/rpath-lib -o FRCUserProgram "src\\Robot.o" -lwpi 
+Info: Nothing to build for 16.02.10 Distance Sensor Tester Code
+Info: Nothing to build for 16.02.10 Distance Sensor Tester Code
+19:04:38 **** Incremental Build of configuration Debug for project 16.02.10 Distance Sensor Tester Code ****
+Info: Internal Builder is used for build
+arm-frc-linux-gnueabi-g++ -std=c++1y "-IC:\\Users\\FYRE5480/wpilib/cpp/current/include" "-IC:\\Users\\FYRE5480\\Desktop\\FYRE-Programming-2015-2016\\eclipseWorkspace\\16.02.10 Distance Sensor Tester Code\\src" -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Robot.o" "..\\src\\Robot.cpp" 
+..\src\Robot.cpp: In member function 'void Robot::ReadDistance()':
+..\src\Robot.cpp:154:8: warning: unused variable 'buff' [-Wunused-variable]
+   byte buff[TO_READ];
+        ^
+arm-frc-linux-gnueabi-g++ "-LC:\\Users\\FYRE5480/wpilib/cpp/current/lib" -Wl,-rpath,/opt/GenICam_v2_3/bin/Linux_armv7-a,-rpath,/usr/local/frc/rpath-lib -o FRCUserProgram "src\\Robot.o" -lwpi 
+Info: Nothing to build for 16.02.10 Distance Sensor Tester Code
+Info: Nothing to build for 16.02.10 Distance Sensor Tester Code
+19:06:05 **** Incremental Build of configuration Debug for project 16.02.10 Distance Sensor Tester Code ****
+Info: Internal Builder is used for build
+arm-frc-linux-gnueabi-g++ -std=c++1y "-IC:\\Users\\FYRE5480/wpilib/cpp/current/include" "-IC:\\Users\\FYRE5480\\Desktop\\FYRE-Programming-2015-2016\\eclipseWorkspace\\16.02.10 Distance Sensor Tester Code\\src" -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Robot.o" "..\\src\\Robot.cpp" 
+..\src\Robot.cpp: In member function 'void Robot::ReadDistance()':
+..\src\Robot.cpp:154:8: warning: unused variable 'buff' [-Wunused-variable]
+   byte buff[TO_READ];
+        ^
+arm-frc-linux-gnueabi-g++ "-LC:\\Users\\FYRE5480/wpilib/cpp/current/lib" -Wl,-rpath,/opt/GenICam_v2_3/bin/Linux_armv7-a,-rpath,/usr/local/frc/rpath-lib -o FRCUserProgram "src\\Robot.o" -lwpi 
+Info: Nothing to build for 16.02.10 Distance Sensor Tester Code
+Info: Nothing to build for 16.02.10 Distance Sensor Tester Code
+19:07:08 **** Incremental Build of configuration Debug for project 16.02.10 Distance Sensor Tester Code ****
+Info: Internal Builder is used for build
+arm-frc-linux-gnueabi-g++ -std=c++1y "-IC:\\Users\\FYRE5480/wpilib/cpp/current/include" "-IC:\\Users\\FYRE5480\\Desktop\\FYRE-Programming-2015-2016\\eclipseWorkspace\\16.02.10 Distance Sensor Tester Code\\src" -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Robot.o" "..\\src\\Robot.cpp" 
+..\src\Robot.cpp: In member function 'void Robot::ReadDistance()':
+..\src\Robot.cpp:154:8: warning: unused variable 'buff' [-Wunused-variable]
+   byte buff[TO_READ];
+        ^
+arm-frc-linux-gnueabi-g++ "-LC:\\Users\\FYRE5480/wpilib/cpp/current/lib" -Wl,-rpath,/opt/GenICam_v2_3/bin/Linux_armv7-a,-rpath,/usr/local/frc/rpath-lib -o FRCUserProgram "src\\Robot.o" -lwpi 
+Info: Nothing to build for 16.02.10 Distance Sensor Tester Code
+Info: Nothing to build for 16.02.10 Distance Sensor Tester Code

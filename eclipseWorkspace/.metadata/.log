@@ -524,3 +524,39 @@ java.io.IOException: Cannot run program "C:\Program Files (x86)\Microsoft Visual
 
 !ENTRY edu.wpi.first.wpilib.plugins.core 1 0 2016-02-12 17:58:19.306
 !MESSAGE Installedcpp
+
+!ENTRY WPILib_CPP_Robot_Development 1 0 2016-02-12 19:00:47.563
+!MESSAGE Running ant file: C:\Users\FYRE5480\Desktop\FYRE-Programming-2015-2016\eclipseWorkspace\16.02.10 Distance Sensor Tester Code\build.xml
+
+!ENTRY WPILib_CPP_Robot_Development 1 0 2016-02-12 19:00:47.565
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_CPP_Robot_Development 1 0 2016-02-12 19:02:00.989
+!MESSAGE Running ant file: C:\Users\FYRE5480\Desktop\FYRE-Programming-2015-2016\eclipseWorkspace\16.02.10 Distance Sensor Tester Code\build.xml
+
+!ENTRY WPILib_CPP_Robot_Development 1 0 2016-02-12 19:02:00.991
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_CPP_Robot_Development 1 0 2016-02-12 19:03:52.191
+!MESSAGE Running ant file: C:\Users\FYRE5480\Desktop\FYRE-Programming-2015-2016\eclipseWorkspace\16.02.10 Distance Sensor Tester Code\build.xml
+
+!ENTRY WPILib_CPP_Robot_Development 1 0 2016-02-12 19:03:52.192
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_CPP_Robot_Development 1 0 2016-02-12 19:04:50.607
+!MESSAGE Running ant file: C:\Users\FYRE5480\Desktop\FYRE-Programming-2015-2016\eclipseWorkspace\16.02.10 Distance Sensor Tester Code\build.xml
+
+!ENTRY WPILib_CPP_Robot_Development 1 0 2016-02-12 19:04:50.607
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_CPP_Robot_Development 1 0 2016-02-12 19:06:17.832
+!MESSAGE Running ant file: C:\Users\FYRE5480\Desktop\FYRE-Programming-2015-2016\eclipseWorkspace\16.02.10 Distance Sensor Tester Code\build.xml
+
+!ENTRY WPILib_CPP_Robot_Development 1 0 2016-02-12 19:06:17.833
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_CPP_Robot_Development 1 0 2016-02-12 19:07:29.587
+!MESSAGE Running ant file: C:\Users\FYRE5480\Desktop\FYRE-Programming-2015-2016\eclipseWorkspace\16.02.10 Distance Sensor Tester Code\build.xml
+
+!ENTRY WPILib_CPP_Robot_Development 1 0 2016-02-12 19:07:29.587
+!MESSAGE Targets: deploy, Mode: run
