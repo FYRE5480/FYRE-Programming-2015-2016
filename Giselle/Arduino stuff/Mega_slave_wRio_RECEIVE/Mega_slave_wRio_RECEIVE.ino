@@ -65,7 +65,7 @@ void loop() {
 
 // function that executes whenever data is requested by master
 // this function is registered as an event, see setup()
-void receiveEvent() {
+void receiveEvent(int params) {
   digitalWrite (13, HIGH);
   Serial.println("I am writing");
   Serial.println(val);
