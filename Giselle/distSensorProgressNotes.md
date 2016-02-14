@@ -5,3 +5,4 @@ Previously: Mega (slave) and Launchpad (master, stand-in for Rio) will transmit 
 16.02.12: Well, code now uploads to the robot again. What I proposed last time doesn't actually work for whatever reason. Connor, this link is for you: http://www.chiefdelphi.com/forums/showthread.php?p=1415788 Download the file, it's actually in there. I'm going to start looking into using something else like idk. -Nix
 
 16.02.13: Trying to use DIOs and bypassing arduino altogether. -Nix
+	5:34p: Ended up using new distance sensor with analog inputs and using the following equation to convert: y = 0.1319x-1.3456 where y is the actual distance and x is the given distance.
