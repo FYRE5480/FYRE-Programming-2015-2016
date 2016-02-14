@@ -5,32 +5,27 @@
 class Robot: public IterativeRobot
 {
 private:
-	// Smart dashboard setup
 	LiveWindow *lw = LiveWindow::GetInstance();
 	SendableChooser *chooser;
 	const std::string autoNameDefault = "Default";
 	const std::string autoNameCustom = "My Auto";
 	std::string autoSelected;
 
-	// Shooting motor controllers and joystick and limit switch
 	Jaguar *motor23;
 	Talon *motor1; //Will be Talon: Victor for testing purposes only
 	Joystick *shootStick;
-	DigitalInput *shooterSwitch;
 
-	// Various drivy things and gyro and switch
 	CANTalon *frontLeftTalon, *rearLeftTalon, *frontRightTalon;
 	Victor *rearRightTalon;
 	RobotDrive *robotDrive;	// robot drive system
 	Joystick *flightStick;	// Flightstick
 	ADXRS450_Gyro *yawGyro;			// How does the Gyro interface with the code? No channel #s are included
+	DigitalInput *shooterSwitch;
 
-	// Camera setup
 	IMAQdxSession session;
 	Image *frame;
 	IMAQdxError imaqError;
 
-//	Distance sensor
 	AnalogInput *distanceSensor;
 	AnalogInput *getVcc;
 
@@ -51,14 +46,13 @@ private:
 
 	float deadZone			 = .2;
 
-	//	Drive variables
 	int driveMode = 0; // Default Drive Mode is Strafe
 	float flightX = 0;
 	float flightY = 0;
 	float flightZ = 0;
 	float flightThrottle = 0;
 
-//Shooter variables
+
 	bool bPrime = false;
 	bool bPrimeOn = false;
 	int bPrimeRunning = 1;
@@ -72,18 +66,15 @@ private:
 	int shooterCounter = 0;
 	bool shootSwitch = 0;
 
-//	Distance variable
 	float convertedDist = 0;
 
 	void RobotInit()
 	{
-//		Auto chooser
 		chooser = new SendableChooser();
 		chooser->AddDefault(autoNameDefault, (void*)&autoNameDefault);
 		chooser->AddObject(autoNameCustom, (void*)&autoNameCustom);
 		SmartDashboard::PutData("Auto Modes", chooser);
 
-//		Drive declarations
 		frontLeftTalon = new CANTalon(frontLeftChannel);
 		rearLeftTalon = new CANTalon(rearLeftChannel);
 		frontRightTalon = new CANTalon(frontRightChannel);
@@ -93,17 +84,16 @@ private:
 		flightStick = new Joystick(flightstickChannel);
 		robotDrive -> SetSafetyEnabled(false);
 
-//		Shooter variable declarations MAKE SURE YOU PLUG THEM INTO THE RIGHT PORTS WENDY
 		motor1 = new Talon(4); // loook above
 		motor23 = new Jaguar(5) ;
 		shootStick = new Joystick(1);
 		shooterSwitch = new DigitalInput(0);
 
-//		Distance sensor declarations
 		distanceSensor = new AnalogInput(3);
 		getVcc = new AnalogInput(2);
 
-//		Camera stuff
+
+		//drivecam = new USBCamera("cam0", false);
 		// create an image
 		frame = imaqCreateImage(IMAQ_IMAGE_RGB, 0);
 		//the camera name (ex "cam0") can be found through the roborio web interface
@@ -117,10 +107,20 @@ private:
 		}
 	}
 
+
+	/**
+	 * This autonomous (along with the chooser code above) shows how to select between different autonomous modes
+	 * using the dashboard. The sendable chooser code works with the Java SmartDashboard. If you prefer the LabVIEW
+	 * Dashboard, remove all of the chooser code and uncomment the GetString line to get the auto name from the text box
+	 * below the Gyro
+	 *
+	 * You can add additional auto modes by adding additional comparisons to the if-else structure below with additional strings.
+	 * If using the SendableChooser make sure to add them to the chooser code above as well.
+	 */
 	void AutonomousInit()
 	{
 		autoSelected = *((std::string*)chooser->GetSelected());
-		std::string autoSelected = SmartDashboard::GetString("Auto Selector", autoNameDefault);
+		//std::string autoSelected = SmartDashboard::GetString("Auto Selector", autoNameDefault);
 		std::cout << "Auto selected: " << autoSelected << std::endl;
 
 		if(autoSelected == autoNameCustom){
