@@ -12,6 +12,12 @@ private:
 	const std::string autoNameCustom = "My Auto";
 	std::string autoSelected;
 
+	// Auto setup: arrays are for joystick motion
+	float xValues[800];
+	float yValues[800];
+	float zValues[800];
+	int autoCounter;
+
 	// Shooting motor controllers and joystick and limit switch
 	Jaguar *motor23;
 	Talon *motor1; //Will be Talon: Victor for testing purposes only
@@ -82,10 +88,6 @@ private:
 		chooser->AddDefault(autoNameDefault, (void*)&autoNameDefault);
 		chooser->AddObject(autoNameCustom, (void*)&autoNameCustom);
 		SmartDashboard::PutData("Auto Modes", chooser);
-		float xValues[800];
-		float yValues[800];
-		float zValues[800];
-		int autoCounter;
 
 //		Drive declarations
 		frontLeftTalon = new CANTalon(frontLeftChannel);
@@ -146,7 +148,7 @@ private:
 				flightX = xValues[autoCounter];
 				flightY = yValues[autoCounter];
 				flightZ = zValues[autoCounter];
-				robotDrive->MechanumDrive_Cartesian(flightZ, flightY, flightX);
+				robotDrive->MecanumDrive_Cartesian(flightZ, flightY, flightX);
 				autoCounter++;
 			}
 		} else {
