@@ -331,6 +331,14 @@ private:
 	}
 
 	void ReadDistance() {
+//		SmartDashboard::PutNumber("the raw distance from the distance sensor is", distanceSensor->GetValue());
+//		SmartDashboard::PutNumber("the voltage is", distanceSensor->GetAverageVoltage());
+//		SmartDashboard::PutNumber("the vcc is", getVcc->GetAverageVoltage());
+//		scalingFactor = getVcc->GetAverageVoltage()/float(512);
+//		SmartDashboard::PutNumber("using scaling factor", scalingFactor * distanceSensor->GetValue());
+//		convertedDist = float(512) * distanceSensor->GetValue() / getVcc->GetAverageVoltage();
+//		SmartDashboard::PutNumber("the converted distance is", convertedDist/1000);
+
 		// y = 0.1319x-1.3456
 		// y is actual distance, x is raw value
 		convertedDist = 0.1319*(distanceSensor->GetValue())-1.3456;

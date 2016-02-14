@@ -246,25 +246,25 @@ private:
 		if(bLoadRunning >= 0){ // bLoadRunning is -1 or 1 (1 means not running)
 			if(bPrime == true){ // if we press the button
 				if(bPrimeOn == false){ // if the button is not pressed last iteration
-					bPrimeOn = true; // say button was pressed
-					bPrimeRunning = -bPrimeRunning; // turn prime on or off
+					bPrimeOn = true;
+					bPrimeRunning = -bPrimeRunning;
 				}
 			}
 			else{
-				bPrimeOn = false; // when you let go, say the button was let go of
+				bPrimeOn = false;
 			}
 
 		}
 
 		if(bPrimeRunning <= 0){
-			motor23 -> Set(1); // turn it on
+			motor23 -> Set(1);
 		}
 		else{
-			motor23 -> Set(0); // turn it off
+			motor23 -> Set(0);
 		}
 	}
 
-	void Load() { // See prime motors for logicy things
+	void Load() {
 		bLoad = shootStick -> GetRawButton(5);
 		if(bPrimeRunning >= 0){
 			if (bLoad == true) {
@@ -278,7 +278,7 @@ private:
 			}
 		}
 
-		if (bLowGoalShoot == false && bHighGoalShoot == false){ // make sure that it is not trying to shoot
+		if (bLowGoalShoot == false && bHighGoalShoot == false){
 			if (bLoadRunning <= 0){
 				motor1 -> Set(1);
 			}
@@ -288,7 +288,7 @@ private:
 		}
 	}
 
-	void HighGoal(){ // shoots for a time period -- is not a toggle
+	void HighGoal(){
 		bHighGoal = shootStick -> GetRawAxis(3);
 
 		if(bLowGoalShoot == false){
@@ -309,7 +309,7 @@ private:
 		}
 	}
 
-	void LowGoal(){ // See HighGoal
+	void LowGoal(){
 		bLowGoal = shootStick -> GetRawAxis(2); // gets left trigger
 
 		if (bHighGoalShoot == false) { // only runs if not shooting for high goal
@@ -331,6 +331,14 @@ private:
 	}
 
 	void ReadDistance() {
+//		SmartDashboard::PutNumber("the raw distance from the distance sensor is", distanceSensor->GetValue());
+//		SmartDashboard::PutNumber("the voltage is", distanceSensor->GetAverageVoltage());
+//		SmartDashboard::PutNumber("the vcc is", getVcc->GetAverageVoltage());
+//		scalingFactor = getVcc->GetAverageVoltage()/float(512);
+//		SmartDashboard::PutNumber("using scaling factor", scalingFactor * distanceSensor->GetValue());
+//		convertedDist = float(512) * distanceSensor->GetValue() / getVcc->GetAverageVoltage();
+//		SmartDashboard::PutNumber("the converted distance is", convertedDist/1000);
+
 		// y = 0.1319x-1.3456
 		// y is actual distance, x is raw value
 		convertedDist = 0.1319*(distanceSensor->GetValue())-1.3456;

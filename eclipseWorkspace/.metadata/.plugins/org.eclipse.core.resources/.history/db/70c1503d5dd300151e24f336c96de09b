@@ -278,7 +278,7 @@ private:
 			}
 		}
 
-		if (bLowGoalShoot == false && bHighGoalShoot == false){ // make sure that it is not trying to shoot
+		if (bLowGoalShoot == false && bHighGoalShoot == false){
 			if (bLoadRunning <= 0){
 				motor1 -> Set(1);
 			}
@@ -288,7 +288,7 @@ private:
 		}
 	}
 
-	void HighGoal(){ // shoots for a time period -- is not a toggle
+	void HighGoal(){
 		bHighGoal = shootStick -> GetRawAxis(3);
 
 		if(bLowGoalShoot == false){
@@ -309,7 +309,7 @@ private:
 		}
 	}
 
-	void LowGoal(){ // See HighGoal
+	void LowGoal(){
 		bLowGoal = shootStick -> GetRawAxis(2); // gets left trigger
 
 		if (bHighGoalShoot == false) { // only runs if not shooting for high goal
@@ -331,6 +331,14 @@ private:
 	}
 
 	void ReadDistance() {
+//		SmartDashboard::PutNumber("the raw distance from the distance sensor is", distanceSensor->GetValue());
+//		SmartDashboard::PutNumber("the voltage is", distanceSensor->GetAverageVoltage());
+//		SmartDashboard::PutNumber("the vcc is", getVcc->GetAverageVoltage());
+//		scalingFactor = getVcc->GetAverageVoltage()/float(512);
+//		SmartDashboard::PutNumber("using scaling factor", scalingFactor * distanceSensor->GetValue());
+//		convertedDist = float(512) * distanceSensor->GetValue() / getVcc->GetAverageVoltage();
+//		SmartDashboard::PutNumber("the converted distance is", convertedDist/1000);
+
 		// y = 0.1319x-1.3456
 		// y is actual distance, x is raw value
 		convertedDist = 0.1319*(distanceSensor->GetValue())-1.3456;

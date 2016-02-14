@@ -85,11 +85,11 @@ private:
 
 //		Drive declarations
 		frontLeftTalon = new CANTalon(frontLeftChannel);
+		frontLeftTalon->SetInverted(true);
 		rearLeftTalon = new CANTalon(rearLeftChannel);
+		rearLeftTalon->SetInverted(true);
 		frontRightTalon = new CANTalon(frontRightChannel);
 		rearRightTalon = new Victor(rearRightChannel);
-		frontRightTalon->SetInverted(true);
-		rearRightTalon->SetInverted(true);
 		yawGyro = new ADXRS450_Gyro();
 		robotDrive = new RobotDrive(frontLeftTalon, rearLeftTalon, frontRightTalon, rearRightTalon);
 		flightStick = new Joystick(flightstickChannel);
@@ -97,7 +97,7 @@ private:
 
 //		Shooter variable declarations MAKE SURE YOU PLUG THEM INTO THE RIGHT PORTS WENDY
 		motor1 = new Talon(4); // loook above
-		motor23 = new Jaguar(5);
+		motor23 = new Jaguar(5) ;
 		shootStick = new Joystick(1);
 		shooterSwitch = new DigitalInput(0);
 
@@ -168,10 +168,7 @@ private:
 		HighGoal();
 		LowGoal();
 		ReadDistance();
-		Camera();
-	}
 
-	void Camera() { // Camera.
 		IMAQdxGrab(session, frame, true, NULL);
 		if(imaqError != IMAQdxErrorSuccess) {
 			DriverStation::ReportError("IMAQdxGrab error: " + std::to_string((long)imaqError) + "\n");
@@ -192,6 +189,7 @@ private:
 		flightZ = flightStick->GetZ(); //Pull joystick twist motion for later use
 		flightThrottle = ((((flightStick->GetThrottle() - 1)*-1)/2) * .8 + .2); //Pull throttle to modify drive variables
 																		//Throttle value is between .2 and 1.0
+		SmartDashboard::PutNumber("AbsFlightX", fabs(flightX));
 
 		if (fabs(flightX) < deadZone) { //Deaden x
 			flightX = 0;
@@ -213,7 +211,7 @@ private:
 			driveMode = 2;
 		}
 		if (flightStick->GetRawButton(gyroResetChannel)){ //Reset gyro with the trigger
-			yawGyro->Reset();
+			//yawGyro->Reset();
 		}
 		flightX = flightX * flightThrottle;
 		flightY = flightY * flightThrottle;
@@ -239,32 +237,40 @@ private:
 
 	void PrimeMotors(){
 		bPrime = shootStick -> GetRawButton(1);
+		//shootSwitch = shooterSwitch -> Get();
+		SmartDashboard::PutNumber("A Button: ", bPrime);
 		SmartDashboard::PutNumber("Load Running", bLoadRunning);
 		SmartDashboard::PutNumber("Prime Running", bPrimeRunning);
+		SmartDashboard::PutNumber("bPrimeOn", bPrimeOn);
+		SmartDashboard::PutNumber("LBumber: ", bLoad);
+		SmartDashboard::PutNumber("bLoadOn", bLoadOn);
 		SmartDashboard::PutBoolean("Shooter Loaded", shooterSwitch);
+		//std::cout << "Shoot Switch: "  << shooterSwitch <<std::endl;
 
-		if(bLoadRunning >= 0){ // bLoadRunning is -1 or 1 (1 means not running)
-			if(bPrime == true){ // if we press the button
-				if(bPrimeOn == false){ // if the button is not pressed last iteration
-					bPrimeOn = true; // say button was pressed
-					bPrimeRunning = -bPrimeRunning; // turn prime on or off
+		std::cout << "Load Running: " << bLoadRunning << std::endl;
+		std::cout << "Prime Running: " << bPrimeRunning << std::endl;
+		if(bLoadRunning >= 0){
+			if(bPrime == true){
+				if(bPrimeOn == false){
+					bPrimeOn = true;
+					bPrimeRunning = -bPrimeRunning;
 				}
 			}
 			else{
-				bPrimeOn = false; // when you let go, say the button was let go of
+				bPrimeOn = false;
 			}
 
 		}
 
 		if(bPrimeRunning <= 0){
-			motor23 -> Set(1); // turn it on
+			motor23 -> Set(1);
 		}
 		else{
-			motor23 -> Set(0); // turn it off
+			motor23 -> Set(0);
 		}
 	}
 
-	void Load() { // See prime motors for logicy things
+	void Load() {
 		bLoad = shootStick -> GetRawButton(5);
 		if(bPrimeRunning >= 0){
 			if (bLoad == true) {
@@ -278,7 +284,7 @@ private:
 			}
 		}
 
-		if (bLowGoalShoot == false && bHighGoalShoot == false){ // make sure that it is not trying to shoot
+		if (bLowGoalShoot == false && bHighGoalShoot == false){
 			if (bLoadRunning <= 0){
 				motor1 -> Set(1);
 			}
@@ -288,7 +294,7 @@ private:
 		}
 	}
 
-	void HighGoal(){ // shoots for a time period -- is not a toggle
+	void HighGoal(){
 		bHighGoal = shootStick -> GetRawAxis(3);
 
 		if(bLowGoalShoot == false){
@@ -309,7 +315,7 @@ private:
 		}
 	}
 
-	void LowGoal(){ // See HighGoal
+	void LowGoal(){
 		bLowGoal = shootStick -> GetRawAxis(2); // gets left trigger
 
 		if (bHighGoalShoot == false) { // only runs if not shooting for high goal
@@ -331,6 +337,14 @@ private:
 	}
 
 	void ReadDistance() {
+//		SmartDashboard::PutNumber("the raw distance from the distance sensor is", distanceSensor->GetValue());
+//		SmartDashboard::PutNumber("the voltage is", distanceSensor->GetAverageVoltage());
+//		SmartDashboard::PutNumber("the vcc is", getVcc->GetAverageVoltage());
+//		scalingFactor = getVcc->GetAverageVoltage()/float(512);
+//		SmartDashboard::PutNumber("using scaling factor", scalingFactor * distanceSensor->GetValue());
+//		convertedDist = float(512) * distanceSensor->GetValue() / getVcc->GetAverageVoltage();
+//		SmartDashboard::PutNumber("the converted distance is", convertedDist/1000);
+
 		// y = 0.1319x-1.3456
 		// y is actual distance, x is raw value
 		convertedDist = 0.1319*(distanceSensor->GetValue())-1.3456;
