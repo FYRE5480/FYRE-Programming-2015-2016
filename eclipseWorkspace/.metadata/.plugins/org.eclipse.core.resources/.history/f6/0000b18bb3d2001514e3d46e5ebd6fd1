@@ -1,0 +1,50 @@
+#include "WPILib.h"
+int convertedDist;
+
+class Robot: public IterativeRobot
+{
+private:
+	LiveWindow *lw = LiveWindow::GetInstance();
+	AnalogInput *distanceSensor;
+	AnalogInput *getVcc;
+
+	void RobotInit()
+	{
+		distanceSensor = new AnalogInput(3);
+		getVcc = new AnalogInput(2);
+	}
+
+	void AutonomousInit()
+	{
+
+	}
+
+	void AutonomousPeriodic()
+	{
+
+	}
+
+	void TeleopInit()
+	{
+
+	}
+
+	void TeleopPeriodic()
+	{
+		ReadDistance();
+	}
+
+	void ReadDistance() {
+		SmartDashboard::PutNumber("the raw distance from the distance sensor is", distanceSensor->GetValue());
+		SmartDashboard::PutNumber("the voltage is", distanceSensor->GetAverageVoltage());
+		convertedDist = 512 * distanceSensor->GetValue() / getVcc->GetAverageVoltage();
+		SmartDashboard::PutNumber("the converted distance is", convertedDist);
+	}
+
+	void TestPeriodic()
+	{
+		lw->Run();
+	}
+};
+
+START_ROBOT_CLASS(Robot)

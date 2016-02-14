@@ -43,7 +43,6 @@ private:
 //		SmartDashboard::PutNumber("using scaling factor", scalingFactor * distanceSensor->GetValue());
 //		convertedDist = float(512) * distanceSensor->GetValue() / getVcc->GetAverageVoltage();
 //		SmartDashboard::PutNumber("the converted distance is", convertedDist/1000);
-
 		// y = 0.1319x-1.3456
 		// y is actual distance, x is raw value
 		Smart Dashboard::PutNumber("Actual distance:", 0.1319(distanceSensor->GetValue())-1.3456);
