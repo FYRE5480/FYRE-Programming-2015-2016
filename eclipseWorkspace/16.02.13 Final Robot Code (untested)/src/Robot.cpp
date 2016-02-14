@@ -82,6 +82,10 @@ private:
 		chooser->AddDefault(autoNameDefault, (void*)&autoNameDefault);
 		chooser->AddObject(autoNameCustom, (void*)&autoNameCustom);
 		SmartDashboard::PutData("Auto Modes", chooser);
+		float xValues[800];
+		float yValues[800];
+		float zValues[800];
+		int autoCounter;
 
 //		Drive declarations
 		frontLeftTalon = new CANTalon(frontLeftChannel);
@@ -125,31 +129,26 @@ private:
 		std::string autoSelected = SmartDashboard::GetString("Auto Selector", autoNameDefault);
 		std::cout << "Auto selected: " << autoSelected << std::endl;
 
+		autoCounter = 0;
+
 		if(autoSelected == autoNameCustom){
 			//Custom Auto goes here
 		} else {
 			//Default Auto goes here
 		}
 
-		//Shooter variables
-			bPrime = false;
-			bPrimeOn = false;
-			bPrimeRunning = 1;
-			bLoad = false;
-			bLoadOn = false;
-			bLoadRunning = 1;
-			bHighGoalShoot = false;
-			bHighGoal = 0;
-			bLowGoalShoot = false;
-			bLowGoal = 0;
-			shooterCounter = 0;
-			shootSwitch = 0;
 	}
 
 	void AutonomousPeriodic()
 	{
 		if(autoSelected == autoNameCustom){
-			//Custom Auto goes here
+			if(autoCounter<800) {
+				flightX = xValues[autoCounter];
+				flightY = yValues[autoCounter];
+				flightZ = zValues[autoCounter];
+				robotDrive->MechanumDrive_Cartesian(flightZ, flightY, flightX);
+				autoCounter++;
+			}
 		} else {
 			//Default Auto goes here
 		}
@@ -157,7 +156,19 @@ private:
 
 	void TeleopInit()
 	{
-
+		//Shooter variables
+		bPrime = false;
+		bPrimeOn = false;
+		bPrimeRunning = 1;
+		bLoad = false;
+		bLoadOn = false;
+		bLoadRunning = 1;
+		bHighGoalShoot = false;
+		bHighGoal = 0;
+		bLowGoalShoot = false;
+		bLowGoal = 0;
+		shooterCounter = 0;
+		shootSwitch = 0;
 	}
 
 	void TeleopPeriodic()
