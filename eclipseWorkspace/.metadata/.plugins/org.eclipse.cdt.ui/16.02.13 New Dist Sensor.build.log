@@ -1,4 +1,4 @@
-17:14:04 **** Incremental Build of configuration Debug for project 16.02.13 New Dist Sensor ****
+19:05:03 **** Incremental Build of configuration Debug for project 16.02.13 New Dist Sensor ****
 Info: Internal Builder is used for build
 arm-frc-linux-gnueabi-g++ -std=c++1y "-IC:\\Users\\FYRE5480/wpilib/cpp/current/include" "-IC:\\Users\\FYRE5480\\Desktop\\FYRE-Programming-2015-2016\\eclipseWorkspace\\16.02.13 New Dist Sensor\\src" -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Robot.o" "..\\src\\Robot.cpp" 
 ..\src\Robot.cpp: In member function 'void Robot::ReadDistance()':
@@ -6,5 +6,5 @@ arm-frc-linux-gnueabi-g++ -std=c++1y "-IC:\\Users\\FYRE5480/wpilib/cpp/current/i
    Smart Dashboard::PutNumber("Actual distance:", 0.1319(distanceSensor->GetValue())-1.3456);
    ^
 
-17:14:11 Build Finished (took 7s.242ms)
+19:05:04 Build Finished (took 1s.173ms)
 
