@@ -32,9 +32,9 @@ private:
 	ADXRS450_Gyro *yawGyro;			// How does the Gyro interface with the code? No channel #s are included
 
 	// Camera setup
-	IMAQdxSession session;
-	Image *frame;
-	IMAQdxError imaqError;
+//	IMAQdxSession session;
+//	Image *frame;
+//	IMAQdxError imaqError;
 
 //	Distance sensor
 	AnalogInput *distanceSensor;
@@ -113,16 +113,16 @@ private:
 
 //		Camera stuff
 		// create an image
-		frame = imaqCreateImage(IMAQ_IMAGE_RGB, 0);
-		//the camera name (ex "cam0") can be found through the roborio web interface
-		imaqError = IMAQdxOpenCamera("cam0", IMAQdxCameraControlModeController, &session);
-		if(imaqError != IMAQdxErrorSuccess) {
-			DriverStation::ReportError("IMAQdxOpenCamera error: " + std::to_string((long)imaqError) + "\n");
-		}
-		imaqError = IMAQdxConfigureGrab(session);
-		if(imaqError != IMAQdxErrorSuccess) {
-			DriverStation::ReportError("IMAQdxConfigureGrab error: " + std::to_string((long)imaqError) + "\n");
-		}
+//		frame = imaqCreateImage(IMAQ_IMAGE_RGB, 0);
+//		//the camera name (ex "cam0") can be found through the roborio web interface
+//		imaqError = IMAQdxOpenCamera("cam0", IMAQdxCameraControlModeController, &session);
+//		if(imaqError != IMAQdxErrorSuccess) {
+//			DriverStation::ReportError("IMAQdxOpenCamera error: " + std::to_string((long)imaqError) + "\n");
+//		}
+//		imaqError = IMAQdxConfigureGrab(session);
+//		if(imaqError != IMAQdxErrorSuccess) {
+//			DriverStation::ReportError("IMAQdxConfigureGrab error: " + std::to_string((long)imaqError) + "\n");
+//		}
 	}
 
 	void AutonomousInit()
@@ -185,17 +185,17 @@ private:
 	}
 
 	void Camera() { // Camera.
-		IMAQdxGrab(session, frame, true, NULL);
-		if(imaqError != IMAQdxErrorSuccess) {
-			DriverStation::ReportError("IMAQdxGrab error: " + std::to_string((long)imaqError) + "\n");
-		} else {
-			imaqDrawShapeOnImage(frame, frame, { 190, 270, 100, 100 }, DrawMode::IMAQ_DRAW_VALUE, ShapeMode::IMAQ_SHAPE_OVAL, 0.0f);
-			imaqDrawShapeOnImage(frame, frame, { 215, 295, 50, 50}, DrawMode::IMAQ_DRAW_VALUE, ShapeMode::IMAQ_SHAPE_OVAL, 0.0f);
-			imaqDrawLineOnImage(frame, frame, DrawMode::IMAQ_DRAW_VALUE, {320,165}, {320,315}, 0.0f);
-			imaqDrawLineOnImage(frame, frame, DrawMode::IMAQ_DRAW_VALUE, {245,240}, {395,240}, 0.0f);
-			imaqDrawShapeOnImage(frame, frame, { 237, 317, 6, 6}, DrawMode::IMAQ_PAINT_VALUE, ShapeMode::IMAQ_SHAPE_OVAL, 255.0f);
-			CameraServer::GetInstance()->SetImage(frame);
-		}
+//		IMAQdxGrab(session, frame, true, NULL);
+//		if(imaqError != IMAQdxErrorSuccess) {
+//			DriverStation::ReportError("IMAQdxGrab error: " + std::to_string((long)imaqError) + "\n");
+//		} else {
+//			imaqDrawShapeOnImage(frame, frame, { 190, 270, 100, 100 }, DrawMode::IMAQ_DRAW_VALUE, ShapeMode::IMAQ_SHAPE_OVAL, 0.0f);
+//			imaqDrawShapeOnImage(frame, frame, { 215, 295, 50, 50}, DrawMode::IMAQ_DRAW_VALUE, ShapeMode::IMAQ_SHAPE_OVAL, 0.0f);
+//			imaqDrawLineOnImage(frame, frame, DrawMode::IMAQ_DRAW_VALUE, {320,165}, {320,315}, 0.0f);
+//			imaqDrawLineOnImage(frame, frame, DrawMode::IMAQ_DRAW_VALUE, {245,240}, {395,240}, 0.0f);
+//			imaqDrawShapeOnImage(frame, frame, { 237, 317, 6, 6}, DrawMode::IMAQ_PAINT_VALUE, ShapeMode::IMAQ_SHAPE_OVAL, 255.0f);
+//			CameraServer::GetInstance()->SetImage(frame);
+//		}
 
 	}
 

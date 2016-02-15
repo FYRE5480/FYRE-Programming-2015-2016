@@ -4847,3 +4847,9 @@ java.io.IOException: Cannot run program "C:\Program Files (x86)\Microsoft Visual
 
 !ENTRY edu.wpi.first.wpilib.plugins.core 1 0 2016-02-14 13:25:57.944
 !MESSAGE Installedjava
+
+!ENTRY WPILib_CPP_Robot_Development 1 0 2016-02-14 21:14:06.915
+!MESSAGE Running ant file: C:\Users\FYRE5480\Desktop\FYRE-Programming-2015-2016\eclipseWorkspace\16.02.13 Final Robot Code (untested)\build.xml
+
+!ENTRY WPILib_CPP_Robot_Development 1 0 2016-02-14 21:14:06.917
+!MESSAGE Targets: deploy, Mode: run
