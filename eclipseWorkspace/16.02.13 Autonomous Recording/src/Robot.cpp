@@ -1,4 +1,4 @@
-// As of 16.02.13. Autonomous recording program.
+// Recording code as of 16.02.23
 
 #include "WPILib.h"
 #include <iostream>
@@ -19,16 +19,17 @@ private:
 	float zValues[800];
 
 	Joystick *flightStick;
+	Joystick *shootStick;
 	RobotDrive *robotDrive;
-	CANTalon *frontLeftTalon, *rearLeftTalon, *frontRightTalon;
-	Victor *rearRightTalon;
+	CANTalon *frontLeftTalon, *rearLeftTalon, *rearRightTalon;
+	Victor *frontRightTalon;
 
 
 
-	int frontLeftChannel	 = 1;	// Channel Declarations
-	int rearLeftChannel	     = 55;
-	int frontRightChannel	 = 2;
-	int rearRightChannel	 = 0;
+	int frontLeftChannel	 = 55;	// Channel Declarations
+	int rearLeftChannel	     = 1;
+	int frontRightChannel	 = 0;
+	int rearRightChannel	 = 2;
 
 	float deadZone			 = .2;
 
@@ -45,14 +46,15 @@ private:
 	{
 		frontLeftTalon = new CANTalon(frontLeftChannel);
 		rearLeftTalon = new CANTalon(rearLeftChannel);
-		frontRightTalon = new CANTalon(frontRightChannel);
-		rearRightTalon = new Victor(rearRightChannel);
+		frontRightTalon = new Victor(frontRightChannel);
+		rearRightTalon = new CANTalon(rearRightChannel);
 		chooser = new SendableChooser();
 		chooser->AddDefault(autoNameDefault, (void*)&autoNameDefault);
 		chooser->AddObject(autoNameCustom, (void*)&autoNameCustom);
 		SmartDashboard::PutData("Auto Modes", chooser);
 
-		flightStick = new Joystick(0);
+		flightStick = new Joystick(1);
+		shootStick = new Joystick(0);
 		robotDrive = new RobotDrive(frontLeftTalon, rearLeftTalon, frontRightTalon, rearRightTalon);
 
 
@@ -78,26 +80,34 @@ private:
 				arrayx = xValues[counter];
 				std::cout << arrayx << "," ;
 				counter ++;
+				robotDrive -> MecanumDrive_Cartesian(0,0,0);
 			}
 		}
 		else if(arraygetter == 1){
 			while(counter < arraynum){
 				arrayx = yValues[counter];
-				std::cout << arrayx << "," << std::endl;
+				std::cout << arrayx << ",";
 				counter ++;
+				robotDrive -> MecanumDrive_Cartesian(0,0,0);
 			}
 		}
 		else if(arraygetter == 2){
 			while(counter < arraynum){
 				arrayx = zValues[counter];
-				std::cout << arrayx << "," << std::endl;
+				std::cout << arrayx << "," ;
+				robotDrive -> MecanumDrive_Cartesian(0,0,0);
+				counter++;
 			}
 		}
 		else{
 			std::cout << "done" << std::endl;
+			std::cout << "resetting" << std::endl;
+			arraygetter = -1;
 		}
-
+		std::cout << std::endl;
+		counter = 0;
 		arraygetter++;
+		robotDrive -> MecanumDrive_Cartesian(0,0,0);
 
 		if(autoSelected == autoNameCustom){
 			//Custom Auto goes here
@@ -113,6 +123,7 @@ private:
 		} else {
 			//Default Auto goes here
 		}
+		robotDrive -> MecanumDrive_Cartesian(0,0,0);
 	}
 
 	void TeleopInit()
@@ -122,11 +133,12 @@ private:
 
 	void TeleopPeriodic()
 	{
-		flightX = flightStick->GetX(); //Pull joystick side motion for later use
-		flightY = flightStick->GetY(); //Pull joystick forward motion for later use (forward is -, backwards is +)
-		flightZ = flightStick->GetZ(); //Pull joystick twist motion for later use
-		flightThrottle = ((((flightStick->GetThrottle() - 1)*-1)/2) * .8 + .2); //Pull throttle to modify drive variables
-											//Throttle value is between .2 and 1.0
+		flightX = flightStick->GetRawAxis(0); //Pull joystick side motion for later use
+		flightY = flightStick->GetRawAxis(1); //Pull joystick forward motion for later use (forward is -, backwards is +)
+		flightZ = flightStick->GetRawAxis(4); //Pull joystick twist motion for later use
+		flightThrottle = ((((shootStick->GetThrottle() - 1)*-1)/2) * .8 + .2); //Pull throttle to modify drive variables
+																		//Throttle value is between .2 and 1.0
+
 		if (fabs(flightX) < deadZone) { //Deaden x
 			flightX = 0;
 		}
@@ -136,7 +148,6 @@ private:
 		if (fabs(flightZ) < deadZone) { //Deaden z
 			flightZ = 0;
 		}
-
 		flightX = flightX * flightThrottle;
 		flightY = flightY * flightThrottle;
 		flightZ = flightZ * flightThrottle;
@@ -168,5 +179,6 @@ private:
 };
 
 START_ROBOT_CLASS(Robot)
+
 
 
