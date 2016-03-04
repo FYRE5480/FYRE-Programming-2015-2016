@@ -8,9 +8,9 @@ private:
 	// Smart dashboard setup
 	LiveWindow *lw = LiveWindow::GetInstance();
 	SendableChooser *chooser;
-	const std::string autoNameDefault = "Front";
-	const std::string autoNameCustom = "Back";
-	std::string autoSelected;
+	const std::string camFront = "Front";
+	const std::string camBack = "Back";
+	std::string camSelected;
 
 	// Camera setup
 	IMAQdxSession session;
@@ -36,9 +36,9 @@ private:
 	void RobotInit()
 	{
 		chooser = new SendableChooser();
-		chooser->AddDefault(autoNameDefault, (void*)&autoNameDefault);
-		chooser->AddObject(autoNameCustom, (void*)&autoNameCustom);
-		SmartDashboard::PutData("Auto Modes", chooser);
+		chooser->AddDefault(camFront, (void*)&camDefault);
+		chooser->AddObject(camBack, (void*)&camCustom);
+		SmartDashboard::PutData("Which camera are you testing?", chooser);
 
 //		Distance sensor declarations
 		distanceSensor = new AnalogInput(3);
@@ -86,11 +86,22 @@ private:
 		// Get joystick Y axis
 		shooterY = shootStick->GetY();
 		// print joystick axis
-		frontAngle += shooterY;
-		frontCamServo -> SetAngle(frontAngle);
+		frontAngle += shooterY; // Scaling is most likely needed. I don't know what the servo angle goes to/from, or what the shooter goes to/from
 		backAngle += shooterY;
-		backCamServo -> SetAngle(backAngle);
-		// Get image however you're getting it.
+
+		if(camSelected == camBack) {
+			backCamServo -> SetAngle(backAngle);
+			// GET BACK CAMERA IMAGE (or maybe just switch a var? who knows. will have to see how Matt implemented 2 cams)
+		}
+		else { // front is default
+			frontCamServo -> SetAngle(frontAngle);
+			// Change a thing. Or display image. Whatevvver.
+		}
+
+		// Get image however you're getting it. GOTTA ADD THIS CODE
+
+		SmartDashboard::PutNumber("Front angle:", frontAngle);
+		SmartDashboard::PutNumber("Back angle:", backAngle);
 	}
 
 	void TestPeriodic()
