@@ -27,8 +27,6 @@ private:
 //  Servo
 	Servo *frontCamServo;
 	Servo *backCamServo;
-	float frontAngle;
-	float backAngle;
 
 	void RobotInit()
 	{
@@ -65,12 +63,7 @@ private:
 	}
 
 	void CameraAngle() {
-		SmartDashboard::GetNumber("Front angle:", frontAngle);
-		frontCamServo -> SetAngle(frontAngle);
-		SmartDashboard::GetNumber("Back angle:", backAngle);
-		backCamServo -> SetAngle(backAngle);
-
-		// Get image however you're getting it.
+		// Get image + show image
 	}
 
 	void TestPeriodic()

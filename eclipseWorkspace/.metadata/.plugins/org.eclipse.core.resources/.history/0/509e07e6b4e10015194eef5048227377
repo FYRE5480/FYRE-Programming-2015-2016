@@ -70,7 +70,7 @@ private:
 		SmartDashboard::GetNumber("Back angle:", backAngle);
 		backCamServo -> SetAngle(backAngle);
 
-		// Get image however you're getting it.
+		// Get
 	}
 
 	void TestPeriodic()
