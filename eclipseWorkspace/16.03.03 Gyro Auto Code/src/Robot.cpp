@@ -20,7 +20,7 @@ private:
 	int autoCounter;
 
 	// MY SUPER AWESOME DRIVING STRAIGHT AUTO CODE
-	static const float Kp = 0.03; // TAAAAAKE ME WITH YOU
+	float Kp = 0.03; // TAAAAAKE ME WITH YOU
 	// This is the constant--make it larger to make the gyro correction faster and smaller to make the correction slower.
 	int driveAngle;
 
