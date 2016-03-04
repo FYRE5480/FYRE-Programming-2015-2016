@@ -2,12 +2,15 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="&#x0D;&#x0A;//&#x09;IMAQdxSession session;&#x0D;&#x0A;//&#x09;Image *frame;&#x0D;&#x0A;//&#x09;IMAQdxError imaqError;" key="selection"/>
+		<item value="yawGyro" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
+			<item value="yawGyro"/>
+			<item value="gyro"/>
+			<item value="distance"/>
 			<item value="&#x0D;&#x0A;//&#x09;IMAQdxSession session;&#x0D;&#x0A;//&#x09;Image *frame;&#x0D;&#x0A;//&#x09;IMAQdxError imaqError;"/>
 			<item value="imaq"/>
 			<item value="mech"/>
