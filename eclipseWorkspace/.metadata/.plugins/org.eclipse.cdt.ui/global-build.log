@@ -66,3 +66,17 @@ arm-frc-linux-gnueabi-g++ "-LC:\\Users\\gsera/wpilib/cpp/current/lib" -Wl,-rpath
 Info: Internal Builder is used for build
 arm-frc-linux-gnueabi-g++ -std=c++1y "-IC:\\Users\\gsera/wpilib/cpp/current/include" "-IC:\\Users\\gsera\\Desktop\\FYRE-Programming-2015-2016\\eclipseWorkspace\\16.03.03 Calibration Code\\src" -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Robot.o" "..\\src\\Robot.cpp" 
 arm-frc-linux-gnueabi-g++ "-LC:\\Users\\gsera/wpilib/cpp/current/lib" -Wl,-rpath,/opt/GenICam_v2_3/bin/Linux_armv7-a,-rpath,/usr/local/frc/rpath-lib -o FRCUserProgram "src\\Robot.o" -lwpi 
+19:38:02 **** Incremental Build of configuration Debug for project 16.02.13 Final Robot Code (untested) ****
+Info: Internal Builder is used for build
+arm-frc-linux-gnueabi-g++ -std=c++1y "-IC:\\Users\\gsera/wpilib/cpp/current/include" "-IC:\\Users\\gsera\\Desktop\\FYRE-Programming-2015-2016\\eclipseWorkspace\\16.02.13 Final Robot Code (untested)\\src" -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Robot.o" "..\\src\\Robot.cpp" 
+arm-frc-linux-gnueabi-g++ "-LC:\\Users\\gsera/wpilib/cpp/current/lib" -Wl,-rpath,/opt/GenICam_v2_3/bin/Linux_armv7-a,-rpath,/usr/local/frc/rpath-lib -o FRCUserProgram "src\\Robot.o" -lwpi 
+19:38:06 **** Incremental Build of configuration Debug for project 16.03.03 Calibration Code ****
+Info: Internal Builder is used for build
+arm-frc-linux-gnueabi-g++ -std=c++1y "-IC:\\Users\\gsera/wpilib/cpp/current/include" "-IC:\\Users\\gsera\\Desktop\\FYRE-Programming-2015-2016\\eclipseWorkspace\\16.03.03 Calibration Code\\src" -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Robot.o" "..\\src\\Robot.cpp" 
+arm-frc-linux-gnueabi-g++ "-LC:\\Users\\gsera/wpilib/cpp/current/lib" -Wl,-rpath,/opt/GenICam_v2_3/bin/Linux_armv7-a,-rpath,/usr/local/frc/rpath-lib -o FRCUserProgram "src\\Robot.o" -lwpi 
+19:38:09 **** Rebuild of configuration Debug for project 16.03.03 Gyro Auto Code ****
+Info: Internal Builder is used for build
+arm-frc-linux-gnueabi-g++ -std=c++1y "-IC:\\Users\\gsera/wpilib/cpp/current/include" "-IC:\\Users\\gsera\\Desktop\\FYRE-Programming-2015-2016\\eclipseWorkspace\\16.03.03 Gyro Auto Code\\src" -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Robot.o" "..\\src\\Robot.cpp" 
+..\src\Robot.cpp:22:26: error: 'constexpr' needed for in-class initialization of static data member 'const float Robot::Kp' of non-integral type [-fpermissive]
+  static const float Kp = 0.03; // TAAAAAKE ME WITH YOU
+                          ^
