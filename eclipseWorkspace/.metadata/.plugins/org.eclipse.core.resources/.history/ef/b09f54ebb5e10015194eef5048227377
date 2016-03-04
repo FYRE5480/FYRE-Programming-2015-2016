@@ -65,10 +65,10 @@ private:
 	}
 
 	void CameraAngle() {
-		SmartDashboard::GetNumber("Front angle:", frontAngle); // if you're using the line below comment this out
+		SmartDashboard::GetNumber("Front angle:", frontAngle);
 		// frontAngle = WHATEVERNUMBER; // if you want to hard-code the servo instead because the smart dashboard's being dumb
 		frontCamServo -> SetAngle(frontAngle);
-		SmartDashboard::GetNumber("Back angle:", backAngle); // if you're using the line below comment this out
+		SmartDashboard::GetNumber("Back angle:", backAngle);
 		// backAngle = WHATEVERNUMBER; // if you want to hard-code the servo instead because the smart dashboard's being dumb
 		backCamServo -> SetAngle(backAngle);
 
