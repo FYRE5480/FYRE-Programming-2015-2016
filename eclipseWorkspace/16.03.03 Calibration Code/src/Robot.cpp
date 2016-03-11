@@ -13,9 +13,9 @@ private:
 	std::string camSelected;
 
 	// Camera setup
-	IMAQdxSession session;
 	Image *frame;
-	IMAQdxError imaqError;
+	USBCamera *camera1;
+	USBCamera *camera2;
 
 //	Distance sensor
 	AnalogInput *distanceSensor;
@@ -48,42 +48,49 @@ private:
 	ADXRS450_Gyro *yawGyro;
 
 	int frontLeftChannel	 = 55;	// Channel Declarations
-		int rearLeftChannel	     = 1;
-		int frontRightChannel	 = 7;
-		int rearRightChannel	 = 2;
+	int rearLeftChannel	     = 1;
+	int frontRightChannel	 = 7;
+	int rearRightChannel	 = 2;
 
-		int flightstickChannel	 = 1;
-		int xboxChannel		     = 0;
+	int flightstickChannel	 = 1;
+	int xboxChannel		     = 0;
 
-		int strafeButtonChannel  = 1;
-		int arcadeButtonChannel  = 2;
-		int fieldButtonChannel	 = 3;
+	int strafeButtonChannel  = 1;
+	int arcadeButtonChannel  = 2;
+	int fieldButtonChannel	 = 3;
 
-		int gyroResetChannel 	 = 8;
+	int gyroResetChannel 	 = 8;
 
-		float deadZone			 = .2;
+	float deadZone			 = .2;
 
-		//	Drive variables
-		int driveMode = 0; // Default Drive Mode is Strafe
-		float flightX = 0;
-		float flightY = 0;
-		float flightZ = 0;
-		float flightThrottle = 0;
+	//	Drive variables
+	int driveMode = 0; // Default Drive Mode is Strafe
+	float flightX = 0;
+	float flightY = 0;
+	float flightZ = 0;
+	float flightThrottle = 0;
 
-	//Shooter variables
-		bool bPrime = false;
-		bool bPrimeOn = false;
-		int bPrimeRunning = 1;
-		bool bLoad = false;
-		bool bLoadOn = false;
-		int bLoadRunning = 1;
-		bool bHighGoalShoot = false;
-		float bHighGoal = 0;
-		bool bLowGoalShoot = false;
-		float bLowGoal = 0;
-		int shooterCounter = 0;
-		bool shootSwitch = 0;
-		int servoLocation = 0;
+//Shooter variables
+	bool bPrime = false;
+	bool bPrimeOn = false;
+	int bPrimeRunning = 1;
+	bool bLoad = false;
+	bool bLoadOn = false;
+	int bLoadRunning = 1;
+	bool bHighGoalShoot = false;
+	float bHighGoal = 0;
+	bool bLowGoalShoot = false;
+	float bLowGoal = 0;
+	int shooterCounter = 0;
+	bool shootSwitch = 0;
+	int servoLocation = 0;
+		
+//  Camera Variables
+	int camtype = 1;
+	bool camswitch = false;
+	bool bSeven = false;
+	int width = 320;
+	int height = 240;
 
 	void RobotInit()
 	{
@@ -101,25 +108,38 @@ private:
 
 		shootStick = new Joystick(0);
 
-			// WE LIKE TO DRIVE, DON'T WE, STEVEN
-	//		Drive declarations
-			frontLeftTalon = new CANTalon(frontLeftChannel);
-			rearLeftTalon = new CANTalon(rearLeftChannel);
-			frontRightTalon = new Victor(frontRightChannel);
-			rearRightTalon = new CANTalon(rearRightChannel);
-			//frontLeftTalon->SetInverted(true);
-			rearLeftTalon->SetInverted(true);
-			yawGyro = new ADXRS450_Gyro();
-			robotDrive = new RobotDrive(frontLeftTalon, rearLeftTalon, frontRightTalon, rearRightTalon);
-			flightStick = new Joystick(flightstickChannel);
-			robotDrive -> SetSafetyEnabled(false);
+		// WE LIKE TO DRIVE, DON'T WE, STEVEN
+//		Drive declarations
+		frontLeftTalon = new CANTalon(frontLeftChannel);
+		rearLeftTalon = new CANTalon(rearLeftChannel);
+		frontRightTalon = new Victor(frontRightChannel);
+		rearRightTalon = new CANTalon(rearRightChannel);
+		//frontLeftTalon->SetInverted(true);
+		rearLeftTalon->SetInverted(true);
+		yawGyro = new ADXRS450_Gyro();
+		robotDrive = new RobotDrive(frontLeftTalon, rearLeftTalon, frontRightTalon, rearRightTalon);
+		flightStick = new Joystick(flightstickChannel);
+		robotDrive -> SetSafetyEnabled(false);
 
-	//		Shooter variable declarations MAKE SURE YOU PLUG THEM INTO THE RIGHT PORTS WENDY
-			motor1 = new Talon(8); // loook above
-			motor2 = new Jaguar(4);
-			motor3 = new Jaguar(5);
-			shootStick = new Joystick(0);
-			shooterSwitch = new DigitalInput(0);
+//		Shooter variable declarations MAKE SURE YOU PLUG THEM INTO THE RIGHT PORTS WENDY
+		motor1 = new Talon(8); // loook above
+		motor2 = new Jaguar(4);
+		motor3 = new Jaguar(5);
+		shootStick = new Joystick(0);
+		shooterSwitch = new DigitalInput(0);
+		
+		//		Camera stuff
+		camera1 = new USBCamera("cam0", false);
+		camera2 = new USBCamera("cam1", false);
+
+		camera1->OpenCamera();
+		camera2->OpenCamera();
+
+	//	camera1 -> SetSize(640,480);
+	//	camera2 -> SetSize(640,480);
+
+		camera1->StartCapture();
+		camera2->StartCapture();
 	}
 
 	void AutonomousInit()
@@ -141,8 +161,39 @@ private:
 	{
 		DistanceSensor();
 		CameraAngle();
+		Camera();
+		DriveControl();
+		PrimeMotors();
+		Load();
+		HighGoal();
+		LowGoal();
 	}
 
+	void Camera() { // Camera.
+		camswitch = flightStick -> GetRawButton(7);
+		if(camtype == 1){
+			camera1 -> GetImage(frame);
+			imaqDrawShapeOnImage(frame, frame, { 70, 110, 100, 100 }, DrawMode::IMAQ_DRAW_VALUE, ShapeMode::IMAQ_SHAPE_OVAL, 0.0f);
+			imaqDrawShapeOnImage(frame, frame, { 95, 135, 50, 50}, DrawMode::IMAQ_DRAW_VALUE, ShapeMode::IMAQ_SHAPE_OVAL, 0.0f);
+			imaqDrawLineOnImage(frame, frame, DrawMode::IMAQ_DRAW_VALUE, {160,0}, {160,315}, 0.0f);
+			imaqDrawLineOnImage(frame, frame, DrawMode::IMAQ_DRAW_VALUE, {0,120}, {395,120}, 0.0f);
+			imaqDrawShapeOnImage(frame, frame, { 117, 157, 6, 6}, DrawMode::IMAQ_PAINT_VALUE, ShapeMode::IMAQ_SHAPE_OVAL, 255.0f);
+		}
+		else{
+			camera2 -> GetImage(frame);
+		}
+		CameraServer::GetInstance()->SetImage(frame);
+		if(camswitch == true){ // if we press the button
+			if(bSeven == false){ // if the button is not pressed last iteration
+				bSeven = true; // say button was pressed
+				camtype = -camtype; // turn prime on or off
+			}
+		}
+		else{
+			bSeven = false; // when you let go, say the button was let go of
+		}
+
+	}
 	void DistanceSensor() {
 		SmartDashboard::PutNumber("Distance input:", distanceSensor->GetValue());
 	}
