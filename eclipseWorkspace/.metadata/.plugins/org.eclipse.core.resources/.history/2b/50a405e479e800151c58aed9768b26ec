@@ -1,4 +1,4 @@
-// As of 16.03.12, I've added both camera servos in. I wish I could test this thing.
+// As of 16.03.12, I'm going to check over this thing.
 
 #include "WPILib.h"
 

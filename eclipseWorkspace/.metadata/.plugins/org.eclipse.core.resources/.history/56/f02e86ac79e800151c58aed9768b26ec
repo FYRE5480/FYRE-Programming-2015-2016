@@ -1,4 +1,4 @@
-// As of 16.03.12, I've added both camera servos in. I wish I could test this thing.
+// As of 16.03.12, I'm going to check over this thing.
 
 #include "WPILib.h"
 
@@ -12,7 +12,8 @@ private:
 	const std::string autoNameCustom = "My Auto";
 	std::string autoSelected;
 
-	// Auto setup
+	// Auto setup: arrays are for joystick motion
+
 	int autoCounter;
 
 	// Shooting motor controllers and joystick and limit switch
@@ -93,15 +94,6 @@ private:
 	bool bSeven = false;
 	int width = 320;
 	int height = 240;
-
-	// Camera servos
-	Servo *frontCamServo;
-	Servo *backCamServo;
-	float frontAngle;
-	float backAngle;
-
-	//	Joystick *shootStick;
-	float shooterY;
 
 	void RobotInit()
 	{
