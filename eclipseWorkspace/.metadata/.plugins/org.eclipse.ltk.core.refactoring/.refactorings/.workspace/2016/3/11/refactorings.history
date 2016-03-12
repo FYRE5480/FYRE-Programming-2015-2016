@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;16.03.12 Actually Final Robot Code&apos; to &apos;16.03.12 Actually Final Robot Code (BOTH Servos)&apos;" description="Rename resource &apos;16.03.12 Actually Final Robot Code&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="/16.03.12 Actually Final Robot Code" name="16.03.12 Actually Final Robot Code (BOTH Servos)" stamp="1457804084815" updateReferences="true"/>
+</session>

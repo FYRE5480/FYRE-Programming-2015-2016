@@ -206,6 +206,29 @@ private:
 //		// backAngle = WHATEVERNUMBER; // if you want to hard-code the servo instead because the smart dashboard's being dumb
 //		backCamServo -> SetAngle(backAngle);
 
+//		camswitch = flightStick -> GetRawButton(7);
+//		if(camtype == 1){
+//			camera1 -> GetImage(frame);
+//			imaqDrawShapeOnImage(frame, frame, { 70, 110, 100, 100 }, DrawMode::IMAQ_DRAW_VALUE, ShapeMode::IMAQ_SHAPE_OVAL, 0.0f);
+//			imaqDrawShapeOnImage(frame, frame, { 95, 135, 50, 50}, DrawMode::IMAQ_DRAW_VALUE, ShapeMode::IMAQ_SHAPE_OVAL, 0.0f);
+//			imaqDrawLineOnImage(frame, frame, DrawMode::IMAQ_DRAW_VALUE, {160,0}, {160,315}, 0.0f);
+//			imaqDrawLineOnImage(frame, frame, DrawMode::IMAQ_DRAW_VALUE, {0,120}, {395,120}, 0.0f);
+//			imaqDrawShapeOnImage(frame, frame, { 117, 157, 6, 6}, DrawMode::IMAQ_PAINT_VALUE, ShapeMode::IMAQ_SHAPE_OVAL, 255.0f);
+//		}
+//		else{
+//			camera2 -> GetImage(frame);
+//		}
+//		CameraServer::GetInstance()->SetImage(frame);
+//		if(camswitch == true){ // if we press the button
+//			if(bSeven == false){ // if the button is not pressed last iteration
+//				bSeven = true; // say button was pressed
+//				camtype = -camtype; // turn prime on or off
+//			}
+//		}
+//		else{
+//			bSeven = false; // when you let go, say the button was let go of
+//		}
+
 		// Get joystick Y axis
 		shooterY = shootStick->GetY();
 		// print joystick axis
@@ -215,13 +238,22 @@ private:
 		if(camSelected == camBack) {
 			backCamServo -> SetAngle(backAngle);
 			// GET BACK CAMERA IMAGE (or maybe just switch a var? who knows. will have to see how Matt implemented 2 cams)
+//			camera2 -> GetImage(frame);
 		}
 		else { // front is default
 			frontCamServo -> SetAngle(frontAngle);
 			// Change a thing. Or display image. Whatevvver.
+//			camera1 -> GetImage(frame);
+//			imaqDrawShapeOnImage(frame, frame, { 70, 110, 100, 100 }, DrawMode::IMAQ_DRAW_VALUE, ShapeMode::IMAQ_SHAPE_OVAL, 0.0f);
+//			imaqDrawShapeOnImage(frame, frame, { 95, 135, 50, 50}, DrawMode::IMAQ_DRAW_VALUE, ShapeMode::IMAQ_SHAPE_OVAL, 0.0f);
+//			imaqDrawLineOnImage(frame, frame, DrawMode::IMAQ_DRAW_VALUE, {160,0}, {160,315}, 0.0f);
+//			imaqDrawLineOnImage(frame, frame, DrawMode::IMAQ_DRAW_VALUE, {0,120}, {395,120}, 0.0f);
+//			imaqDrawShapeOnImage(frame, frame, { 117, 157, 6, 6}, DrawMode::IMAQ_PAINT_VALUE, ShapeMode::IMAQ_SHAPE_OVAL, 255.0f);
 		}
 
 		// Get image however you're getting it. GOTTA ADD THIS CODE
+//		CameraServer::GetInstance()->SetImage(frame);
+		// OOPS MY BAD SORRY DON'T NEED OUR CAM CODE IN HERE
 
 		SmartDashboard::PutNumber("Front angle:", frontAngle);
 		SmartDashboard::PutNumber("Back angle:", backAngle);
