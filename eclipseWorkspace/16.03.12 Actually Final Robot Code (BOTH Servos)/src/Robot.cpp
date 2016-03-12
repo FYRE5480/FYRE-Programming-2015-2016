@@ -1,4 +1,5 @@
 // As of 16.03.12, I've added both camera servos in. I wish I could test this thing.
+// Line 214: Update with shooting angle. Line 150, 151: Update with port numbers.
 
 #include "WPILib.h"
 
@@ -140,13 +141,8 @@ private:
 //		Camera stuff
 		camera1 = new USBCamera("cam0", false);
 		camera2 = new USBCamera("cam1", false);
-
 		camera1->OpenCamera();
 		camera2->OpenCamera();
-
-	//	camera1 -> SetSize(640,480);
-	//	camera2 -> SetSize(640,480);
-
 		camera1->StartCapture();
 		camera2->StartCapture();
 
@@ -202,23 +198,28 @@ private:
 
 	void TeleopPeriodic()
 	{
+		Camera();
 		DriveControl();
 		PrimeMotors();
 		Load();
 		HighGoal();
 		LowGoal();
 		ReadDistance();
-		Camera();
 		UpdateServo();
-		PrimeBack();
 	}
 
-	void Camera() { // Camera.
-		// Get joystick Y axis
-		shooterY = shootStick->GetY();
-		// print joystick axis
-		frontAngle += shooterY; // Scaling is most likely needed. I don't know what the servo angle goes to/from, or what the shooter goes to/from
-		backAngle += shooterY;
+	void Camera() { // Camera. Also updates camera servos.
+		// forces default angle for shooting
+		if(shootStick->GetRawButton(12)) {
+			frontAngle = 60; // UPDATE WITH REAL VALUE
+		}
+		else {
+			// Get joystick Y axis
+			shooterY = shootStick->GetY();
+			// add joystick axis to front and back angle
+			frontAngle += shooterY; // Scaling is most likely needed. I don't know what the servo angle goes to/from, or what the shooter goes to/from
+			backAngle += shooterY;
+		}
 
 		camswitch = flightStick -> GetRawButton(7);
 		if(camtype == 1){
@@ -281,20 +282,17 @@ private:
 		flightZ = flightZ * flightThrottle;
 
 		if(driveMode == 1){
-				robotDrive->MecanumDrive_Cartesian(flightZ, flightY, flightX, 0);
-				SmartDashboard::PutString("DriveMode", "Arcade");
+			robotDrive->MecanumDrive_Cartesian(flightZ, flightY, flightX, 0);
+			SmartDashboard::PutString("DriveMode", "Arcade");
 		}
 		else if(driveMode == 2){
-				robotDrive->MecanumDrive_Cartesian(flightX, flightY, flightZ, yawGyro->GetAngle());
-				SmartDashboard::PutString("DriveMode", "Field");
-
+			robotDrive->MecanumDrive_Cartesian(flightX, flightY, flightZ, yawGyro->GetAngle());
+			SmartDashboard::PutString("DriveMode", "Field");
 		}
 		else{
-				robotDrive->MecanumDrive_Cartesian(flightX, flightY, flightZ, 0);
-				SmartDashboard::PutString("DriveMode", "Strafe");
-
+			robotDrive->MecanumDrive_Cartesian(flightX, flightY, flightZ, 0);
+			SmartDashboard::PutString("DriveMode", "Strafe");
 		}
-
 
 		SmartDashboard::PutNumber("GyroAngle", yawGyro->GetAngle());
 	}
@@ -405,17 +403,12 @@ private:
 	}
 
 	void UpdateServo(){
-		//servoLocation = shootStick -> GetPOV();
 		if(shootStick -> GetRawButton(3) == 1){
 			doorLift -> SetAngle(0);
 		}
 		if(shootStick -> GetRawButton(4) == 1){
 			doorLift -> SetAngle(135);
 		}
-	}
-
-	void PrimeBack(){
-
 	}
 
 	void TestPeriodic()
