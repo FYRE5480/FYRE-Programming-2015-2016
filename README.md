@@ -10,3 +10,5 @@ Actually Final (FRONT) [Full code, front servo only, with gyro auto]
 Calibration Code [Side code to run to get camera angle for servo]
 
 High Goal Auto [Just auto that only shoots high goal]
+
+There is an up to date (before comp) version of this entire repo on Giselle's USB. 
